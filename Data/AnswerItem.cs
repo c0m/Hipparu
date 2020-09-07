@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace Hipparu.Data
 {
-    public class TodoItem
+    public class AnswerItem
     {
         public string Titel { get; set; }
-        public bool IsDone { get; set; }
+        public string RomajiScript { get; set; }
+        public string JapaneseScript { get; set; }
     }
 }
