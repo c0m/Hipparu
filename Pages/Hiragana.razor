@@ -3,54 +3,709 @@
 @using Hipparu.Data
 @using Plk.Blazor.DragDrop;
 
-<div class="bg-success">You can drag items from one dropzone to another dropzone.</div>
+<!--I hate this. There's probably a better way to do this, but this isn't the end of the world.-->
+<table>
+    <tr>
+        <th>Misc.</th>
+        <th></th>
+        <th>R-</th>
+        <th></th>
+        <th>Y-</th>
+        <th></th>
+        <th>M-</th>
+        <th></th>
+        <th>H-</th>
+        <th></th>
+        <th>N-</th>
+        <th></th>
+        <th>T-</th>
+        <th></th>
+        <th>S-</th>
+        <th></th>
+        <th>K-</th>
+        <th></th>
+        <th>Vowels</th>
+        <th></th>
+    </tr>
+    <!--First row-->
+    <tr>
+        <td>wa</td>
+        <td>
+            <Dropzone Items="WaList" Accepts='(d) => d.RomajiScript.Equals("wa")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ra</td>
+        <td>
+            <Dropzone Items="RaList" Accepts='(d) => d.RomajiScript.Equals("ra")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ya</td>
+        <td>
+            <Dropzone Items="YaList" Accepts='(d) => d.RomajiScript.Equals("ya")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ma</td>
+        <td>
+            <Dropzone Items="MaList" Accepts='(d) => d.RomajiScript.Equals("ma")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ha</td>
+        <td>
+            <Dropzone Items="HaList" Accepts='(d) => d.RomajiScript.Equals("ha")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>na</td>
+        <td>
+            <Dropzone Items="NaList" Accepts='(d) => d.RomajiScript.Equals("na")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ta</td>
+        <td>
+            <Dropzone Items="TaList" Accepts='(d) => d.RomajiScript.Equals("ta")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>sa</td>
+        <td>
+            <Dropzone Items="SaList" Accepts='(d) => d.RomajiScript.Equals("sa")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ka</td>
+        <td>
+            <Dropzone Items="KaList" Accepts='(d) => d.RomajiScript.Equals("ka")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>a</td>
+        <td>
+            <Dropzone Items="AList" Accepts='(d) => d.RomajiScript.Equals("a")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+    </tr>
+    <!--Second row-->
+    <tr>
+        <td></td>
+        <td></td>
+        <td>ri</td>
+        <td>
+            <Dropzone Items="RiList" Accepts='(d) => d.RomajiScript.Equals("ri")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td></td>
+        <td>
+        </td>
+        <td>mi</td>
+        <td>
+            <Dropzone Items="MiList" Accepts='(d) => d.RomajiScript.Equals("mi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>hi</td>
+        <td>
+            <Dropzone Items="HiList" Accepts='(d) => d.RomajiScript.Equals("hi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ni</td>
+        <td>
+            <Dropzone Items="NiList" Accepts='(d) => d.RomajiScript.Equals("ni")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>chi</td>
+        <td>
+            <Dropzone Items="ChiList" Accepts='(d) => d.RomajiScript.Equals("chi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>shi</td>
+        <td>
+            <Dropzone Items="ShiList" Accepts='(d) => d.RomajiScript.Equals("shi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ki</td>
+        <td>
+            <Dropzone Items="KiList" Accepts='(d) => d.RomajiScript.Equals("ki")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>i</td>
+        <td>
+            <Dropzone Items="IList" Accepts='(d) => d.RomajiScript.Equals("i")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+    </tr>
+    <!--Third row-->
+    <tr>
+        <td>wo</td>
+        <td>
+            <Dropzone Items="WoList" Accepts='(d) => d.RomajiScript.Equals("wo")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ru</td>
+        <td>
+            <Dropzone Items="RuList" Accepts='(d) => d.RomajiScript.Equals("ru")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>yu</td>
+        <td>
+            <Dropzone Items="YuList" Accepts='(d) => d.RomajiScript.Equals("yu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>mu</td>
+        <td>
+            <Dropzone Items="MuList" Accepts='(d) => d.RomajiScript.Equals("mu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>fu</td>
+        <td>
+            <Dropzone Items="FuList" Accepts='(d) => d.RomajiScript.Equals("fu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>nu</td>
+        <td>
+            <Dropzone Items="NuList" Accepts='(d) => d.RomajiScript.Equals("nu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>tsu</td>
+        <td>
+            <Dropzone Items="TsuList" Accepts='(d) => d.RomajiScript.Equals("tsu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>su</td>
+        <td>
+            <Dropzone Items="SuList" Accepts='(d) => d.RomajiScript.Equals("su")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ku</td>
+        <td>
+            <Dropzone Items="KuList" Accepts='(d) => d.RomajiScript.Equals("ku")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>u</td>
+        <td>
+            <Dropzone Items="UList" Accepts='(d) => d.RomajiScript.Equals("u")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+    </tr>
+    <!--Fourth row-->
+    <tr>
+        <td></td>
+        <td>
+        </td>
+        <td>re</td>
+        <td>
+            <Dropzone Items="ReList" Accepts='(d) => d.RomajiScript.Equals("re")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td></td>
+        <td>
+        </td>
+        <td>me</td>
+        <td>
+            <Dropzone Items="MeList" Accepts='(d) => d.RomajiScript.Equals("me")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>he</td>
+        <td>
+            <Dropzone Items="HeList" Accepts='(d) => d.RomajiScript.Equals("he")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ne</td>
+        <td>
+            <Dropzone Items="NeList" Accepts='(d) => d.RomajiScript.Equals("ne")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>te</td>
+        <td>
+            <Dropzone Items="TeList" Accepts='(d) => d.RomajiScript.Equals("te")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>se</td>
+        <td>
+            <Dropzone Items="SuList" Accepts='(d) => d.RomajiScript.Equals("se")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ke</td>
+        <td>
+            <Dropzone Items="KuList" Accepts='(d) => d.RomajiScript.Equals("ke")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>e</td>
+        <td>
+            <Dropzone Items="EList" Accepts='(d) => d.RomajiScript.Equals("e")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+    </tr>
+    <!--Fifth row-->
+    <tr>
+        <td>n</td>
+        <td>
+            <Dropzone Items="NList" Accepts='(d) => d.RomajiScript.Equals("n")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ro</td>
+        <td>
+            <Dropzone Items="RoList" Accepts='(d) => d.RomajiScript.Equals("ro")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>yo</td>
+        <td>
+            <Dropzone Items="YoList" Accepts='(d) => d.RomajiScript.Equals("yo")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>mo</td>
+        <td>
+            <Dropzone Items="MoList" Accepts='(d) => d.RomajiScript.Equals("mo")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ho</td>
+        <td>
+            <Dropzone Items="HoList" Accepts='(d) => d.RomajiScript.Equals("ho")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>no</td>
+        <td>
+            <Dropzone Items="NoList" Accepts='(d) => d.RomajiScript.Equals("no")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>to</td>
+        <td>
+            <Dropzone Items="ToList" Accepts='(d) => d.RomajiScript.Equals("to")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>so</td>
+        <td>
+            <Dropzone Items="SoList" Accepts='(d) => d.RomajiScript.Equals("so")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>ko</td>
+        <td>
+            <Dropzone Items="KuList" Accepts='(d) => d.RomajiScript.Equals("ko")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+        <td>o</td>
+        <td>
+            <Dropzone Items="UList" Accepts='(d) => d.RomajiScript.Equals("o")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
+                <div class="mt-2" style="border: 2px solid black">
+                    @context.JapaneseScript
+                </div>
+            </Dropzone>
+        </td>
+    </tr>
+</table>
 
-<hr />
+<h1>Unsorted Hiragana:</h1>
+<Dropzone Items="HiraganaList">
+        @context.JapaneseScript
+</Dropzone>
 
-<div class="bg-light">First Dropzone:</div>
-
-
-    <Dropzone Items="MyFirstList">
-        <div style="border: 2px solid blue">
-            @context.Titel
-        </div>
-    </Dropzone>
-
-
-<hr />
-
-<div class="bg-light">Second Dropzone: (only accepts items containing the word 'fun')</div>
-
-
-    <Dropzone Items="MySecondList" Accepts='(d)=>d.Titel.Contains("fun")' TItem="TodoItem" OnItemDropRejected="@((i)=>lastdropped = i)">
-        <div class="mt-2" style="border: 2px solid black">
-            @context.Titel
-        </div>
-    </Dropzone>
-
-<hr />
-
-@if(lastdropped != null)
+@if (lastdropped != null)
 {
-    <div class="bg-warning">No place for you here:  @lastdropped?.Titel </div>
-}
+<div class="bg-warning">No place for you here:  @lastdropped?.RomajiScript </div>}
 
-@code {
+@code
+{ private AnswerItem lastdropped { get; set; }
 
-    private TodoItem lastdropped { get; set; }
+    public List<AnswerItem> HiraganaList = new List<AnswerItem>()
+    { 
+        //Misc 
+        new AnswerItem(){RomajiScript = "wa", JapaneseScript = "わ"},
+        new AnswerItem(){RomajiScript = "wo", JapaneseScript = "を"},
+        new AnswerItem(){RomajiScript = "n", JapaneseScript = "ん"},
 
-    public List<TodoItem> MyFirstList = new List<TodoItem>()
-{
-            new TodoItem(){Titel = "Item 1 - boring"},
-            new TodoItem(){Titel = "Item 2 - angry"},
-            new TodoItem(){Titel = "Item 3 - fun"},
-            new TodoItem(){Titel = "Item 4 - more fun"},
-            new TodoItem(){Titel = "Item 5 - great"},
+        //R Group
+        new AnswerItem(){RomajiScript = "ra", JapaneseScript = "ら"},
+        new AnswerItem(){RomajiScript = "ri", JapaneseScript = "り"},
+        new AnswerItem(){RomajiScript = "ru", JapaneseScript = "る"},
+        new AnswerItem(){RomajiScript = "re", JapaneseScript = "れ"},
+        new AnswerItem(){RomajiScript = "ro", JapaneseScript = "ろ"},
+
+        //Y group 
+        new AnswerItem(){RomajiScript = "ya", JapaneseScript = "や"},
+        new AnswerItem(){RomajiScript = "yu", JapaneseScript = "ゆ"},
+        new AnswerItem(){RomajiScript = "yo", JapaneseScript = "よ"},
+
+        //M Group
+        new AnswerItem(){RomajiScript = "ma", JapaneseScript = "ま"},
+        new AnswerItem(){RomajiScript = "mi", JapaneseScript = "み"},
+        new AnswerItem(){RomajiScript = "mu", JapaneseScript = "む"},
+        new AnswerItem(){RomajiScript = "me", JapaneseScript = "め"},
+        new AnswerItem(){RomajiScript = "mo", JapaneseScript = "も"},
+
+        //H Group
+        new AnswerItem(){RomajiScript = "ha", JapaneseScript = "は"},
+        new AnswerItem(){RomajiScript = "hi", JapaneseScript = "ひ"},
+        new AnswerItem(){RomajiScript = "fu", JapaneseScript = "ふ"},
+        new AnswerItem(){RomajiScript = "he", JapaneseScript = "へ"},
+        new AnswerItem(){RomajiScript = "ho", JapaneseScript = "ほ"},
+            
+        
+        //N Group
+        new AnswerItem(){RomajiScript = "na", JapaneseScript = "な"},
+        new AnswerItem(){RomajiScript = "ni", JapaneseScript = "に"},
+        new AnswerItem(){RomajiScript = "nu", JapaneseScript = "ぬ"},
+        new AnswerItem(){RomajiScript = "ne", JapaneseScript = "ね"},
+        new AnswerItem(){RomajiScript = "no", JapaneseScript = "の"},
+
+        
+        //T Group
+        new AnswerItem(){RomajiScript = "ta", JapaneseScript = "た"},
+        new AnswerItem(){RomajiScript = "chi", JapaneseScript = "ち"},
+        new AnswerItem(){RomajiScript = "tsu", JapaneseScript = "つ"},
+        new AnswerItem(){RomajiScript = "te", JapaneseScript = "て"},
+        new AnswerItem(){RomajiScript = "to", JapaneseScript = "と"},
+
+        
+        //S Group
+        new AnswerItem(){RomajiScript = "ka", JapaneseScript = "さ"},
+        new AnswerItem(){RomajiScript = "ki", JapaneseScript = "し"},
+        new AnswerItem(){RomajiScript = "ku", JapaneseScript = "す"},
+        new AnswerItem(){RomajiScript = "ke", JapaneseScript = "せ"},
+        new AnswerItem(){RomajiScript = "ko", JapaneseScript = "そ"},
+
+        //K Group
+        new AnswerItem(){RomajiScript = "ka", JapaneseScript = "か"},
+        new AnswerItem(){RomajiScript = "ki", JapaneseScript = "き"},
+        new AnswerItem(){RomajiScript = "ku", JapaneseScript = "く"},
+        new AnswerItem(){RomajiScript = "ke", JapaneseScript = "け"},
+        new AnswerItem(){RomajiScript = "ko", JapaneseScript = "こ"},
+
+        
+        //Vowel Group
+        new AnswerItem(){RomajiScript = "a", JapaneseScript = "あ"},
+        new AnswerItem(){RomajiScript = "i", JapaneseScript = "い"},
+        new AnswerItem(){RomajiScript = "u", JapaneseScript = "う"},
+        new AnswerItem(){RomajiScript = "e", JapaneseScript = "え"},
+        new AnswerItem(){RomajiScript = "o", JapaneseScript = "お"},
     };
 
-    public List<TodoItem> MySecondList = new List<TodoItem>()
-{
-            new TodoItem(){Titel = "Item 6 - the real fun"},
+    public List<AnswerItem> AcceptList = new List<AnswerItem>()
+    {
     };
 
-}
+    // This is horrifying but we're gonna do it anyway because Dropzone wants lists
+    #region Dropzone Lists
+    // Misc group
+    public List<AnswerItem> WaList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> WoList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> NList = new List<AnswerItem>()
+    {
+    };
+
+    // R group
+    public List<AnswerItem> RaList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> RiList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> RuList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> ReList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> RoList = new List<AnswerItem>()
+    {
+    };
+
+    // Y group
+    public List<AnswerItem> YaList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> YuList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> YoList = new List<AnswerItem>()
+    {
+    };
+
+    // M group
+    public List<AnswerItem> MaList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> MiList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> MuList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> MeList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> MoList = new List<AnswerItem>()
+    {
+    };
+
+    // H group
+    public List<AnswerItem> HaList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> HiList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> FuList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> HeList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> HoList = new List<AnswerItem>()
+    {
+    };
+
+    // N group
+    public List<AnswerItem> NaList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> NiList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> NuList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> NeList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> NoList = new List<AnswerItem>()
+    {
+    };
+
+    // T group
+    public List<AnswerItem> TaList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> ChiList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> TsuList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> TeList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> ToList = new List<AnswerItem>()
+    {
+    };
+
+    // S group
+    public List<AnswerItem> SaList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> ShiList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> SuList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> SeList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> SoList = new List<AnswerItem>()
+    {
+    };
+
+    // K group
+    public List<AnswerItem> KaList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> KiList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> KuList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> KeList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> KoList = new List<AnswerItem>()
+    {
+    };
+
+    // Vowel group
+    public List<AnswerItem> AList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> IList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> UList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> EList = new List<AnswerItem>()
+    {
+    };
+
+    public List<AnswerItem> OList = new List<AnswerItem>()
+    {
+    };
+    #endregion
+    }
