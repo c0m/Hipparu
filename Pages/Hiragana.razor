@@ -3,6 +3,11 @@
 @using Hipparu.Data
 @using Plk.Blazor.DragDrop;
 
+@if (lastdropped != null)
+{
+    <div class="bg-warning">That's not where  @lastdropped?.JapaneseScript goes.</div>
+}
+
 <!--I hate this. There's probably a better way to do this, but this isn't the end of the world.-->
 <table>
     <tr>
@@ -30,7 +35,7 @@
     <!--First row-->
     <tr>
         <td>wa</td>
-        <td>
+        <td width="60">
             <Dropzone Items="WaList" Accepts='(d) => d.RomajiScript.Equals("wa")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.JapaneseScript
@@ -38,7 +43,7 @@
             </Dropzone>
         </td>
         <td>ra</td>
-        <td>
+        <td width="60">
             <Dropzone Items="RaList" Accepts='(d) => d.RomajiScript.Equals("ra")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.JapaneseScript
@@ -46,7 +51,7 @@
             </Dropzone>
         </td>
         <td>ya</td>
-        <td>
+        <td width="60">
             <Dropzone Items="YaList" Accepts='(d) => d.RomajiScript.Equals("ya")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.JapaneseScript
@@ -54,7 +59,7 @@
             </Dropzone>
         </td>
         <td>ma</td>
-        <td>
+        <td width="60">
             <Dropzone Items="MaList" Accepts='(d) => d.RomajiScript.Equals("ma")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.JapaneseScript
@@ -62,7 +67,7 @@
             </Dropzone>
         </td>
         <td>ha</td>
-        <td>
+        <td width="60">
             <Dropzone Items="HaList" Accepts='(d) => d.RomajiScript.Equals("ha")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.JapaneseScript
@@ -70,7 +75,7 @@
             </Dropzone>
         </td>
         <td>na</td>
-        <td>
+        <td width="60">
             <Dropzone Items="NaList" Accepts='(d) => d.RomajiScript.Equals("na")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.JapaneseScript
@@ -78,7 +83,7 @@
             </Dropzone>
         </td>
         <td>ta</td>
-        <td>
+        <td width="60">
             <Dropzone Items="TaList" Accepts='(d) => d.RomajiScript.Equals("ta")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.JapaneseScript
@@ -86,7 +91,7 @@
             </Dropzone>
         </td>
         <td>sa</td>
-        <td>
+        <td width="60">
             <Dropzone Items="SaList" Accepts='(d) => d.RomajiScript.Equals("sa")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.JapaneseScript
@@ -94,7 +99,7 @@
             </Dropzone>
         </td>
         <td>ka</td>
-        <td>
+        <td width="60">
             <Dropzone Items="KaList" Accepts='(d) => d.RomajiScript.Equals("ka")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.JapaneseScript
@@ -102,7 +107,7 @@
             </Dropzone>
         </td>
         <td>a</td>
-        <td>
+        <td width="60">
             <Dropzone Items="AList" Accepts='(d) => d.RomajiScript.Equals("a")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.JapaneseScript
@@ -423,21 +428,21 @@
     </tr>
 </table>
 
-<h1>Unsorted Hiragana:</h1>
-<Dropzone Items="HiraganaList">
+<h2>Unsorted Hiragana:</h2>
+<div class="plk-flex">
+    <Dropzone Items="HiraganaList">
         @context.JapaneseScript
-</Dropzone>
+    </Dropzone>
+</div>
 
-@if (lastdropped != null)
-{
-<div class="bg-warning">No place for you here:  @lastdropped?.RomajiScript </div>}
+
 
 @code
 { private AnswerItem lastdropped { get; set; }
 
     public List<AnswerItem> HiraganaList = new List<AnswerItem>()
-    { 
-        //Misc 
+{
+        //Misc
         new AnswerItem(){RomajiScript = "wa", JapaneseScript = "わ"},
         new AnswerItem(){RomajiScript = "wo", JapaneseScript = "を"},
         new AnswerItem(){RomajiScript = "n", JapaneseScript = "ん"},
@@ -449,7 +454,7 @@
         new AnswerItem(){RomajiScript = "re", JapaneseScript = "れ"},
         new AnswerItem(){RomajiScript = "ro", JapaneseScript = "ろ"},
 
-        //Y group 
+        //Y group
         new AnswerItem(){RomajiScript = "ya", JapaneseScript = "や"},
         new AnswerItem(){RomajiScript = "yu", JapaneseScript = "ゆ"},
         new AnswerItem(){RomajiScript = "yo", JapaneseScript = "よ"},
@@ -467,8 +472,7 @@
         new AnswerItem(){RomajiScript = "fu", JapaneseScript = "ふ"},
         new AnswerItem(){RomajiScript = "he", JapaneseScript = "へ"},
         new AnswerItem(){RomajiScript = "ho", JapaneseScript = "ほ"},
-            
-        
+
         //N Group
         new AnswerItem(){RomajiScript = "na", JapaneseScript = "な"},
         new AnswerItem(){RomajiScript = "ni", JapaneseScript = "に"},
@@ -476,7 +480,6 @@
         new AnswerItem(){RomajiScript = "ne", JapaneseScript = "ね"},
         new AnswerItem(){RomajiScript = "no", JapaneseScript = "の"},
 
-        
         //T Group
         new AnswerItem(){RomajiScript = "ta", JapaneseScript = "た"},
         new AnswerItem(){RomajiScript = "chi", JapaneseScript = "ち"},
@@ -484,7 +487,6 @@
         new AnswerItem(){RomajiScript = "te", JapaneseScript = "て"},
         new AnswerItem(){RomajiScript = "to", JapaneseScript = "と"},
 
-        
         //S Group
         new AnswerItem(){RomajiScript = "ka", JapaneseScript = "さ"},
         new AnswerItem(){RomajiScript = "ki", JapaneseScript = "し"},
@@ -499,7 +501,6 @@
         new AnswerItem(){RomajiScript = "ke", JapaneseScript = "け"},
         new AnswerItem(){RomajiScript = "ko", JapaneseScript = "こ"},
 
-        
         //Vowel Group
         new AnswerItem(){RomajiScript = "a", JapaneseScript = "あ"},
         new AnswerItem(){RomajiScript = "i", JapaneseScript = "い"},
@@ -708,4 +709,4 @@
     {
     };
     #endregion
-    }
+}
