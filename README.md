@@ -20,4 +20,4 @@ A mode where you match to randomly listed sounds rather than romanji is planned.
 
 Nowhere for now. I'll get some hosting for it sorted before the Flash end-of-life. The CSUS.edu solution will work just fine until then. Incidentally if you know anywhere decent for me to host it, open up an issue.
 
-がんばって　ください！
+がんばってください！
