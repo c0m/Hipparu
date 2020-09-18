@@ -7,8 +7,8 @@ namespace Hipparu.Data
 {
     public class AnswerItem
     {
-        public string Titel { get; set; }
         public string RomajiScript { get; set; }
-        public string JapaneseScript { get; set; }
+        public string HiraganaScript { get; set; }
+        public string KatakanaScript { get; set; }
     }
 }
