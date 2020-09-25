@@ -1,8 +1,9 @@
 ﻿@page "/hiragana"
-@using Hipparu.Components
 @using Hipparu.Data
 @using Plk.Blazor.DragDrop;
-
+@using Newtonsoft.Json;
+@using Newtonsoft.Json.Linq;
+@using System.IO;
 
 @if (lastdropped != null)
 {
@@ -36,7 +37,7 @@
     <tr>
         <td>wa</td>
         <td width="60">
-            <Dropzone Items="WaList" Accepts='(d) => d.RomajiScript.Equals("wa")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="WaList" Accepts='(d) => d.RomajiScript.Equals("wa")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -44,7 +45,7 @@
         </td>
         <td>ra</td>
         <td width="60">
-            <Dropzone Items="RaList" Accepts='(d) => d.RomajiScript.Equals("ra")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="RaList" Accepts='(d) => d.RomajiScript.Equals("ra")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -52,7 +53,7 @@
         </td>
         <td>ya</td>
         <td width="60">
-            <Dropzone Items="YaList" Accepts='(d) => d.RomajiScript.Equals("ya")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="YaList" Accepts='(d) => d.RomajiScript.Equals("ya")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -60,7 +61,7 @@
         </td>
         <td>ma</td>
         <td width="60">
-            <Dropzone Items="MaList" Accepts='(d) => d.RomajiScript.Equals("ma")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="MaList" Accepts='(d) => d.RomajiScript.Equals("ma")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -68,7 +69,7 @@
         </td>
         <td>ha</td>
         <td width="60">
-            <Dropzone Items="HaList" Accepts='(d) => d.RomajiScript.Equals("ha")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="HaList" Accepts='(d) => d.RomajiScript.Equals("ha")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -76,7 +77,7 @@
         </td>
         <td>na</td>
         <td width="60">
-            <Dropzone Items="NaList" Accepts='(d) => d.RomajiScript.Equals("na")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="NaList" Accepts='(d) => d.RomajiScript.Equals("na")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -84,7 +85,7 @@
         </td>
         <td>ta</td>
         <td width="60">
-            <Dropzone Items="TaList" Accepts='(d) => d.RomajiScript.Equals("ta")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="TaList" Accepts='(d) => d.RomajiScript.Equals("ta")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -92,7 +93,7 @@
         </td>
         <td>sa</td>
         <td width="60">
-            <Dropzone Items="SaList" Accepts='(d) => d.RomajiScript.Equals("sa")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="SaList" Accepts='(d) => d.RomajiScript.Equals("sa")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -100,7 +101,7 @@
         </td>
         <td>ka</td>
         <td width="60">
-            <Dropzone Items="KaList" Accepts='(d) => d.RomajiScript.Equals("ka")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="KaList" Accepts='(d) => d.RomajiScript.Equals("ka")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -108,7 +109,7 @@
         </td>
         <td>a</td>
         <td width="60">
-            <Dropzone Items="AList" Accepts='(d) => d.RomajiScript.Equals("a")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="AList" Accepts='(d) => d.RomajiScript.Equals("a")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -121,7 +122,7 @@
         <td></td>
         <td>ri</td>
         <td>
-            <Dropzone Items="RiList" Accepts='(d) => d.RomajiScript.Equals("ri")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="RiList" Accepts='(d) => d.RomajiScript.Equals("ri")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -132,7 +133,7 @@
         </td>
         <td>mi</td>
         <td>
-            <Dropzone Items="MiList" Accepts='(d) => d.RomajiScript.Equals("mi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="MiList" Accepts='(d) => d.RomajiScript.Equals("mi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -140,7 +141,7 @@
         </td>
         <td>hi</td>
         <td>
-            <Dropzone Items="HiList" Accepts='(d) => d.RomajiScript.Equals("hi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="HiList" Accepts='(d) => d.RomajiScript.Equals("hi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -148,7 +149,7 @@
         </td>
         <td>ni</td>
         <td>
-            <Dropzone Items="NiList" Accepts='(d) => d.RomajiScript.Equals("ni")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="NiList" Accepts='(d) => d.RomajiScript.Equals("ni")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -156,7 +157,7 @@
         </td>
         <td>chi</td>
         <td>
-            <Dropzone Items="ChiList" Accepts='(d) => d.RomajiScript.Equals("chi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="ChiList" Accepts='(d) => d.RomajiScript.Equals("chi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -164,7 +165,7 @@
         </td>
         <td>shi</td>
         <td>
-            <Dropzone Items="ShiList" Accepts='(d) => d.RomajiScript.Equals("shi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="ShiList" Accepts='(d) => d.RomajiScript.Equals("shi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -172,7 +173,7 @@
         </td>
         <td>ki</td>
         <td>
-            <Dropzone Items="KiList" Accepts='(d) => d.RomajiScript.Equals("ki")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="KiList" Accepts='(d) => d.RomajiScript.Equals("ki")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -180,7 +181,7 @@
         </td>
         <td>i</td>
         <td>
-            <Dropzone Items="IList" Accepts='(d) => d.RomajiScript.Equals("i")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="IList" Accepts='(d) => d.RomajiScript.Equals("i")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -191,7 +192,7 @@
     <tr>
         <td>wo</td>
         <td>
-            <Dropzone Items="WoList" Accepts='(d) => d.RomajiScript.Equals("wo")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="WoList" Accepts='(d) => d.RomajiScript.Equals("wo")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -199,7 +200,7 @@
         </td>
         <td>ru</td>
         <td>
-            <Dropzone Items="RuList" Accepts='(d) => d.RomajiScript.Equals("ru")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="RuList" Accepts='(d) => d.RomajiScript.Equals("ru")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -207,7 +208,7 @@
         </td>
         <td>yu</td>
         <td>
-            <Dropzone Items="YuList" Accepts='(d) => d.RomajiScript.Equals("yu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="YuList" Accepts='(d) => d.RomajiScript.Equals("yu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = i)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -215,7 +216,7 @@
         </td>
         <td>mu</td>
         <td>
-            <Dropzone Items="MuList" Accepts='(d) => d.RomajiScript.Equals("mu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="MuList" Accepts='(d) => d.RomajiScript.Equals("mu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -223,7 +224,7 @@
         </td>
         <td>fu</td>
         <td>
-            <Dropzone Items="FuList" Accepts='(d) => d.RomajiScript.Equals("fu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="FuList" Accepts='(d) => d.RomajiScript.Equals("fu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -231,7 +232,7 @@
         </td>
         <td>nu</td>
         <td>
-            <Dropzone Items="NuList" Accepts='(d) => d.RomajiScript.Equals("nu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="NuList" Accepts='(d) => d.RomajiScript.Equals("nu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -239,7 +240,7 @@
         </td>
         <td>tsu</td>
         <td>
-            <Dropzone Items="TsuList" Accepts='(d) => d.RomajiScript.Equals("tsu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="TsuList" Accepts='(d) => d.RomajiScript.Equals("tsu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -247,7 +248,7 @@
         </td>
         <td>su</td>
         <td>
-            <Dropzone Items="SuList" Accepts='(d) => d.RomajiScript.Equals("su")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="SuList" Accepts='(d) => d.RomajiScript.Equals("su")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -255,7 +256,7 @@
         </td>
         <td>ku</td>
         <td>
-            <Dropzone Items="KuList" Accepts='(d) => d.RomajiScript.Equals("ku")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="KuList" Accepts='(d) => d.RomajiScript.Equals("ku")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -263,7 +264,7 @@
         </td>
         <td>u</td>
         <td>
-            <Dropzone Items="UList" Accepts='(d) => d.RomajiScript.Equals("u")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="UList" Accepts='(d) => d.RomajiScript.Equals("u")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -277,7 +278,7 @@
         </td>
         <td>re</td>
         <td>
-            <Dropzone Items="ReList" Accepts='(d) => d.RomajiScript.Equals("re")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="ReList" Accepts='(d) => d.RomajiScript.Equals("re")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -288,7 +289,7 @@
         </td>
         <td>me</td>
         <td>
-            <Dropzone Items="MeList" Accepts='(d) => d.RomajiScript.Equals("me")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="ShiList" Accepts='(d) => d.RomajiScript.Equals("shi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -296,7 +297,7 @@
         </td>
         <td>he</td>
         <td>
-            <Dropzone Items="HeList" Accepts='(d) => d.RomajiScript.Equals("he")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="KiList" Accepts='(d) => d.RomajiScript.Equals("ki")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -304,7 +305,7 @@
         </td>
         <td>ne</td>
         <td>
-            <Dropzone Items="NeList" Accepts='(d) => d.RomajiScript.Equals("ne")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="IList" Accepts='(d) => d.RomajiScript.Equals("i")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -312,7 +313,7 @@
         </td>
         <td>te</td>
         <td>
-            <Dropzone Items="TeList" Accepts='(d) => d.RomajiScript.Equals("te")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="WoList" Accepts='(d) => d.RomajiScript.Equals("wo")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -320,7 +321,7 @@
         </td>
         <td>se</td>
         <td>
-            <Dropzone Items="SuList" Accepts='(d) => d.RomajiScript.Equals("se")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="RuList" Accepts='(d) => d.RomajiScript.Equals("ru")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -328,7 +329,7 @@
         </td>
         <td>ke</td>
         <td>
-            <Dropzone Items="KuList" Accepts='(d) => d.RomajiScript.Equals("ke")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="YuList" Accepts='(d) => d.RomajiScript.Equals("yu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -336,7 +337,7 @@
         </td>
         <td>e</td>
         <td>
-            <Dropzone Items="EList" Accepts='(d) => d.RomajiScript.Equals("e")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="MuList" Accepts='(d) => d.RomajiScript.Equals("mu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -347,7 +348,7 @@
     <tr>
         <td>n</td>
         <td>
-            <Dropzone Items="NList" Accepts='(d) => d.RomajiScript.Equals("n")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="FuList" Accepts='(d) => d.RomajiScript.Equals("fu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -355,7 +356,7 @@
         </td>
         <td>ro</td>
         <td>
-            <Dropzone Items="RoList" Accepts='(d) => d.RomajiScript.Equals("ro")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="NuList" Accepts='(d) => d.RomajiScript.Equals("nu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -363,7 +364,7 @@
         </td>
         <td>yo</td>
         <td>
-            <Dropzone Items="YoList" Accepts='(d) => d.RomajiScript.Equals("yo")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="TsuList" Accepts='(d) => d.RomajiScript.Equals("tsu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -371,7 +372,7 @@
         </td>
         <td>mo</td>
         <td>
-            <Dropzone Items="MoList" Accepts='(d) => d.RomajiScript.Equals("mo")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="SuList" Accepts='(d) => d.RomajiScript.Equals("su")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -379,7 +380,7 @@
         </td>
         <td>ho</td>
         <td>
-            <Dropzone Items="HoList" Accepts='(d) => d.RomajiScript.Equals("ho")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="KuList" Accepts='(d) => d.RomajiScript.Equals("ku")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -387,7 +388,7 @@
         </td>
         <td>no</td>
         <td>
-            <Dropzone Items="NoList" Accepts='(d) => d.RomajiScript.Equals("no")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="UList" Accepts='(d) => d.RomajiScript.Equals("u")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -395,7 +396,7 @@
         </td>
         <td>to</td>
         <td>
-            <Dropzone Items="ToList" Accepts='(d) => d.RomajiScript.Equals("to")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="ReList" Accepts='(d) => d.RomajiScript.Equals("re")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -403,7 +404,7 @@
         </td>
         <td>so</td>
         <td>
-            <Dropzone Items="SoList" Accepts='(d) => d.RomajiScript.Equals("so")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="MeList" Accepts='(d) => d.RomajiScript.Equals("me")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -411,7 +412,7 @@
         </td>
         <td>ko</td>
         <td>
-            <Dropzone Items="KuList" Accepts='(d) => d.RomajiScript.Equals("ko")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="HeList" Accepts='(d) => d.RomajiScript.Equals("he")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -419,7 +420,7 @@
         </td>
         <td>o</td>
         <td>
-            <Dropzone Items="UList" Accepts='(d) => d.RomajiScript.Equals("o")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)"  MaxItems="1">
+            <Dropzone Items="NeList" Accepts='(d) => d.RomajiScript.Equals("ne")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
@@ -435,13 +436,28 @@
     </Dropzone>
 </div>
 
+@functions
+{
+    private static IList<AnswerItem> BuildAnswerList()
+    {
+        string json = File.ReadAllText("./Data/CharacterList.json");
+        Answers answers = JsonConvert.DeserializeObject<Answers>(json);
+        return answers.Data;
+    }
+}
+
+
+
+
 @code
 {
-
     private AnswerItem lastdropped { get; set; }
 
-    public static List<AnswerItem> HiraganaList = new List<AnswerItem>()
+    IList<AnswerItem> HiraganaList = BuildAnswerList();
+
+    public static List<AnswerItem> HiragafnaList = new List<AnswerItem>()
 {
+
         //todo replace this with a json file and make it programatically
         //Misc
         new AnswerItem(){RomajiScript = "wa", HiraganaScript = "わ"},
@@ -489,11 +505,11 @@
         new AnswerItem(){RomajiScript = "to", HiraganaScript = "と"},
 
         //S Group
-        new AnswerItem(){RomajiScript = "ka", HiraganaScript = "さ"},
-        new AnswerItem(){RomajiScript = "ki", HiraganaScript = "し"},
-        new AnswerItem(){RomajiScript = "ku", HiraganaScript = "す"},
-        new AnswerItem(){RomajiScript = "ke", HiraganaScript = "せ"},
-        new AnswerItem(){RomajiScript = "ko", HiraganaScript = "そ"},
+        new AnswerItem(){RomajiScript = "sa", HiraganaScript = "さ"},
+        new AnswerItem(){RomajiScript = "shi", HiraganaScript = "し"},
+        new AnswerItem(){RomajiScript = "su", HiraganaScript = "す"},
+        new AnswerItem(){RomajiScript = "se", HiraganaScript = "せ"},
+        new AnswerItem(){RomajiScript = "so", HiraganaScript = "そ"},
 
         //K Group
         new AnswerItem(){RomajiScript = "ka", HiraganaScript = "か"},
