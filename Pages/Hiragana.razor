@@ -2,7 +2,6 @@
 @using Hipparu.Data
 @using Plk.Blazor.DragDrop;
 @using Newtonsoft.Json;
-@using Newtonsoft.Json.Linq;
 @using System.IO;
 
 @if (lastdropped != null)
@@ -438,93 +437,41 @@
 
 @functions
 {
+
+    public static IList<AnswerItem> Shuffle<AnswerItem>(IList<AnswerItem> list)
+    {
+        Random rng = new Random();
+        var source = list.ToList();
+        int n = source.Count;
+        var shuffled = new List<AnswerItem>(n);
+        shuffled.AddRange(source);
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            AnswerItem value = shuffled[k];
+            shuffled[k] = shuffled[n];
+            shuffled[n] = value;
+        }
+        return shuffled;
+    }
+
     private static IList<AnswerItem> BuildAnswerList()
     {
         string json = File.ReadAllText("./Data/CharacterList.json");
         Answers answers = JsonConvert.DeserializeObject<Answers>(json);
-        return answers.Data;
+        return Shuffle<AnswerItem>(answers.Data);
     }
+
+
+
 }
-
-
-
 
 @code
 {
     private AnswerItem lastdropped { get; set; }
 
     IList<AnswerItem> HiraganaList = BuildAnswerList();
-
-    public static List<AnswerItem> HiragafnaList = new List<AnswerItem>()
-{
-
-        //todo replace this with a json file and make it programatically
-        //Misc
-        new AnswerItem(){RomajiScript = "wa", HiraganaScript = "わ"},
-        new AnswerItem(){RomajiScript = "wo", HiraganaScript = "を"},
-        new AnswerItem(){RomajiScript = "n", HiraganaScript = "ん"},
-
-        //R Group
-        new AnswerItem(){RomajiScript = "ra", HiraganaScript = "ら"},
-        new AnswerItem(){RomajiScript = "ri", HiraganaScript = "り"},
-        new AnswerItem(){RomajiScript = "ru", HiraganaScript = "る"},
-        new AnswerItem(){RomajiScript = "re", HiraganaScript = "れ"},
-        new AnswerItem(){RomajiScript = "ro", HiraganaScript = "ろ"},
-
-        //Y group
-        new AnswerItem(){RomajiScript = "ya", HiraganaScript = "や"},
-        new AnswerItem(){RomajiScript = "yu", HiraganaScript = "ゆ"},
-        new AnswerItem(){RomajiScript = "yo", HiraganaScript = "よ"},
-
-        //M Group
-        new AnswerItem(){RomajiScript = "ma", HiraganaScript = "ま"},
-        new AnswerItem(){RomajiScript = "mi", HiraganaScript = "み"},
-        new AnswerItem(){RomajiScript = "mu", HiraganaScript = "む"},
-        new AnswerItem(){RomajiScript = "me", HiraganaScript = "め"},
-        new AnswerItem(){RomajiScript = "mo", HiraganaScript = "も"},
-
-        //H Group
-        new AnswerItem(){RomajiScript = "ha", HiraganaScript = "は"},
-        new AnswerItem(){RomajiScript = "hi", HiraganaScript = "ひ"},
-        new AnswerItem(){RomajiScript = "fu", HiraganaScript = "ふ"},
-        new AnswerItem(){RomajiScript = "he", HiraganaScript = "へ"},
-        new AnswerItem(){RomajiScript = "ho", HiraganaScript = "ほ"},
-
-        //N Group
-        new AnswerItem(){RomajiScript = "na", HiraganaScript = "な"},
-        new AnswerItem(){RomajiScript = "ni", HiraganaScript = "に"},
-        new AnswerItem(){RomajiScript = "nu", HiraganaScript = "ぬ"},
-        new AnswerItem(){RomajiScript = "ne", HiraganaScript = "ね"},
-        new AnswerItem(){RomajiScript = "no", HiraganaScript = "の"},
-
-        //T Group
-        new AnswerItem(){RomajiScript = "ta", HiraganaScript = "た"},
-        new AnswerItem(){RomajiScript = "chi", HiraganaScript = "ち"},
-        new AnswerItem(){RomajiScript = "tsu", HiraganaScript = "つ"},
-        new AnswerItem(){RomajiScript = "te", HiraganaScript = "て"},
-        new AnswerItem(){RomajiScript = "to", HiraganaScript = "と"},
-
-        //S Group
-        new AnswerItem(){RomajiScript = "sa", HiraganaScript = "さ"},
-        new AnswerItem(){RomajiScript = "shi", HiraganaScript = "し"},
-        new AnswerItem(){RomajiScript = "su", HiraganaScript = "す"},
-        new AnswerItem(){RomajiScript = "se", HiraganaScript = "せ"},
-        new AnswerItem(){RomajiScript = "so", HiraganaScript = "そ"},
-
-        //K Group
-        new AnswerItem(){RomajiScript = "ka", HiraganaScript = "か"},
-        new AnswerItem(){RomajiScript = "ki", HiraganaScript = "き"},
-        new AnswerItem(){RomajiScript = "ku", HiraganaScript = "く"},
-        new AnswerItem(){RomajiScript = "ke", HiraganaScript = "け"},
-        new AnswerItem(){RomajiScript = "ko", HiraganaScript = "こ"},
-
-        //Vowel Group
-        new AnswerItem(){RomajiScript = "a", HiraganaScript = "あ"},
-        new AnswerItem(){RomajiScript = "i", HiraganaScript = "い"},
-        new AnswerItem(){RomajiScript = "u", HiraganaScript = "う"},
-        new AnswerItem(){RomajiScript = "e", HiraganaScript = "え"},
-        new AnswerItem(){RomajiScript = "o", HiraganaScript = "お"},
-    };
 
     public List<AnswerItem> AcceptList = new List<AnswerItem>()
     {
