@@ -207,7 +207,7 @@
         </td>
         <td>yu</td>
         <td>
-            <Dropzone Items="YuList" Accepts='(d) => d.RomajiScript.Equals("yu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = i)" MaxItems="1">
+            <Dropzone Items="YuList" Accepts='(d) => d.RomajiScript.Equals("yu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                 <div class="mt-2" style="border: 2px solid black">
                     @context.HiraganaScript
                 </div>
