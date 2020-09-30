@@ -431,269 +431,285 @@
         </tr>
     </table>
 
-    <h2>Unsorted Hiragana:</h2>
+    <h2>Unsorted:</h2>
     <div class="grid-container">
         <Dropzone Class="grid-container" Items="HiraganaList" ItemWrapperClass="flex-item">
-            @context.HiraganaScript
+            @if (activeGameMode == GameModes.Hiragana)
+             {
+                @context.HiraganaScript
+            }
+            else if (activeGameMode == GameModes.Katakana)
+            {
+                @context.KatakanaScript
+            }
         </Dropzone>
-    </div>
+
+        </div>
 </div>
 
 @functions
 {
-    public void StartGame(MouseEventArgs e)
-    {
-        gameInactive = false;
-        HiraganaList.Clear();
-        HiraganaList = BuildAnswerList();
-        foreach (List<AnswerItem> sublist in ListOfAnswerLists)
-        {
-            sublist.Clear();
-        }
-    }
+                    public void StartGame(MouseEventArgs e)
+                    {
+                        gameInactive = false;
+                        HiraganaList.Clear();
+                        HiraganaList = BuildAnswerList();
+                        foreach (List<AnswerItem> sublist in ListOfAnswerLists)
+                        {
+                            sublist.Clear();
+                        }
+                    }
 
-    public static IList<AnswerItem> Shuffle<AnswerItem>(IList<AnswerItem> list)
-    {
-        Random rng = new Random();
-        var source = list.ToList();
-        int n = source.Count;
-        var shuffled = new List<AnswerItem>(n);
-        shuffled.AddRange(source);
-        while (n > 1)
-        {
-            n--;
-            int k = rng.Next(n + 1);
-            AnswerItem value = shuffled[k];
-            shuffled[k] = shuffled[n];
-            shuffled[n] = value;
-        }
-        return shuffled;
-    }
+                    public static IList<AnswerItem> Shuffle<AnswerItem>(IList<AnswerItem> list)
+                    {
+                        Random rng = new Random();
+                        var source = list.ToList();
+                        int n = source.Count;
+                        var shuffled = new List<AnswerItem>(n);
+                        shuffled.AddRange(source);
+                        while (n > 1)
+                        {
+                            n--;
+                            int k = rng.Next(n + 1);
+                            AnswerItem value = shuffled[k];
+                            shuffled[k] = shuffled[n];
+                            shuffled[n] = value;
+                        }
+                        return shuffled;
+                    }
 
-    private static IList<AnswerItem> BuildAnswerList()
-    {
-        string json = File.ReadAllText("./Data/CharacterList.json");
-        Answers answers = JsonConvert.DeserializeObject<Answers>(json);
-        return Shuffle<AnswerItem>(answers.Data);
-    }
+                    private static IList<AnswerItem> BuildAnswerList()
+                    {
+                        string json = File.ReadAllText("./Data/CharacterList.json");
+                        Answers answers = JsonConvert.DeserializeObject<Answers>(json);
+                        return Shuffle<AnswerItem>(answers.Data);
+                    }
 
 
 
-}
+                }
 
-@code
+                @code
 {
-    private AnswerItem lastdropped { get; set; }
+    public enum GameModes
+            {
+                Hiragana,
+                Katakana
+            }
 
-    private bool gameInactive { get; set; } = true;
+            GameModes activeGameMode = GameModes.Katakana;
 
-    IList<AnswerItem> HiraganaList = BuildAnswerList();
+            private AnswerItem lastdropped { get; set; }
 
-    public static List<AnswerItem> AcceptList = new List<AnswerItem>()
+            private bool gameInactive { get; set; } = true;
+
+            IList<AnswerItem> HiraganaList = BuildAnswerList();
+
+            public static List<AnswerItem> AcceptList = new List<AnswerItem>()
+            {
+            };
+
+            // This is horrifying but we're gonna do it anyway because Dropzone wants lists
+            #region Dropzone Lists
+            // Misc group
+            public static List<AnswerItem> WaList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> WoList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> NList = new List<AnswerItem>()
+            {
+            };
+
+            // R group
+            public static List<AnswerItem> RaList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> RiList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> RuList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> ReList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> RoList = new List<AnswerItem>()
+            {
+            };
+
+            // Y group
+            public static List<AnswerItem> YaList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> YuList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> YoList = new List<AnswerItem>()
+            {
+            };
+
+            // M group
+            public static List<AnswerItem> MaList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> MiList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> MuList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> MeList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> MoList = new List<AnswerItem>()
+            {
+            };
+
+            // H group
+            public static List<AnswerItem> HaList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> HiList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> FuList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> HeList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> HoList = new List<AnswerItem>()
+            {
+            };
+
+            // N group
+            public static List<AnswerItem> NaList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> NiList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> NuList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> NeList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> NoList = new List<AnswerItem>()
+            {
+            };
+
+            // T group
+            public static List<AnswerItem> TaList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> ChiList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> TsuList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> TeList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> ToList = new List<AnswerItem>()
+            {
+            };
+
+            // S group
+            public static List<AnswerItem> SaList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> ShiList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> SuList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> SeList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> SoList = new List<AnswerItem>()
+            {
+            };
+
+            // K group
+            public static List<AnswerItem> KaList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> KiList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> KuList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> KeList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> KoList = new List<AnswerItem>()
+            {
+            };
+
+            // Vowel group
+            public static List<AnswerItem> AList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> IList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> UList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> EList = new List<AnswerItem>()
+            {
+            };
+
+            public static List<AnswerItem> OList = new List<AnswerItem>()
+            {
+            };
+            #endregion
+
+            // It would be nicer to add these all to the list as the lists are getting made
+            // But it's not a fan for some reason, so here's some more silliness.
+            public List<List<AnswerItem>> ListOfAnswerLists = new List<List<AnswerItem>>()
     {
-    };
-
-    // This is horrifying but we're gonna do it anyway because Dropzone wants lists
-    #region Dropzone Lists
-    // Misc group
-    public static List<AnswerItem> WaList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> WoList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> NList = new List<AnswerItem>()
-    {
-    };
-
-    // R group
-    public static List<AnswerItem> RaList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> RiList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> RuList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> ReList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> RoList = new List<AnswerItem>()
-    {
-    };
-
-    // Y group
-    public static List<AnswerItem> YaList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> YuList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> YoList = new List<AnswerItem>()
-    {
-    };
-
-    // M group
-    public static List<AnswerItem> MaList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> MiList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> MuList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> MeList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> MoList = new List<AnswerItem>()
-    {
-    };
-
-    // H group
-    public static List<AnswerItem> HaList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> HiList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> FuList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> HeList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> HoList = new List<AnswerItem>()
-    {
-    };
-
-    // N group
-    public static List<AnswerItem> NaList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> NiList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> NuList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> NeList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> NoList = new List<AnswerItem>()
-    {
-    };
-
-    // T group
-    public static List<AnswerItem> TaList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> ChiList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> TsuList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> TeList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> ToList = new List<AnswerItem>()
-    {
-    };
-
-    // S group
-    public static List<AnswerItem> SaList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> ShiList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> SuList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> SeList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> SoList = new List<AnswerItem>()
-    {
-    };
-
-    // K group
-    public static List<AnswerItem> KaList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> KiList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> KuList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> KeList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> KoList = new List<AnswerItem>()
-    {
-    };
-
-    // Vowel group
-    public static List<AnswerItem> AList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> IList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> UList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> EList = new List<AnswerItem>()
-    {
-    };
-
-    public static List<AnswerItem> OList = new List<AnswerItem>()
-    {
-    };
-    #endregion
-
-    // It would be nicer to add these all to the list as the lists are getting made
-    // But it's not a fan for some reason, so here's some more silliness.
-    public List<List<AnswerItem>> ListOfAnswerLists = new List<List<AnswerItem>>() 
-    { 
         WaList,
         WoList,
         NList,
@@ -741,5 +757,5 @@
         OList
     };
 
-}
+        }
 
