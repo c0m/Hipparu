@@ -9,9 +9,18 @@
     <div class="bg-warning">That's not where  @lastdropped?.HiraganaScript goes.</div>
 }
 
-<button @onclick="StartGame">Start</button>
 
-<div hidden="@gameInactive">
+<div>
+    <select @onchange="OnGameModeSelect">
+        <option value="@GameModes.Katakana">Katakana Mode</option>
+        <option value="@GameModes.Hiragana">Hiragana Mode</option>
+    </select>
+    <button @onclick="ResetGame" value="@ButtonText">Reset</button>
+</div>
+
+<br />
+
+<div>
     <table>
         <tr>
             <th>Misc.</th>
@@ -41,7 +50,14 @@
             <td width="60">
                 <Dropzone Items="WaList" Accepts='(d) => d.RomajiScript.Equals("wa")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -49,7 +65,14 @@
             <td width="60">
                 <Dropzone Items="RaList" Accepts='(d) => d.RomajiScript.Equals("ra")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -57,7 +80,14 @@
             <td width="60">
                 <Dropzone Items="YaList" Accepts='(d) => d.RomajiScript.Equals("ya")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -65,7 +95,14 @@
             <td width="60">
                 <Dropzone Items="MaList" Accepts='(d) => d.RomajiScript.Equals("ma")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -73,7 +110,14 @@
             <td width="60">
                 <Dropzone Items="HaList" Accepts='(d) => d.RomajiScript.Equals("ha")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -81,7 +125,14 @@
             <td width="60">
                 <Dropzone Items="NaList" Accepts='(d) => d.RomajiScript.Equals("na")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -89,7 +140,14 @@
             <td width="60">
                 <Dropzone Items="TaList" Accepts='(d) => d.RomajiScript.Equals("ta")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -97,7 +155,14 @@
             <td width="60">
                 <Dropzone Items="SaList" Accepts='(d) => d.RomajiScript.Equals("sa")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -105,7 +170,14 @@
             <td width="60">
                 <Dropzone Items="KaList" Accepts='(d) => d.RomajiScript.Equals("ka")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -113,7 +185,14 @@
             <td width="60">
                 <Dropzone Items="AList" Accepts='(d) => d.RomajiScript.Equals("a")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -126,7 +205,14 @@
             <td>
                 <Dropzone Items="RiList" Accepts='(d) => d.RomajiScript.Equals("ri")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -137,7 +223,14 @@
             <td>
                 <Dropzone Items="MiList" Accepts='(d) => d.RomajiScript.Equals("mi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -145,7 +238,14 @@
             <td>
                 <Dropzone Items="HiList" Accepts='(d) => d.RomajiScript.Equals("hi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -153,7 +253,14 @@
             <td>
                 <Dropzone Items="NiList" Accepts='(d) => d.RomajiScript.Equals("ni")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -161,7 +268,14 @@
             <td>
                 <Dropzone Items="ChiList" Accepts='(d) => d.RomajiScript.Equals("chi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -169,7 +283,14 @@
             <td>
                 <Dropzone Items="ShiList" Accepts='(d) => d.RomajiScript.Equals("shi")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -177,7 +298,14 @@
             <td>
                 <Dropzone Items="KiList" Accepts='(d) => d.RomajiScript.Equals("ki")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -185,7 +313,14 @@
             <td>
                 <Dropzone Items="IList" Accepts='(d) => d.RomajiScript.Equals("i")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -196,7 +331,14 @@
             <td>
                 <Dropzone Items="WoList" Accepts='(d) => d.RomajiScript.Equals("wo")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -204,7 +346,14 @@
             <td>
                 <Dropzone Items="RuList" Accepts='(d) => d.RomajiScript.Equals("ru")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -212,7 +361,14 @@
             <td>
                 <Dropzone Items="YuList" Accepts='(d) => d.RomajiScript.Equals("yu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -220,7 +376,14 @@
             <td>
                 <Dropzone Items="MuList" Accepts='(d) => d.RomajiScript.Equals("mu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -228,7 +391,14 @@
             <td>
                 <Dropzone Items="FuList" Accepts='(d) => d.RomajiScript.Equals("fu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -236,7 +406,14 @@
             <td>
                 <Dropzone Items="NuList" Accepts='(d) => d.RomajiScript.Equals("nu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -244,7 +421,14 @@
             <td>
                 <Dropzone Items="TsuList" Accepts='(d) => d.RomajiScript.Equals("tsu")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -252,7 +436,14 @@
             <td>
                 <Dropzone Items="SuList" Accepts='(d) => d.RomajiScript.Equals("su")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -260,7 +451,14 @@
             <td>
                 <Dropzone Items="KuList" Accepts='(d) => d.RomajiScript.Equals("ku")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -268,7 +466,14 @@
             <td>
                 <Dropzone Items="UList" Accepts='(d) => d.RomajiScript.Equals("u")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -282,7 +487,14 @@
             <td>
                 <Dropzone Items="ReList" Accepts='(d) => d.RomajiScript.Equals("re")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -293,7 +505,14 @@
             <td>
                 <Dropzone Items="MeList" Accepts='(d) => d.RomajiScript.Equals("me")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -301,7 +520,14 @@
             <td>
                 <Dropzone Items="HeList" Accepts='(d) => d.RomajiScript.Equals("he")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -309,7 +535,14 @@
             <td>
                 <Dropzone Items="NeList" Accepts='(d) => d.RomajiScript.Equals("ne")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -317,7 +550,14 @@
             <td>
                 <Dropzone Items="TeList" Accepts='(d) => d.RomajiScript.Equals("te")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -325,7 +565,14 @@
             <td>
                 <Dropzone Items="SeList" Accepts='(d) => d.RomajiScript.Equals("se")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -333,7 +580,14 @@
             <td>
                 <Dropzone Items="KeList" Accepts='(d) => d.RomajiScript.Equals("ke")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -341,7 +595,14 @@
             <td>
                 <Dropzone Items="EList" Accepts='(d) => d.RomajiScript.Equals("e")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -352,7 +613,14 @@
             <td>
                 <Dropzone Items="NList" Accepts='(d) => d.RomajiScript.Equals("n")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -360,7 +628,14 @@
             <td>
                 <Dropzone Items="RoList" Accepts='(d) => d.RomajiScript.Equals("ro")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -368,7 +643,14 @@
             <td>
                 <Dropzone Items="YoList" Accepts='(d) => d.RomajiScript.Equals("yo")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -376,7 +658,14 @@
             <td>
                 <Dropzone Items="MoList" Accepts='(d) => d.RomajiScript.Equals("mo")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -384,7 +673,14 @@
             <td>
                 <Dropzone Items="HoList" Accepts='(d) => d.RomajiScript.Equals("ho")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -392,7 +688,14 @@
             <td>
                 <Dropzone Items="NoList" Accepts='(d) => d.RomajiScript.Equals("no")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -400,7 +703,14 @@
             <td>
                 <Dropzone Items="ToList" Accepts='(d) => d.RomajiScript.Equals("to")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -408,7 +718,14 @@
             <td>
                 <Dropzone Items="SoList" Accepts='(d) => d.RomajiScript.Equals("so")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -416,7 +733,14 @@
             <td>
                 <Dropzone Items="KoList" Accepts='(d) => d.RomajiScript.Equals("ko")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -424,7 +748,14 @@
             <td>
                 <Dropzone Items="OList" Accepts='(d) => d.RomajiScript.Equals("o")' TItem="AnswerItem" OnItemDropRejected="@((i) => lastdropped = i)" OnItemDrop="@((i) => lastdropped = null)" MaxItems="1">
                     <div class="mt-2" style="border: 2px solid black">
-                        @context.HiraganaScript
+                        @if (activeGameMode == GameModes.Hiragana)
+                        {
+                            @context.HiraganaScript
+                        }
+                        else if (activeGameMode == GameModes.Katakana)
+                        {
+                            @context.KatakanaScript
+                        }
                     </div>
                 </Dropzone>
             </td>
@@ -436,279 +767,276 @@
         <Dropzone Class="grid-container" Items="HiraganaList" ItemWrapperClass="flex-item">
             @if (activeGameMode == GameModes.Hiragana)
              {
-                @context.HiraganaScript
-            }
-            else if (activeGameMode == GameModes.Katakana)
-            {
-                @context.KatakanaScript
-            }
+                @context.HiraganaScript 
+             }
+             else if (activeGameMode == GameModes.Katakana)
+             {
+                    @context.KatakanaScript
+             }
         </Dropzone>
-
-        </div>
+    </div>
 </div>
 
 @functions
-{
-                    public void StartGame(MouseEventArgs e)
-                    {
-                        gameInactive = false;
-                        HiraganaList.Clear();
-                        HiraganaList = BuildAnswerList();
-                        foreach (List<AnswerItem> sublist in ListOfAnswerLists)
-                        {
-                            sublist.Clear();
-                        }
-                    }
+{ public void ResetGame(MouseEventArgs e)
+    {
+        HiraganaList.Clear();
+        HiraganaList = BuildAnswerList();
+        foreach (List<AnswerItem> sublist in ListOfAnswerLists)
+        {
+            sublist.Clear();
+        }
+    }
 
-                    public static IList<AnswerItem> Shuffle<AnswerItem>(IList<AnswerItem> list)
-                    {
-                        Random rng = new Random();
-                        var source = list.ToList();
-                        int n = source.Count;
-                        var shuffled = new List<AnswerItem>(n);
-                        shuffled.AddRange(source);
-                        while (n > 1)
-                        {
-                            n--;
-                            int k = rng.Next(n + 1);
-                            AnswerItem value = shuffled[k];
-                            shuffled[k] = shuffled[n];
-                            shuffled[n] = value;
-                        }
-                        return shuffled;
-                    }
+    public void OnGameModeSelect(ChangeEventArgs e)
+    {
+        activeGameMode = (GameModes)Enum.Parse(typeof(GameModes), e.Value.ToString());
+    }
 
-                    private static IList<AnswerItem> BuildAnswerList()
-                    {
-                        string json = File.ReadAllText("./Data/CharacterList.json");
-                        Answers answers = JsonConvert.DeserializeObject<Answers>(json);
-                        return Shuffle<AnswerItem>(answers.Data);
-                    }
+    public static IList<AnswerItem> Shuffle<AnswerItem>(IList<AnswerItem> list)
+    {
+        Random rng = new Random();
+        var source = list.ToList();
+        int n = source.Count;
+        var shuffled = new List<AnswerItem>(n);
+        shuffled.AddRange(source);
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            AnswerItem value = shuffled[k];
+            shuffled[k] = shuffled[n];
+            shuffled[n] = value;
+        }
+        return shuffled;
+    }
 
+    private static IList<AnswerItem> BuildAnswerList()
+    {
+        string json = File.ReadAllText("./Data/CharacterList.json");
+        Answers answers = JsonConvert.DeserializeObject<Answers>(json);
+        return Shuffle<AnswerItem>(answers.Data);
+    } }
 
+@code
+{ public enum GameModes
+    {
+        Hiragana,
+        Katakana
+    }
 
-                }
+    private string ButtonText = "Start";
 
-                @code
-{
-    public enum GameModes
-            {
-                Hiragana,
-                Katakana
-            }
+    GameModes activeGameMode = GameModes.Katakana;
 
-            GameModes activeGameMode = GameModes.Katakana;
+    private AnswerItem lastdropped { get; set; }
 
-            private AnswerItem lastdropped { get; set; }
+    IList<AnswerItem> HiraganaList = BuildAnswerList();
 
-            private bool gameInactive { get; set; } = true;
+    public static List<AnswerItem> AcceptList = new List<AnswerItem>()
+    {
+    };
 
-            IList<AnswerItem> HiraganaList = BuildAnswerList();
+    // This is horrifying but we're gonna do it anyway because Dropzone wants lists
+    #region Dropzone Lists
+    // Misc group
+    public static List<AnswerItem> WaList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> AcceptList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> WoList = new List<AnswerItem>()
+    {
+    };
 
-            // This is horrifying but we're gonna do it anyway because Dropzone wants lists
-            #region Dropzone Lists
-            // Misc group
-            public static List<AnswerItem> WaList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> NList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> WoList = new List<AnswerItem>()
-            {
-            };
+    // R group
+    public static List<AnswerItem> RaList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> NList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> RiList = new List<AnswerItem>()
+    {
+    };
 
-            // R group
-            public static List<AnswerItem> RaList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> RuList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> RiList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> ReList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> RuList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> RoList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> ReList = new List<AnswerItem>()
-            {
-            };
+    // Y group
+    public static List<AnswerItem> YaList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> RoList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> YuList = new List<AnswerItem>()
+    {
+    };
 
-            // Y group
-            public static List<AnswerItem> YaList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> YoList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> YuList = new List<AnswerItem>()
-            {
-            };
+    // M group
+    public static List<AnswerItem> MaList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> YoList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> MiList = new List<AnswerItem>()
+    {
+    };
 
-            // M group
-            public static List<AnswerItem> MaList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> MuList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> MiList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> MeList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> MuList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> MoList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> MeList = new List<AnswerItem>()
-            {
-            };
+    // H group
+    public static List<AnswerItem> HaList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> MoList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> HiList = new List<AnswerItem>()
+    {
+    };
 
-            // H group
-            public static List<AnswerItem> HaList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> FuList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> HiList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> HeList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> FuList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> HoList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> HeList = new List<AnswerItem>()
-            {
-            };
+    // N group
+    public static List<AnswerItem> NaList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> HoList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> NiList = new List<AnswerItem>()
+    {
+    };
 
-            // N group
-            public static List<AnswerItem> NaList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> NuList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> NiList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> NeList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> NuList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> NoList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> NeList = new List<AnswerItem>()
-            {
-            };
+    // T group
+    public static List<AnswerItem> TaList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> NoList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> ChiList = new List<AnswerItem>()
+    {
+    };
 
-            // T group
-            public static List<AnswerItem> TaList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> TsuList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> ChiList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> TeList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> TsuList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> ToList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> TeList = new List<AnswerItem>()
-            {
-            };
+    // S group
+    public static List<AnswerItem> SaList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> ToList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> ShiList = new List<AnswerItem>()
+    {
+    };
 
-            // S group
-            public static List<AnswerItem> SaList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> SuList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> ShiList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> SeList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> SuList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> SoList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> SeList = new List<AnswerItem>()
-            {
-            };
+    // K group
+    public static List<AnswerItem> KaList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> SoList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> KiList = new List<AnswerItem>()
+    {
+    };
 
-            // K group
-            public static List<AnswerItem> KaList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> KuList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> KiList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> KeList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> KuList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> KoList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> KeList = new List<AnswerItem>()
-            {
-            };
+    // Vowel group
+    public static List<AnswerItem> AList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> KoList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> IList = new List<AnswerItem>()
+    {
+    };
 
-            // Vowel group
-            public static List<AnswerItem> AList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> UList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> IList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> EList = new List<AnswerItem>()
+    {
+    };
 
-            public static List<AnswerItem> UList = new List<AnswerItem>()
-            {
-            };
+    public static List<AnswerItem> OList = new List<AnswerItem>()
+    {
+    };
+    #endregion
 
-            public static List<AnswerItem> EList = new List<AnswerItem>()
-            {
-            };
-
-            public static List<AnswerItem> OList = new List<AnswerItem>()
-            {
-            };
-            #endregion
-
-            // It would be nicer to add these all to the list as the lists are getting made
-            // But it's not a fan for some reason, so here's some more silliness.
-            public List<List<AnswerItem>> ListOfAnswerLists = new List<List<AnswerItem>>()
+    // It would be nicer to add these all to the list as the lists are getting made
+    // But it's not a fan for some reason, so here's some more silliness.
+    public List<List<AnswerItem>> ListOfAnswerLists = new List<List<AnswerItem>>()
     {
         WaList,
         WoList,
@@ -755,7 +1083,4 @@
         UList,
         EList,
         OList
-    };
-
-        }
-
+    }; }

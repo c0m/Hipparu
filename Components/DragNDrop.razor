@@ -5,17 +5,14 @@
         <span class="oi oi-trash"></span>
     </button>
     <span class="ml-3 oi oi-sun"></span>
-
 </div>
 
 @functions
-{
-
-}
+{ }
 
 
 @code { [Parameter]
-            public AnswerItem Item { get; set; }
+    public AnswerItem Item { get; set; }
 
-            [Parameter]
-            public EventCallback<AnswerItem> OnRemoveClick { get; set; } }
+    [Parameter]
+    public EventCallback<AnswerItem> OnRemoveClick { get; set; } }
