@@ -16,8 +16,6 @@ namespace Hipparu.Pages
             Katakana
         }
 
-        private string ButtonText = "Start";
-
 
         private AnswerItem lastdropped { get; set; }
 
