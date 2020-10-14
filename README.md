@@ -4,17 +4,15 @@ Hipparu is a replacement for the venerable CSUS.edu Drag-n-Drop exercises that c
  - https://www.csus.edu/indiv/s/sheaa/projects/genki/katakana-timer.html
  - https://www.csus.edu/indiv/s/sheaa/projects/genki/hiragana-timer.html
  
+The main difference between the two is that you may swap freely between alphabets, rather than having two different applications for the exercises. 
+ 
 # Why do they need replaced?
 
 Flash will no longer be supported from the end of 2020, and the average Japanese learner who might have enjoyed this resource might not have the know-how to run a local emulator. It's just simpler to make a more modern solution. 
 
 # Can I help?
 
-Sure, make a pull request or open an issue with what you'd like to see. 
-
-# Are any improvements over the CSUS.edu Flash exercises planned?
-
-A mode where you match to randomly listed sounds rather than romanji is planned. I don't have a wild pile beyond that planned. Maybe something to help memorise stroke order? Again, open an issue if you've got any suggestions.
+Sure, make a pull request or open an issue with what you'd like to see.
 
 # Where is it hosted?
 
