@@ -336,3 +336,7 @@ td, th {
 tr:nth-child(even) {
     background-color: #00CC66;
 }
+
+div.timer {
+    text-align: right;
+}

@@ -4,10 +4,12 @@ using System.IO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Timers;
 using System.Threading.Tasks;
 
 namespace Hipparu.Pages
 {
+
     public partial class Index
     {
         public enum GameModes
@@ -16,8 +18,7 @@ namespace Hipparu.Pages
             Katakana
         }
 
-
-        private AnswerItem lastdropped { get; set; }
+        private AnswerItem LastDropped { get; set; }
 
         IList<AnswerItem> HiraganaList = BuildAnswerList();
 
@@ -273,8 +274,7 @@ namespace Hipparu.Pages
         OList
     };
 
-
-        public void ResetGame()
+        private void ResetGame()
         {
             HiraganaList.Clear();
             HiraganaList = BuildAnswerList();
@@ -282,6 +282,7 @@ namespace Hipparu.Pages
             {
                 sublist.Clear();
             }
+            exerciseTimer = new TimeSpan();
         }
 
         public static IList<AnswerItem> Shuffle<AnswerItem>(IList<AnswerItem> list)
@@ -308,5 +309,24 @@ namespace Hipparu.Pages
             Answers answers = JsonConvert.DeserializeObject<Answers>(json);
             return Shuffle<AnswerItem>(answers.Data);
         }
+
+        TimeSpan exerciseTimer = new TimeSpan();
+        bool isTimerRunning = false;
+
+        async Task TimerTask()
+        {
+            isTimerRunning = true;
+            while(isTimerRunning)
+            { 
+                await Task.Delay(1000);
+                exerciseTimer = exerciseTimer.Add(new TimeSpan(0, 0, 1));
+                StateHasChanged();
+            }
+        }
+        protected override async Task OnInitializedAsync()
+        {
+            TimerTask();
+        }
     }
+
 }
