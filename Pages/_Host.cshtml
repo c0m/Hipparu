@@ -32,6 +32,16 @@
         <a class="dismiss">🗙</a>
     </div>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mobile-drag-drop@2.3.0-rc.2/default.css">
+    <script src="https://cdn.jsdelivr.net/npm/mobile-drag-drop@2.3.0-rc.2/index.min.js"></script>
+
+    <script>
+        //blazor-drag-drop needs a little extra help to work on mobiles
+        MobileDragDrop.polyfill({
+            dragImageTranslateOverride: MobileDragDrop.scrollBehaviourDragImageTranslateOverride
+        });
+    </script>
+
     <script src="_framework/blazor.server.js"></script>
 </body>
 </html>
