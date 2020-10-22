@@ -12,19 +12,85 @@ namespace Hipparu.Pages
 
     public partial class Index
     {
+        //variables
         public enum GameModes
         {
             Hiragana,
             Katakana
         }
 
+        TimeSpan exerciseTimer = new TimeSpan();
+        bool isTimerRunning = false;
+
         private AnswerItem LastDropped { get; set; }
+        IList<AnswerItem> AnswerList = BuildAnswerList();
 
-        IList<AnswerItem> HiraganaList = BuildAnswerList();
-
-        public static List<AnswerItem> AcceptList = new List<AnswerItem>()
+        private void ResetGame()
         {
-        };
+            AnswerList.Clear();
+            AnswerList = BuildAnswerList();
+            foreach (List<AnswerItem> sublist in ListOfAnswerLists)
+            {
+                sublist.Clear();
+            }
+            exerciseTimer = new TimeSpan();
+        }
+
+        private void SuccessfulDrop()
+        {
+            LastDropped = null;
+            if(AnswerList.Count == 0)
+            {
+                WinGame();
+            }
+        }
+
+        private void WinGame()
+        {
+            // send the user to the personal bests page and send along their current time to see if they've reached a personal best
+            // for now, just reset the game
+            ResetGame();
+        }
+
+        public static IList<AnswerItem> Shuffle<AnswerItem>(IList<AnswerItem> list)
+        {
+            Random rng = new Random();
+            var source = list.ToList();
+            int n = source.Count;
+            var shuffled = new List<AnswerItem>(n);
+            shuffled.AddRange(source);
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                AnswerItem value = shuffled[k];
+                shuffled[k] = shuffled[n];
+                shuffled[n] = value;
+            }
+            return shuffled;
+        }
+
+        private static IList<AnswerItem> BuildAnswerList()
+        {
+            string json = File.ReadAllText("./Data/CharacterList.json");
+            Answers answers = JsonConvert.DeserializeObject<Answers>(json);
+            return Shuffle<AnswerItem>(answers.Data);
+        }
+
+        async Task TimerTask()
+        {
+            isTimerRunning = true;
+            while (isTimerRunning)
+            {
+                await Task.Delay(1000);
+                exerciseTimer = exerciseTimer.Add(new TimeSpan(0, 0, 1));
+                StateHasChanged();
+            }
+        }
+        protected override async Task OnInitializedAsync()
+        {
+            TimerTask();
+        }
 
         // This is horrifying but we're gonna do it anyway because Dropzone wants lists
         #region Dropzone Lists
@@ -274,59 +340,6 @@ namespace Hipparu.Pages
         OList
     };
 
-        private void ResetGame()
-        {
-            HiraganaList.Clear();
-            HiraganaList = BuildAnswerList();
-            foreach (List<AnswerItem> sublist in ListOfAnswerLists)
-            {
-                sublist.Clear();
-            }
-            exerciseTimer = new TimeSpan();
-        }
-
-        public static IList<AnswerItem> Shuffle<AnswerItem>(IList<AnswerItem> list)
-        {
-            Random rng = new Random();
-            var source = list.ToList();
-            int n = source.Count;
-            var shuffled = new List<AnswerItem>(n);
-            shuffled.AddRange(source);
-            while (n > 1)
-            {
-                n--;
-                int k = rng.Next(n + 1);
-                AnswerItem value = shuffled[k];
-                shuffled[k] = shuffled[n];
-                shuffled[n] = value;
-            }
-            return shuffled;
-        }
-
-        private static IList<AnswerItem> BuildAnswerList()
-        {
-            string json = File.ReadAllText("./Data/CharacterList.json");
-            Answers answers = JsonConvert.DeserializeObject<Answers>(json);
-            return Shuffle<AnswerItem>(answers.Data);
-        }
-
-        TimeSpan exerciseTimer = new TimeSpan();
-        bool isTimerRunning = false;
-
-        async Task TimerTask()
-        {
-            isTimerRunning = true;
-            while(isTimerRunning)
-            { 
-                await Task.Delay(1000);
-                exerciseTimer = exerciseTimer.Add(new TimeSpan(0, 0, 1));
-                StateHasChanged();
-            }
-        }
-        protected override async Task OnInitializedAsync()
-        {
-            TimerTask();
-        }
     }
 
 }
