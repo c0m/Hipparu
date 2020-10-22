@@ -339,4 +339,7 @@ tr:nth-child(even) {
 
 div.timer {
     text-align: right;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
 }
