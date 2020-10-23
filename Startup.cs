@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Hipparu.Data;
 using Plk.Blazor.DragDrop;
+using Blazored.LocalStorage;
 
 namespace Hipparu
 {
@@ -30,6 +31,7 @@ namespace Hipparu
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddBlazorDragDrop();
+            services.AddBlazoredLocalStorage();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
