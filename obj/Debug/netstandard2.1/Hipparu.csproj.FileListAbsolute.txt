@@ -1,0 +1,13 @@
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.csprojAssemblyReference.cache
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.AssemblyInfoInputs.cache
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.AssemblyInfo.cs
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.RazorComponent.input.cache
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\App.razor.g.cs
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Counter.razor.g.cs
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Pages\FetchData.razor.g.cs
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Index.razor.g.cs
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Shared\NavMenu.razor.g.cs
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\_Imports.razor.g.cs
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.RazorComponent.output.cache
