@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "blazor-dragdrop/2.2.1": {
+      "blazor-dragdrop/2.2.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Components": "3.1.7",
@@ -466,14 +466,14 @@
     }
   },
   "libraries": {
-    "blazor-dragdrop/2.2.1": {
-      "sha512": "2oNM6UhqN1MwiJX4eiqLzoN+jqFn8nfeeDQBptLT3G4NzY6tb4x8amtKpE/PcbYbpklEFCUc29NpANMnYVrVyg==",
+    "blazor-dragdrop/2.2.0": {
+      "sha512": "jXKsgwou0pdPUnp0PaMRcHD3EYSEEmOBX38gY8MxAAWbWMhmf2lbUioki1x9045vC3nOKGi7t5jpdSF1RhC0Nw==",
       "type": "package",
-      "path": "blazor-dragdrop/2.2.1",
+      "path": "blazor-dragdrop/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "blazor-dragdrop.2.2.1.nupkg.sha512",
+        "blazor-dragdrop.2.2.0.nupkg.sha512",
         "blazor-dragdrop.nuspec",
         "lib/netstandard2.1/Plk.Blazor.DragDrop.dll"
       ]
@@ -1779,7 +1779,7 @@
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 3.2.1",
       "Newtonsoft.Json >= 12.0.3",
       "System.Net.Http.Json >= 3.2.0",
-      "blazor-dragdrop >= 2.2.1"
+      "blazor-dragdrop >= 2.2.0"
     ]
   },
   "packageFolders": {
@@ -1845,7 +1845,7 @@
           },
           "blazor-dragdrop": {
             "target": "Package",
-            "version": "[2.2.1, )"
+            "version": "[2.2.0, )"
           }
         },
         "imports": [

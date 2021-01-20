@@ -64,7 +64,7 @@
             },
             "blazor-dragdrop": {
               "target": "Package",
-              "version": "[2.2.1, )"
+              "version": "[2.2.0, )"
             }
           },
           "imports": [

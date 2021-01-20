@@ -41,10 +41,10 @@ app {
             margin-left: 1.5rem;
         }
 
-.main .top-row a:first-child {
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+        .main .top-row a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
 .sidebar {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
@@ -129,12 +129,12 @@ app {
     z-index: 1000;
 }
 
-#blazor-error-ui .dismiss {
-    cursor: pointer;
-    position: absolute;
-    right: 0.75rem;
-    top: 0.5rem;
-}
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
 
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
@@ -180,4 +180,166 @@ app {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+}
+
+.plk-dd-dropzone {
+    min-height: 50px;
+}
+
+
+/*
+    This looks silly but I mean, it works?
+    Definitely needs to be fixed to fill the screen in a more appealing way
+*/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    background-color: #1861ac;
+    padding: 15px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    font-size: 5px;
+    text-align: center;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+#cards-dd .plk-dd-dragged-over > div {
+    background-color: lightgray;
+    opacity: 0.6;
+    animation: blinker 1s linear infinite;
+}
+
+
+#cards-dd .plk-dd-in-transit > div {
+    background-color: aqua;
+}
+
+.cards-list {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+    .card .card_image {
+        width: inherit;
+        height: inherit;
+        border-radius: 40px;
+    }
+
+        .card .card_image img {
+            width: inherit;
+            height: inherit;
+            border-radius: 40px;
+            object-fit: cover;
+        }
+
+    .card .card_title {
+        text-align: center;
+        border-radius: 0px 0px 40px 40px;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: -80px;
+        height: 40px;
+    }
+
+    .card:hover {
+        transform: scale(0.9, 0.9);
+        box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
+    }
+
+.title-white {
+    color: white;
+}
+
+.title-black {
+    color: black;
+}
+
+.flex-item {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: lightgray;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.plk-flex .plk-dd-spacing {
+    width: 2px;
+}
+
+.plk-flex .plk-dd-dragged-over {
+    background-color: lightgray;
+    opacity: 0.6;
+    animation: blinker 1s linear infinite;
+}
+
+    .plk-flex .plk-dd-dragged-over > div {
+        background-color: lightgray;
+        opacity: 0.9;
+        animation: blinker 1s linear infinite;
+    }
+
+.plk-flex .plk-dd-in-transit {
+    background-color: orangered;
+}
+
+    .plk-flex .plk-dd-in-transit > div {
+        background-color: orangered;
+    }
+
+.blink_me {
+    animation: blinker 1s linear infinite;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 4px;
+}
+
+tr:nth-child(even) {
+    background-color: #00CC66;
+}
+
+div.timer {
+    text-align: right;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
 }

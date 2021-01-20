@@ -75,6 +75,34 @@ using Hipparu.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "O:\Hipparu\Hipparu\Pages\Index.razor"
+using Hipparu.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "O:\Hipparu\Hipparu\Pages\Index.razor"
+using Plk.Blazor.DragDrop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "O:\Hipparu\Hipparu\Pages\Index.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "O:\Hipparu\Hipparu\Pages\Index.razor"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -83,6 +111,18 @@ using Hipparu.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 687 "O:\Hipparu\Hipparu\Pages\Index.razor"
+  public void OnGameModeSelect(ChangeEventArgs e)
+    {
+        activeGameMode = (GameModes)Enum.Parse(typeof(GameModes), e.Value.ToString());
+    }
+
+    GameModes activeGameMode = GameModes.Hiragana; 
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

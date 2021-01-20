@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BsJK9JM/tZ55iGr0/YPGZlG5qYA3YYDf7YFuoBR+JbEBu7mIAtWl+AB3+IhlRbhtOo4kKaMoYHJgYiQp5YXBqg==",
+  "dgSpecHash": "VF8gZPYmdmTmORYE9Y9a20z7DemiwhdAfGhF8H6kr80OGJcOOjGdA9bAdDK7C6ubQvyov9vPJuPMA1LxMII7ZA==",
   "success": true,
   "projectFilePath": "O:\\Hipparu\\Hipparu\\Hipparu.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Cormac\\.nuget\\packages\\blazor-dragdrop\\2.2.1\\blazor-dragdrop.2.2.1.nupkg.sha512",
+    "C:\\Users\\Cormac\\.nuget\\packages\\blazor-dragdrop\\2.2.0\\blazor-dragdrop.2.2.0.nupkg.sha512",
     "C:\\Users\\Cormac\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.7\\microsoft.aspnetcore.authorization.3.1.7.nupkg.sha512",
     "C:\\Users\\Cormac\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.7\\microsoft.aspnetcore.components.3.1.7.nupkg.sha512",
     "C:\\Users\\Cormac\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.7\\microsoft.aspnetcore.components.analyzers.3.1.7.nupkg.sha512",
