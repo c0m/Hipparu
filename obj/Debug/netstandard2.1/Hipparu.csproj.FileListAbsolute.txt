@@ -3,8 +3,6 @@ O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.AssemblyInfoInputs.cache
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.AssemblyInfo.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.RazorComponent.input.cache
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\App.razor.g.cs
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Counter.razor.g.cs
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Pages\FetchData.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Index.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Shared\NavMenu.razor.g.cs
@@ -19,8 +17,6 @@ O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.TagHelpers.output.cache
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.RazorCoreGenerate.cache
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\App.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\Components\DragNDrop.razor.g.cs
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\Pages\Counter.razor.g.cs
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\Pages\FetchData.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\Pages\Index.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\Shared\MainLayout.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\Shared\NavMenu.razor.g.cs
@@ -31,7 +27,6 @@ O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\Hipparu.StaticWebAssets.xml
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\Hipparu.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\Hipparu.pdb
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Hipparu.dll
-O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Net.Http.Json.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Buffers.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\mscorlib.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Threading.Tasks.Extensions.dll
@@ -62,7 +57,6 @@ O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Data.
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Numerics.Vectors.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Text.Encodings.Web.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Newtonsoft.Json.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.Components.Web.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.Components.Forms.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.ComponentModel.Annotations.dll
@@ -91,7 +85,6 @@ O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\wasm\dotnet.wasm
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\blazor.webassembly.js
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\blazor.boot.json
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Hipparu.dll.gz
-O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Net.Http.Json.dll.gz
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Buffers.dll.gz
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\mscorlib.dll.gz
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Threading.Tasks.Extensions.dll.gz
@@ -122,7 +115,6 @@ O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Data.
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Numerics.Vectors.dll.gz
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Text.Encodings.Web.dll.gz
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll.gz
-O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Newtonsoft.Json.dll.gz
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.Components.Web.dll.gz
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Microsoft.AspNetCore.Components.Forms.dll.gz
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.ComponentModel.Annotations.dll.gz
@@ -186,15 +178,11 @@ O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\System.Text.Encodings.Web.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\System.Text.Json.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\System.Threading.Tasks.Extensions.dll
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\blazor\unlinked.output
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\GG2ou1wuHcEgikfL-ePWYC-Ihh6rPuF8GfX7I9Ac3LE=.hash
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\99dseBOagY3mzu5Y8Eqm8gRI_o8QbbCp7R2Ew9bQ_5E=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\ZxXy75PYbzJxNfAc-SAP1nUYm4gt1jSaOpFnBb9m85M=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\BaZPMj95_YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\TkH6yxFQlTfY8NfznePrCdYJiEVpM9Dqy4Uu4H9qk10=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\-cPXlNTX8GKF-lIn-2DIjtxTe0Wpy4ZDcyAj67b6JYk=.hash
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\HQeN_ZfHAERO_uW0fP0J9J3WV1hQ3vUIOWbqGSYBPp8=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\kL-omZDwqByAi_lPdMeDmr3XjHcn4RVb_LmZ4mut1Yc=.hash
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\OBWh2or_2mU6elwqPfmL72FBZVKl2WzTJ4L-IrKeXM4=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\-zcPVM75OAY_joGVM8yIC1gO1SFYWP1CFERgQ8PJkfA=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\IPbQMdJxZXdk8HTlaPyXdQ6Zb82iZLphnM74yO4EURQ=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\Zw2-5aDWjgMedporhjigwhi-UCLcfl0tfa0LXUyD9HE=.hash
@@ -216,9 +204,7 @@ O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\vcCLMX4xAsUqKuQjjIkzu1O9pH
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\eejp4oI3sQBq-tI6GsJNaPu3Dkdot5Vbn8_R3w2vYLE=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\dxfTuT6ffPMmvuUUTfv7_bpLtOZZZHQdz77hjhy9qHw=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\qAKfFnquY_7UC-MzLi04rjqEhLzTryCoLg-S6MxI19I=.hash
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\Tqh1Da_iTRQJEZUGAsMNFuZ4hf1PMf13WApRZod_uw4=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\tjbh51aVu1kTNULze_ql74GraZd0WcTaq28VNttAPKA=.hash
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\mRd6TL4DYldo1ko9czkjEDcoiPdMPrJxz3dekwV6OOY=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\q2j1aHF1BWLrBraTuWmiWrT17oZrEqO_0_qx79A0NtU=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\LyBD1c8n8d5NFd3AYh2yBtPRaeAHijo-LgN9hj6yGFQ=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\tmnkCmP9OzLUkpQ3LP7PRosi7gt5pyfEZCM6aqAokFI=.hash
@@ -240,15 +226,12 @@ O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\_kkwUt5LUrFrnFcHiSvLP3Ps50
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\CNukDMTMsZ77nI593UgjfZkJqNhgDLvnpUjL2QzFL2M=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\XFbAHBcZNYlz6PL_SGdEip24fiaqva_7Umq8VeSsots=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\czNf3btAeBW-vvID5LAfgcsNZ_GM3ssVuPaMflcg0rs=.hash
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\QlCejAZsfvHxM-xOE4ArCoWY6EpJlaFqgcUGEonVARI=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\mPoqx7XczFHBWk3gRNn0hc9ekG1OvkKY4XiKRY5Mj5U=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\3S0qzYaBEKOBXarzVLNzNAFXlwJr6nI3lFlYUpQTPH8=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\UC-3Rm1NkdNdlIrzYARo_dO-HDlS5mhPxo0IQv7kma8=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\SPHS1EAPAcMFN4TEIUYl3FWtoCQTsNJch0XVGgok1eE=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\blazor\blazor.boot.json
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\SvBC7TmnDUBIu7Qq5E4v1Bb3EUomYCXDP9S_hidfBU8=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Hipparu.dll.gz
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Net.Http.Json.dll.gz
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Buffers.dll.gz
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\mscorlib.dll.gz
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Threading.Tasks.Extensions.dll.gz
@@ -279,7 +262,6 @@ O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Da
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Numerics.Vectors.dll.gz
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Text.Encodings.Web.dll.gz
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll.gz
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Newtonsoft.Json.dll.gz
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.Components.Web.dll.gz
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.Components.Forms.dll.gz
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.ComponentModel.Annotations.dll.gz
@@ -308,7 +290,6 @@ O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\wasm\dotnet.wa
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\blazor.webassembly.js.gz
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\blazor.boot.json.gz
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Hipparu.dll.br
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Net.Http.Json.dll.br
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Buffers.dll.br
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\mscorlib.dll.br
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Threading.Tasks.Extensions.dll.br
@@ -339,7 +320,6 @@ O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Da
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Numerics.Vectors.dll.br
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Text.Encodings.Web.dll.br
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll.br
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Newtonsoft.Json.dll.br
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.Components.Web.dll.br
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Microsoft.AspNetCore.Components.Forms.dll.br
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.ComponentModel.Annotations.dll.br
@@ -374,3 +354,20 @@ O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.RazorTargetAssemblyInfo.cach
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.csproj.CopyComplete
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.dll
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.pdb
+O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Blazored.LocalStorage.dll
+O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Blazored.LocalStorage.dll.gz
+O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\Blazored.LocalStorage.dll
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\7_FtaZd2xSysaMLC59XhYdtkNMZ15ha0lk73dxPdT5w=.hash
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Blazored.LocalStorage.dll.gz
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Blazored.LocalStorage.dll.br
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\M1pYQBRnwZmTq5CodeZxTzsPoWvxBmTSTyy3y0pe8P0=.hash
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\APJhF7Cne1YtXAEDjYtS_NC54Yt8Uy4W364YV6GfInE=.hash
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\QC2lFdhGg2mRa2tR3yhZ47dJn2L5nn4cRFtCHgTXc2c=.hash
+O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Newtonsoft.Json.dll
+O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\Newtonsoft.Json.dll.gz
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\mRd6TL4DYldo1ko9czkjEDcoiPdMPrJxz3dekwV6OOY=.hash
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Newtonsoft.Json.dll.gz
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Newtonsoft.Json.dll.br
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\4YflZ3QroEIQcoFezb4Qw01sTETOJLDqMCBXG8Mlimw=.hash
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\CimFQkrhHWiN3iEBlh_Ui0OxGEWVX1ptk1i9-ItYQMU=.hash
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\pITg-lY10hBZYmm5yUQIcLCU90309RJ8qHvCSTfI1SM=.hash

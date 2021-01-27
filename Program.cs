@@ -3,6 +3,8 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Plk.Blazor.DragDrop;
+using Blazored.LocalStorage;
 
 namespace Hipparu
 {
@@ -13,7 +15,10 @@ namespace Hipparu
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("app");
 
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services
+                .AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) })
+                .AddBlazorDragDrop()
+                .AddBlazoredLocalStorage();
 
             await builder.Build().RunAsync();
         }

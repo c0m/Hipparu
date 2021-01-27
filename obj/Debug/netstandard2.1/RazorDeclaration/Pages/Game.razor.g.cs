@@ -75,8 +75,36 @@ using Hipparu.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
-    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 2 "O:\Hipparu\Hipparu\Pages\Game.razor"
+using Hipparu.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "O:\Hipparu\Hipparu\Pages\Game.razor"
+using Plk.Blazor.DragDrop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "O:\Hipparu\Hipparu\Pages\Game.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "O:\Hipparu\Hipparu\Pages\Game.razor"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/game")]
+    public partial class Game : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -84,14 +112,14 @@ using Hipparu.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "O:\Hipparu\Hipparu\Pages\Counter.razor"
-       
-    private int currentCount = 0;
-
-    private void IncrementCount()
+#line 687 "O:\Hipparu\Hipparu\Pages\Game.razor"
+  public void OnGameModeSelect(ChangeEventArgs e)
     {
-        currentCount++;
+        activeGameMode = (GameModes)Enum.Parse(typeof(GameModes), e.Value.ToString());
     }
+
+    GameModes activeGameMode = GameModes.Hiragana; 
+    
 
 #line default
 #line hidden

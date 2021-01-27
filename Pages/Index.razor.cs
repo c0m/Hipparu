@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace Hipparu.Pages
 {
-
     public partial class Index
     {
         //variables
@@ -22,7 +21,7 @@ namespace Hipparu.Pages
         bool isTimerRunning = false;
 
         private AnswerItem LastDropped { get; set; }
-        IList<AnswerItem> AnswerList = BuildAnswerList();
+        IList<AnswerItem> AnswerList;
 
         private void ResetGame()
         {
