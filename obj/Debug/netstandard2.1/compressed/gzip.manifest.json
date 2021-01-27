@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\4YflZ3QroEIQcoFezb4Qw01sTETOJLDqMCBXG8Mlimw=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\ambPa7whprB2mky8E4A_fEaMzqT2qkUv7iC4fvNF6kA=.hash",
       "Source": "O:\\Hipparu\\Hipparu\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Hipparu.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Hipparu.dll.gz"
     },
@@ -176,9 +176,9 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\hnEO7MdiuDTjoxunP8gP477dGxkJWyAZgiyGF77Dh-8=.hash",
-      "Source": "O:\\Hipparu\\Hipparu\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Plk.Blazor.DragDrop.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Plk.Blazor.DragDrop.dll.gz"
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\mRd6TL4DYldo1ko9czkjEDcoiPdMPrJxz3dekwV6OOY=.hash",
+      "Source": "O:\\Hipparu\\Hipparu\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Newtonsoft.Json.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Newtonsoft.Json.dll.gz"
     },
     {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\q2j1aHF1BWLrBraTuWmiWrT17oZrEqO_0_qx79A0NtU=.hash",
@@ -211,9 +211,9 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.Logging.Abstractions.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\mRd6TL4DYldo1ko9czkjEDcoiPdMPrJxz3dekwV6OOY=.hash",
-      "Source": "O:\\Hipparu\\Hipparu\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Newtonsoft.Json.dll",
-      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Newtonsoft.Json.dll.gz"
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\hnEO7MdiuDTjoxunP8gP477dGxkJWyAZgiyGF77Dh-8=.hash",
+      "Source": "O:\\Hipparu\\Hipparu\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Plk.Blazor.DragDrop.dll",
+      "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Plk.Blazor.DragDrop.dll.gz"
     },
     {
       "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\FJ_rEgcx6ljTxwbRXZSUGfrDKpVvOxHCSfNxbnXNn3M=.hash",
@@ -271,7 +271,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\CimFQkrhHWiN3iEBlh_Ui0OxGEWVX1ptk1i9-ItYQMU=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\GqtMBouTVKBXapsErgJiun32-_7IgrHpA28YgbrP3nw=.hash",
       "Source": "O:\\Hipparu\\Hipparu\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\Hipparu.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Hipparu.pdb.gz"
     },
@@ -296,7 +296,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\pITg-lY10hBZYmm5yUQIcLCU90309RJ8qHvCSTfI1SM=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\QD-NIejJhym85-fn2Kc1Of6cBW7_tmqZeRM8lvQl0Z0=.hash",
       "Source": "O:\\Hipparu\\Hipparu\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.gz"
     }

@@ -112,7 +112,7 @@ using System.IO;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 690 "O:\Hipparu\Hipparu\Pages\Index.razor"
+#line 692 "O:\Hipparu\Hipparu\Pages\Index.razor"
   public void OnGameModeSelect(ChangeEventArgs e)
     {
         activeGameMode = (GameModes)Enum.Parse(typeof(GameModes), e.Value.ToString());

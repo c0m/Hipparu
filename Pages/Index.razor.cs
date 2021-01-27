@@ -10,27 +10,28 @@ namespace Hipparu.Pages
 {
     public partial class Index
     {
-        //variables
         public enum GameModes
         {
             Hiragana,
             Katakana
         }
 
+        List<AnswerItem> AnswerListB = new List<AnswerItem>();
         TimeSpan exerciseTimer = new TimeSpan();
         bool isTimerRunning = false;
 
         private AnswerItem LastDropped { get; set; }
-        IList<AnswerItem> AnswerList;
+        public IList<AnswerItem> AnswerList;
 
         private void ResetGame()
         {
             AnswerList.Clear();
             AnswerList = BuildAnswerList();
-            foreach (List<AnswerItem> sublist in ListOfAnswerLists)
+            foreach (IList<AnswerItem> sublist in ListOfAnswerLists)
             {
                 sublist.Clear();
             }
+            AnswerListB = AnswerList as List<AnswerItem>;
             exerciseTimer = new TimeSpan();
         }
 

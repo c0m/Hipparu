@@ -675,13 +675,15 @@
     <!--problem land-->
     <h2>Unsorted:</h2>
     <div class="grid-container">
-        <Dropzone Class="grid-container" Items="AnswerList" ItemWrapperClass="flex-item">
-            @if (activeGameMode == GameModes.Hiragana)
-            {
-                @context.HiraganaScript }
-            else if (activeGameMode == GameModes.Katakana)
-            {
-                @context.KatakanaScript}
+        <Dropzone Items="AnswerListB" ItemWrapperClass="flex-item">
+            <div class="mt-2" style="border: 2px solid black">
+                @if (activeGameMode == GameModes.Hiragana)
+                {
+                    @context.HiraganaScript }
+                else if (activeGameMode == GameModes.Katakana)
+                {
+                    @context.KatakanaScript}
+            </div>
         </Dropzone>
     </div>
 </div>
