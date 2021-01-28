@@ -3,6 +3,7 @@
 @using Plk.Blazor.DragDrop;
 @using Newtonsoft.Json;
 @using System.IO;
+@inject HttpClient Http 
 @namespace Hipparu.Pages
 
 
@@ -689,9 +690,17 @@
 </div>
 
 @code
-{ public void OnGameModeSelect(ChangeEventArgs e)
+{
+
+    public void OnGameModeSelect(ChangeEventArgs e)
     {
         activeGameMode = (GameModes)Enum.Parse(typeof(GameModes), e.Value.ToString());
     }
 
-    GameModes activeGameMode = GameModes.Hiragana; }
+    GameModes activeGameMode = GameModes.Hiragana;
+
+    protected override async Task OnInitializedAsync()
+    {
+        masterAnswers = await Http.GetFromJsonAsync<Answers>("sample-data/CharacterList.json");
+        TimerTask();
+    }}

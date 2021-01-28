@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net.Http;
+using Microsoft.AspNetCore.Components.WebAssembly;
 
 namespace Hipparu.Pages
 {
@@ -19,20 +21,15 @@ namespace Hipparu.Pages
         List<AnswerItem> AnswerListB = new List<AnswerItem>();
         TimeSpan exerciseTimer = new TimeSpan();
         bool isTimerRunning = false;
+        Answers masterAnswers;
 
         private AnswerItem LastDropped { get; set; }
         public IList<AnswerItem> AnswerList;
 
         private void ResetGame()
         {
-            AnswerList.Clear();
-            AnswerList = BuildAnswerList();
-            foreach (IList<AnswerItem> sublist in ListOfAnswerLists)
-            {
-                sublist.Clear();
-            }
-            AnswerListB = AnswerList as List<AnswerItem>;
-            exerciseTimer = new TimeSpan();
+            AnswerList = masterAnswers.Data;
+            AnswerListB = (List<AnswerItem>)masterAnswers.Data;
         }
 
         private void SuccessfulDrop()
@@ -69,12 +66,7 @@ namespace Hipparu.Pages
             return shuffled;
         }
 
-        private static IList<AnswerItem> BuildAnswerList()
-        {
-            string json = File.ReadAllText("./Data/CharacterList.json");
-            Answers answers = JsonConvert.DeserializeObject<Answers>(json);
-            return Shuffle<AnswerItem>(answers.Data);
-        }
+
 
         async Task TimerTask()
         {
@@ -86,10 +78,9 @@ namespace Hipparu.Pages
                 StateHasChanged();
             }
         }
-        protected override async Task OnInitializedAsync()
-        {
-            TimerTask();
-        }
+
+
+
 
         // This is horrifying but we're gonna do it anyway because Dropzone wants lists
         #region Dropzone Lists

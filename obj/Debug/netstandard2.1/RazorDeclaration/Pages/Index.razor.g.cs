@@ -112,17 +112,26 @@ using System.IO;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 692 "O:\Hipparu\Hipparu\Pages\Index.razor"
-  public void OnGameModeSelect(ChangeEventArgs e)
+#line 693 "O:\Hipparu\Hipparu\Pages\Index.razor"
+ 
+
+    public void OnGameModeSelect(ChangeEventArgs e)
     {
         activeGameMode = (GameModes)Enum.Parse(typeof(GameModes), e.Value.ToString());
     }
 
-    GameModes activeGameMode = GameModes.Hiragana; 
+    GameModes activeGameMode = GameModes.Hiragana;
+
+    protected override async Task OnInitializedAsync()
+    {
+        masterAnswers = await Http.GetFromJsonAsync<Answers>("sample-data/CharacterList.json");
+        TimerTask();
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591
