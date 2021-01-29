@@ -1,18 +1,17 @@
 ﻿using Hipparu.Data;
 using Newtonsoft.Json;
-using System.IO;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Timers;
 using System.Threading.Tasks;
+using System.Net.Http;
+using Microsoft.AspNetCore.Components.WebAssembly;
 
 namespace Hipparu.Pages
 {
-
     public partial class Index
     {
-        //variables
         public enum GameModes
         {
             Hiragana,
@@ -21,29 +20,37 @@ namespace Hipparu.Pages
 
         TimeSpan exerciseTimer = new TimeSpan();
         bool isTimerRunning = false;
+        Answers masterAnswers;
+        public List<AnswerItem> AnswerList = new List<AnswerItem>()
+        {
+        };
 
         private AnswerItem LastDropped { get; set; }
-        IList<AnswerItem> AnswerList = BuildAnswerList();
 
         private void ResetGame()
         {
-            AnswerList.Clear();
-            AnswerList = BuildAnswerList();
             foreach (List<AnswerItem> sublist in ListOfAnswerLists)
             {
                 sublist.Clear();
             }
-            exerciseTimer = new TimeSpan();
+            AnswerList = BuildAnswerList();
         }
+
+        private List<AnswerItem> BuildAnswerList()
+        {
+            return (List<AnswerItem>)Shuffle(masterAnswers.Data);
+        }
+
 
         private void SuccessfulDrop()
         {
             LastDropped = null;
-            if(AnswerList.Count == 0)
+            if (AnswerList.Count == 0)
             {
                 WinGame();
             }
         }
+
 
         private void WinGame()
         {
@@ -70,12 +77,7 @@ namespace Hipparu.Pages
             return shuffled;
         }
 
-        private static IList<AnswerItem> BuildAnswerList()
-        {
-            string json = File.ReadAllText("./Data/CharacterList.json");
-            Answers answers = JsonConvert.DeserializeObject<Answers>(json);
-            return Shuffle<AnswerItem>(answers.Data);
-        }
+
 
         async Task TimerTask()
         {
@@ -87,10 +89,9 @@ namespace Hipparu.Pages
                 StateHasChanged();
             }
         }
-        protected override async Task OnInitializedAsync()
-        {
-            TimerTask();
-        }
+
+
+
 
         // This is horrifying but we're gonna do it anyway because Dropzone wants lists
         #region Dropzone Lists

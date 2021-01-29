@@ -3,11 +3,13 @@
 @using Plk.Blazor.DragDrop;
 @using Newtonsoft.Json;
 @using System.IO;
+@inject HttpClient Http 
+@namespace Hipparu.Pages
+
 
 @if (LastDropped != null)
 {
-    <div class="bg-warning">That's not where  @LastDropped?.HiraganaScript goes.</div>
-}
+    <div class="bg-warning">That's not where  @LastDropped?.HiraganaScript goes.</div>}
 
 
 <div>
@@ -53,12 +55,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -68,12 +68,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -83,12 +81,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -98,12 +94,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -113,12 +107,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -128,12 +120,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -143,12 +133,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -158,12 +146,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -173,12 +159,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -188,12 +172,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -208,12 +190,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -226,12 +206,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -241,12 +219,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -256,12 +232,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -271,12 +245,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -286,12 +258,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -301,12 +271,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -316,12 +284,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -334,12 +300,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -349,12 +313,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -364,12 +326,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -379,12 +339,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -394,12 +352,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -409,12 +365,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -424,12 +378,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -439,12 +391,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -454,12 +404,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -469,12 +417,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -490,12 +436,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -508,12 +452,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -523,12 +465,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -538,12 +478,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -553,12 +491,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -568,12 +504,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -583,12 +517,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -598,12 +530,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -616,12 +546,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -631,12 +559,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -646,12 +572,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -661,12 +585,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -676,12 +598,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -691,12 +611,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -706,12 +624,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -721,12 +637,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -736,12 +650,10 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
@@ -751,35 +663,35 @@
                     <div class="mt-2" style="border: 2px solid black">
                         @if (activeGameMode == GameModes.Hiragana)
                         {
-                            @context.HiraganaScript
-                        }
+                            @context.HiraganaScript }
                         else if (activeGameMode == GameModes.Katakana)
                         {
-                            @context.KatakanaScript
-                        }
+                            @context.KatakanaScript}
                     </div>
                 </Dropzone>
             </td>
         </tr>
     </table>
-
+    
+    <!--problem land-->
     <h2>Unsorted:</h2>
     <div class="grid-container">
-        <Dropzone Class="grid-container" Items="AnswerList" ItemWrapperClass="flex-item">
-            @if (activeGameMode == GameModes.Hiragana)
-             {
-                @context.HiraganaScript 
-             }
-             else if (activeGameMode == GameModes.Katakana)
-             {
-                    @context.KatakanaScript
-             }
+        <Dropzone Items="AnswerList" ItemWrapperClass="flex-item">
+            <div class="mt-2" style="border: 2px solid black">
+                @if (activeGameMode == GameModes.Hiragana)
+                {
+                    @context.HiraganaScript }
+                else if (activeGameMode == GameModes.Katakana)
+                {
+                    @context.KatakanaScript}
+            </div>
         </Dropzone>
     </div>
 </div>
 
 @code
 {
+
     public void OnGameModeSelect(ChangeEventArgs e)
     {
         activeGameMode = (GameModes)Enum.Parse(typeof(GameModes), e.Value.ToString());
@@ -787,4 +699,9 @@
 
     GameModes activeGameMode = GameModes.Hiragana;
 
-}
+    protected override async Task OnInitializedAsync()
+    {
+        masterAnswers = await Http.GetFromJsonAsync<Answers>("sample-data/CharacterList.json");
+        TimerTask();
+        ResetGame();
+    }}

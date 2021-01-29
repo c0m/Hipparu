@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Hipparu.Data
 {
@@ -18,7 +16,7 @@ namespace Hipparu.Data
         {
             for (int i = 0; i < personalBests.Length; i++)
             {
-                if(newScore < personalBests[i] || personalBests[i] == TimeSpan.Zero)
+                if (newScore < personalBests[i] || personalBests[i] == TimeSpan.Zero)
                 {
                     personalBests[i] = newScore;
                     return;
