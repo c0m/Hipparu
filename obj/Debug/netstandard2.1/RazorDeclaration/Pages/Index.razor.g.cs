@@ -126,6 +126,7 @@ using System.IO;
     {
         masterAnswers = await Http.GetFromJsonAsync<Answers>("sample-data/CharacterList.json");
         TimerTask();
+        ResetGame();
     }
 
 #line default

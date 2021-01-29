@@ -18,19 +18,29 @@ namespace Hipparu.Pages
             Katakana
         }
 
-        List<AnswerItem> AnswerListB = new List<AnswerItem>();
         TimeSpan exerciseTimer = new TimeSpan();
         bool isTimerRunning = false;
         Answers masterAnswers;
+        public List<AnswerItem> AnswerList = new List<AnswerItem>()
+        {
+        };
 
         private AnswerItem LastDropped { get; set; }
-        public IList<AnswerItem> AnswerList;
 
         private void ResetGame()
         {
-            AnswerList = masterAnswers.Data;
-            AnswerListB = (List<AnswerItem>)masterAnswers.Data;
+            foreach (List<AnswerItem> sublist in ListOfAnswerLists)
+            {
+                sublist.Clear();
+            }
+            AnswerList = BuildAnswerList();
         }
+
+        private List<AnswerItem> BuildAnswerList()
+        {
+            return (List<AnswerItem>)Shuffle(masterAnswers.Data);
+        }
+
 
         private void SuccessfulDrop()
         {
@@ -40,6 +50,7 @@ namespace Hipparu.Pages
                 WinGame();
             }
         }
+
 
         private void WinGame()
         {

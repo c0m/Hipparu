@@ -83,7 +83,7 @@ using Hipparu.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "O:\Hipparu\Hipparu\Shared\NavMenu.razor"
+#line 18 "O:\Hipparu\Hipparu\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

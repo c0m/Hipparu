@@ -6,7 +6,6 @@ O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\App.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Index.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Shared\NavMenu.razor.g.cs
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\RazorDeclaration\_Imports.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.RazorComponent.output.cache
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Hipparu.csproj.CoreCompileInputs.cache
@@ -20,9 +19,7 @@ O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\Components\DragNDrop.razor.g.c
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\Pages\Index.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\Shared\MainLayout.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\Shared\NavMenu.razor.g.cs
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\Shared\SurveyPrompt.razor.g.cs
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\Razor\_Imports.razor.g.cs
-O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\Data\CharacterList.json
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\Hipparu.StaticWebAssets.xml
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\Hipparu.dll
 O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\Hipparu.pdb
@@ -376,6 +373,6 @@ O:\Hipparu\Hipparu\bin\Debug\netstandard2.1\wwwroot\_framework\_bin\System.Net.H
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\brS4kX7v7bK5QHvD3m28MWueZWLhM2-Redb9wvgCLAI=.hash
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Net.Http.Json.dll.gz
 O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Net.Http.Json.dll.br
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\TBOWNASMc76pRtQZ8Gano4gyILTQVr5cZAXIJiy4MuA=.hash
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\VcnpPYq1ffd4lgMvK372Zg6aumTg1uM7UW0QILNIPZM=.hash
-O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\SPIoUZ-el5eLVNtrqQSDLMlIqsLk7o52XYpNYN1Kdv8=.hash
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\3HEmSGPIJE7pVwS484mrwieoexlj6YtJnISZsycPNFE=.hash
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\idr-jo4BRg8fwC-tt6WLa6oYSqXN-MCT_PQGSY3xJ74=.hash
+O:\Hipparu\Hipparu\obj\Debug\netstandard2.1\integrity\JhZO6xfJA5ryV7629ch1XTVckSOnEfiholS7VB_XGTM=.hash

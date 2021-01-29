@@ -676,7 +676,7 @@
     <!--problem land-->
     <h2>Unsorted:</h2>
     <div class="grid-container">
-        <Dropzone Items="AnswerListB" ItemWrapperClass="flex-item">
+        <Dropzone Items="AnswerList" ItemWrapperClass="flex-item">
             <div class="mt-2" style="border: 2px solid black">
                 @if (activeGameMode == GameModes.Hiragana)
                 {
@@ -703,4 +703,5 @@
     {
         masterAnswers = await Http.GetFromJsonAsync<Answers>("sample-data/CharacterList.json");
         TimerTask();
+        ResetGame();
     }}
