@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zeEskip/VFITSRFfrAo8Vfh73S0EU1FLOC8ZqcJy+fenSdagISV3/HaT5sByDvK/MRmP7f/L0YvH5LO1tE/ICA==",
+  "dgSpecHash": "/DQpalYPT/9sYrKYJKQrroQ9TSPmVRHHeP5Hzqr0jEozcemIQfj/8Ga6Y76LMEmVjqh5tVibsBVT3dQLMlOBvQ==",
   "success": true,
-  "projectFilePath": "O:\\Hipparu\\Hipparu\\Hipparu.csproj",
+  "projectFilePath": "C:\\Users\\Cormac\\source\\repos\\c0m\\Hipparu\\Hipparu.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cormac\\.nuget\\packages\\blazor-dragdrop\\2.2.0\\blazor-dragdrop.2.2.0.nupkg.sha512",
     "C:\\Users\\Cormac\\.nuget\\packages\\blazored.localstorage\\3.0.0\\blazored.localstorage.3.0.0.nupkg.sha512",
