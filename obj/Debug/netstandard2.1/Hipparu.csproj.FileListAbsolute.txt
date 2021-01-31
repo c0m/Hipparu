@@ -754,6 +754,6 @@ C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\Hipparu.RazorT
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\Hipparu.csproj.CopyComplete
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\Hipparu.dll
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\Hipparu.pdb
-C:\Users\Cormac\source\repos\c0m\Hipparu\bin\Debug\netstandard2.1\github-pages\web.config
-C:\Users\Cormac\source\repos\c0m\Hipparu\bin\Debug\netstandard2.1\github-pages\wwwroot\sample-data\CharacterList.json
-C:\Users\Cormac\source\repos\c0m\Hipparu\bin\Debug\netstandard2.1\github-pages\wwwroot\_framework\blazor.boot.json
+C:\Users\Cormac\source\repos\c0m\Hipparu\bin\Debug\netstandard2.1\docs\web.config
+C:\Users\Cormac\source\repos\c0m\Hipparu\bin\Debug\netstandard2.1\docs\sample-data\CharacterList.json
+C:\Users\Cormac\source\repos\c0m\Hipparu\bin\Debug\netstandard2.1\docs\_framework\blazor.boot.json
