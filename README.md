@@ -16,6 +16,6 @@ Sure, make a pull request or open an issue with what you'd like to see.
 
 # Where is it hosted?
 
-Using Github Pages, it's will be available at https://hipparu.com
+Using Github Pages, it will be available at https://hipparu.com
 
 がんばってください！

@@ -1729,11 +1729,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cormac\\source\\repos\\c0m\\Hipparu\\Hipparu.csproj",
+      "projectUniqueName": "C:\\Users\\Cormac\\Source\\Repos\\c0m\\Hipparu\\Hipparu.csproj",
       "projectName": "Hipparu",
-      "projectPath": "C:\\Users\\Cormac\\source\\repos\\c0m\\Hipparu\\Hipparu.csproj",
+      "projectPath": "C:\\Users\\Cormac\\Source\\Repos\\c0m\\Hipparu\\Hipparu.csproj",
       "packagesPath": "C:\\Users\\Cormac\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cormac\\source\\repos\\c0m\\Hipparu\\obj\\",
+      "outputPath": "C:\\Users\\Cormac\\Source\\Repos\\c0m\\Hipparu\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Cormac\\AppData\\Roaming\\NuGet\\NuGet.Config",
