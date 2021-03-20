@@ -566,7 +566,6 @@ C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\Razor\Shared\M
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\Razor\Shared\NavMenu.razor.g.cs
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\Razor\_Imports.razor.g.cs
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\blazor\unlinked.output
-C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\anbcntZ0b1F_FtlYoZAIPH8Z3_S5Yk2jEg4-0bGXNLE=.hash
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\brS4kX7v7bK5QHvD3m28MWueZWLhM2-Redb9wvgCLAI=.hash
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\ZxXy75PYbzJxNfAc-SAP1nUYm4gt1jSaOpFnBb9m85M=.hash
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\BaZPMj95_YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=.hash
@@ -620,13 +619,11 @@ C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\r8Lu
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\DrtNiKIMjfSOdamH5Bs5zHmjFADgNiwrY5tRgTm6XuI=.hash
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\_kkwUt5LUrFrnFcHiSvLP3Ps50UAimB6C5utgehqOo4=.hash
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\czNf3btAeBW-vvID5LAfgcsNZ_GM3ssVuPaMflcg0rs=.hash
-C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\2yqXA95CjH6VVr2tC0ryqN7EjTHlH5mkXr0FoBsnnuI=.hash
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\mPoqx7XczFHBWk3gRNn0hc9ekG1OvkKY4XiKRY5Mj5U=.hash
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\3S0qzYaBEKOBXarzVLNzNAFXlwJr6nI3lFlYUpQTPH8=.hash
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\UC-3Rm1NkdNdlIrzYARo_dO-HDlS5mhPxo0IQv7kma8=.hash
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\SPHS1EAPAcMFN4TEIUYl3FWtoCQTsNJch0XVGgok1eE=.hash
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\blazor\blazor.boot.json
-C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\KZlTEeMreNQoOagwoQZWDSJtgr-JhlShjj-AGU1YdYE=.hash
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\Hipparu.dll.gz
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Net.Http.Json.dll.gz
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\compressed\_framework\_bin\System.Buffers.dll.gz
@@ -754,6 +751,6 @@ C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\Hipparu.RazorT
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\Hipparu.csproj.CopyComplete
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\Hipparu.dll
 C:\Users\Cormac\source\repos\c0m\Hipparu\obj\Debug\netstandard2.1\Hipparu.pdb
-C:\Users\Cormac\source\repos\c0m\Hipparu\bin\Debug\netstandard2.1\docs\web.config
-C:\Users\Cormac\source\repos\c0m\Hipparu\bin\Debug\netstandard2.1\docs\sample-data\CharacterList.json
-C:\Users\Cormac\source\repos\c0m\Hipparu\bin\Debug\netstandard2.1\docs\_framework\blazor.boot.json
+C:\Users\Cormac\Source\Repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\lvoaBGWqs6OEhJxjBI6-yLtDOLT3J8YI_S5FWY8M9pQ=.hash
+C:\Users\Cormac\Source\Repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\GI1P3boZL0Xr1VBkMgh5eKKmqv80E0_WOEJaI0V4iQ0=.hash
+C:\Users\Cormac\Source\Repos\c0m\Hipparu\obj\Debug\netstandard2.1\integrity\fKmpq2a4sWnny-4FnJ5VtGsC4Da6uLMwUP5cpQ4FYlE=.hash
