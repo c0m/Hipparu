@@ -1,8 +1,9 @@
 ﻿@page "/"
 
-<div class="main-menu">
-    <button class="btn btn-primary" @onclick="()=>IncrementCount(0)">Hiragana</button>
-    <button class="btn btn-primary" @onclick="()=>IncrementCount(1)">Katakana</button>
-    <button class="btn btn-primary" @onclick="()=>IncrementCount(2)">Mixed</button>
-    <p>Current count: @gameMode</p>
+<div class="@menuVisibility">
+    <button class="btn btn-primary" @onclick="()=>SelectMode(1)">Hiragana</button>
+    <button class="btn btn-primary" @onclick="()=>SelectMode(2)">Katakana</button>
+    <button class="btn btn-primary" @onclick="()=>SelectMode(3)">Mixed</button>
 </div>
+
+<div class="@gameVisibility"><button class="btn btn-primary" @onclick="SwapBetweenGameAndMenu">Back to menu</button></div>

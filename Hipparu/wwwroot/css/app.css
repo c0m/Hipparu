@@ -181,3 +181,19 @@ app {
         display: block;
     }
 }
+/*It's probably going to be useful to seperate these*/
+.menu-visible {
+    visibility: visible;
+}
+
+.menu-invisible {
+    visibility: hidden;
+}
+
+.game-visible {
+    visibility: visible;
+}
+
+.game-invisible {
+    visibility: hidden;
+}
