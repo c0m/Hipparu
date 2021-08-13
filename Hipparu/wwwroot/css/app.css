@@ -183,17 +183,17 @@ app {
 }
 /*It's probably going to be useful to seperate these*/
 .menu-visible {
-    visibility: visible;
+    display: flex;
 }
 
 .menu-invisible {
-    visibility: hidden;
+    display: none;
 }
 
 .game-visible {
-    visibility: visible;
+    display: flex;
 }
 
 .game-invisible {
-    visibility: hidden;
+    display: none
 }
