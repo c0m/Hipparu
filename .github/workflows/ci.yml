@@ -24,13 +24,13 @@ jobs:
 
         # Publish the website
         - name: GitHub Pages action
-          if: ${{ github.ref == 'refs/heads/master' }} # Publish only when the push is on master
+          if: github.ref == 'refs/heads/master' # Publish only when the push is on master
           uses: peaceiris/actions-gh-pages@v3.6.1
           with:
             github_token: ${{ secrets.PUBLISH_TOKEN }}
             publish_branch: gh-pages
             publish_dir: bin/Release/netstandard2.1/publish/wwwroot
-            allow_empty_commit: false
+            allow_empty_commit: true
             keep_files: false
             force_orphan: true
             # TODO uncomment the following line once domain is configured
