@@ -1,10 +1,15 @@
-﻿namespace Hipparu.Pages
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Hipparu.Pages
 {
     public partial class Index
     {
-        private int gameMode = 0;
+        public int gameMode = 0;
 
-        void IncrementCount(int mode)
+        public void IncrementCount(int mode)
         {
             if (mode == 0)
             {
