@@ -33,5 +33,4 @@ jobs:
             allow_empty_commit: false
             keep_files: false
             force_orphan: true
-            # TODO uncomment the following line once domain is configured
-            # cname: www.hipparu.com
+            cname: www.hipparu.com
