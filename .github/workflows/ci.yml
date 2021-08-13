@@ -30,7 +30,7 @@ jobs:
             github_token: ${{ secrets.PUBLISH_TOKEN }}
             publish_branch: gh-pages
             publish_dir: Hipparu/bin/Release/netstandard2.1/publish/wwwroot
-            allow_empty_commit: true
+            allow_empty_commit: false
             keep_files: false
             force_orphan: true
             # TODO uncomment the following line once domain is configured
