@@ -1,6 +1,7 @@
 ﻿@page "/"
 @using Hipparu.Shared
 @using Plk.Blazor.DragDrop
+@inject HttpClient Http
 
 <div class="@menuVisibility">
     <button class="btn btn-primary" @onclick="()=>SelectMode(1)">Hiragana</button>
@@ -27,3 +28,12 @@
 
     <button class="btn btn-primary" @onclick="SwapBetweenGameAndMenu">Reset</button>
 </div>
+
+@code{
+    // Unfortunately the http client doesn't seem to want to work in the code behind file
+    // So we've got to do this weirdness
+    protected override async Task OnInitializedAsync()
+    {
+        masterAnswers = await Http.GetFromJsonAsync<Answers>("data/CharacterList.json");
+    }
+}

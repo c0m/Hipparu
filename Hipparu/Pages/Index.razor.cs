@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Hipparu.Shared;
+using Microsoft.AspNetCore.Components;
 using Plk.Blazor.DragDrop;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.IO;
+
 
 namespace Hipparu.Pages
 {
-    public partial class Index
+    public partial class Index : ComponentBase
     {
         // Game states:
         // 0 - Main Menu
@@ -25,11 +30,12 @@ namespace Hipparu.Pages
         private string menuVisibility = "menu-visible";
         private string gameVisibility = "game-invisible";
 
-        // List for Answer Items with placeholder
-        public List<AnswerItem> AnswerList = new List<AnswerItem>()
-        {
-                new AnswerItem(){Id = 1, RomajiScript = "n", HiraganaScript = "ん", KatakanaScript = "ン"},
-        };
+        // A list of answers to save us loading from json every time
+        // Gets assigned to in OnInitializedAsync()
+        private static Answers masterAnswers;
+
+        // List for Answer Items
+        public List<AnswerItem> AnswerList = new List<AnswerItem>(){};
 
         // LastDropped lets us tell the player when they're going wrong
         private AnswerItem LastDropped { get; set; }
@@ -63,8 +69,8 @@ namespace Hipparu.Pages
         private void PrepareGame()
         {
             SwapBetweenGameAndMenu();
+            AnswerList = BuildAnswerList();
             // Reset the game timer
-            // Populate answer table
         }
         /// <summary>
         /// Swap between menu being visible and game being hidden. This changes the strings of the class of the divs which the menu and games are located in. 
@@ -83,6 +89,37 @@ namespace Hipparu.Pages
                 menuVisibility = "menu-invisible";
                 gameVisibility = "game-visible";
             }
+        }
+        /// <summary>
+        /// Take a list of Answer Items (usually masterAnswers) and spit out a shuffled version of the list
+        /// </summary>
+        /// <typeparam name="AnswerItem"></typeparam>
+        /// <param name="list">Answers, usually masterAnswers</param>
+        /// <returns></returns>
+        public static IList<AnswerItem> Shuffle<AnswerItem>(IList<AnswerItem> list)
+        {
+            Random rng = new Random();
+            var source = list.ToList();
+            int n = source.Count;
+            var shuffled = new List<AnswerItem>(n);
+            shuffled.AddRange(source);
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                AnswerItem value = shuffled[k];
+                shuffled[k] = shuffled[n];
+                shuffled[n] = value;
+            }
+            return shuffled;
+        }
+        /// <summary>
+        /// Return a shuffled list of masterAnswers
+        /// </summary>
+        /// <returns></returns>
+        private static List<AnswerItem> BuildAnswerList()
+        {
+            return (List<AnswerItem>)Shuffle(masterAnswers.Data);
         }
     }
 }

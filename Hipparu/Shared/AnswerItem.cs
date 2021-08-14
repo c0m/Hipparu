@@ -7,7 +7,7 @@ namespace Hipparu.Shared
 {
     public class Answers
     {
-        public List<AnswerItem> Data { get; set; }
+        public IList<AnswerItem> Data { get; set; }
     }
     public class AnswerItem
     {
