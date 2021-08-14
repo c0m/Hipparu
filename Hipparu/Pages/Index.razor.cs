@@ -31,8 +31,8 @@ namespace Hipparu.Pages
         private TextState textState = TextState.HiraganaMode;
 
         // Styles for the game and menu divs to decide visibilty
-        private string menuVisibility = "menu-visible";
-        private string gameVisibility = "game-invisible";
+        private string menuVisibility = "visible";
+        private string gameVisibility = "invisible";
 
         // A list of answers to save us loading from json every time
         // Gets assigned to in OnInitializedAsync()
@@ -81,17 +81,17 @@ namespace Hipparu.Pages
         /// </summary>
         private void SwapBetweenGameAndMenu()
         {
-            if (menuVisibility == "menu-invisible")
+            if (menuVisibility == "invisible")
             {
                 gameState = GameState.MainMenu;
-                menuVisibility = "menu-visible";
-                gameVisibility = "game-invisible";
+                menuVisibility = "visible";
+                gameVisibility = "invisible";
             }
             else
             {
                 //gameState handled by SelectMode
-                menuVisibility = "menu-invisible";
-                gameVisibility = "game-visible";
+                menuVisibility = "invisible";
+                gameVisibility = "visible";
             }
         }
         /// <summary>

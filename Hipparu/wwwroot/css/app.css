@@ -182,25 +182,17 @@ app {
     }
 }
 /*It's probably going to be useful to seperate these*/
-.menu-visible {
+.visible {
     display: flex;
 }
 
-.menu-invisible {
-    display: none;
-}
-
-.game-visible {
-    display: flex;
-}
-
-.game-invisible {
+.invisible {
     display: none
 }
 
 .grid-container {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-columns: 100px;
+    grid-template-rows: 100px;
     background-color: #1861ac;
     padding: 15px;
 }
