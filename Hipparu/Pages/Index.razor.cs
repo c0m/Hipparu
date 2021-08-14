@@ -33,6 +33,7 @@ namespace Hipparu.Pages
         // Styles for the game and menu divs to decide visibilty
         private string menuVisibility = "visible";
         private string gameVisibility = "invisible";
+        private string mixedButtonVisibility = "invisible";
 
         // A list of answers to save us loading from json every time
         // Gets assigned to in OnInitializedAsync()
@@ -64,6 +65,7 @@ namespace Hipparu.Pages
 
                 case 3:
                     textState = TextState.HiraganaMode;
+                    mixedButtonVisibility = "visible";
                     break;
             }
         }
@@ -72,6 +74,7 @@ namespace Hipparu.Pages
         /// </summary>
         private void PrepareGame()
         {
+            mixedButtonVisibility = "invisible";
             SwapBetweenGameAndMenu();
             AnswerList = BuildAnswerList();
             // Reset the game timer
@@ -124,6 +127,18 @@ namespace Hipparu.Pages
         private static List<AnswerItem> BuildAnswerList()
         {
             return (List<AnswerItem>)Shuffle(masterAnswers.Data);
+        }
+        /// <summary>
+        /// Swap textState to Katakana if it's Hiragana, otherwise swap it to Hiragana.
+        /// </summary>
+        private void SwapKana()
+        {
+            if (textState == TextState.HiraganaMode)
+            {
+                textState = TextState.KatakanaMode;
+                return;
+            }
+            textState = TextState.HiraganaMode;
         }
     }
 }
