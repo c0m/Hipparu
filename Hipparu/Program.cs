@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Plk.Blazor.DragDrop;
 
 namespace Hipparu
 {
@@ -18,6 +19,7 @@ namespace Hipparu
             builder.RootComponents.Add<App>("app");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddBlazorDragDrop();
 
             await builder.Build().RunAsync();
         }

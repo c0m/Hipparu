@@ -1,4 +1,6 @@
 ﻿@page "/"
+@using Hipparu.Shared
+@using Plk.Blazor.DragDrop
 
 <div class="@menuVisibility">
     <button class="btn btn-primary" @onclick="()=>SelectMode(1)">Hiragana</button>
@@ -6,4 +8,22 @@
     <button class="btn btn-primary" @onclick="()=>SelectMode(3)">Mixed</button>
 </div>
 
-<div class="@gameVisibility"><button class="btn btn-primary" @onclick="SwapBetweenGameAndMenu">Back to menu</button></div>
+<div class="@gameVisibility">
+
+    <div class="grid-container">
+        <Dropzone Items="AnswerList" TItem="AnswerItem" >
+            <div class="mt-2" style="border: 2px solid black">
+                @if (textState == 0)
+                {
+                    @context.HiraganaScript 
+                }
+                else
+                {
+                    @context.KatakanaScript
+                }
+            </div>   
+        </Dropzone>
+    </div>
+
+    <button class="btn btn-primary" @onclick="SwapBetweenGameAndMenu">Reset</button>
+</div>
