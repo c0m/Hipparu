@@ -202,10 +202,28 @@ app {
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    background-color: dodgerblue;
+    background-color: #d6d5d5;
     float: left;
 }
 
 .flex-container div:nth-child(2n){
     padding: 10px;
+}
+
+.btn-primary {
+    height: 50px;
+    width: 100px;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 5px;
+}
+
+.btn-secondary {
+    height: 50px;
+    width: 100px;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 5px;
 }
