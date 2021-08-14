@@ -14,7 +14,7 @@
     <div class="grid-container">
         <Dropzone Items="AnswerList" TItem="AnswerItem" >
             <div class="mt-2" style="border: 2px solid black">
-                @if (textState == 0)
+                @if (textState == TextState.HiraganaMode)
                 {
                     @context.HiraganaScript 
                 }

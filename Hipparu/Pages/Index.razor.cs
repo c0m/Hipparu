@@ -14,17 +14,21 @@ namespace Hipparu.Pages
 {
     public partial class Index : ComponentBase
     {
-        // Game states:
-        // 0 - Main Menu
-        // 1 - Hiragana Mode
-        // 2 - Katakana Mode
-        // 3 - Mixed Mode
-        private int gameState = 0;
+        enum GameState
+        {
+            MainMenu,
+            HiraganaMode,
+            KatakanaMode,
+            MixedMode
+        }
+        private GameState gameState = GameState.MainMenu;
 
-        // Text states
-        // 0 - Hiragana
-        // 1 - Katakana
-        private int textState = 0;
+        enum TextState
+        {
+            HiraganaMode,
+            KatakanaMode
+        }
+        private TextState textState = TextState.HiraganaMode;
 
         // Styles for the game and menu divs to decide visibilty
         private string menuVisibility = "menu-visible";
@@ -51,15 +55,15 @@ namespace Hipparu.Pages
             switch (mode)
             {
                 case 1:
-                    //set to display hiragana
+                    textState = TextState.HiraganaMode;
                     break;
 
                 case 2:
-                    //set to display katakana
+                    textState = TextState.KatakanaMode;
                     break;
 
                 case 3:
-                    //enable mixed game switch
+                    textState = TextState.HiraganaMode;
                     break;
             }
         }
@@ -79,7 +83,7 @@ namespace Hipparu.Pages
         {
             if (menuVisibility == "menu-invisible")
             {
-                gameState = 0;
+                gameState = GameState.MainMenu;
                 menuVisibility = "menu-visible";
                 gameVisibility = "game-invisible";
             }
