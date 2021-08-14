@@ -181,7 +181,7 @@ app {
         display: block;
     }
 }
-/*It's probably going to be useful to seperate these*/
+    
 .visible {
     display: flex;
 }
@@ -190,10 +190,10 @@ app {
     display: none
 }
 
+
 .grid-container {
-    grid-template-columns: 100px;
-    grid-template-rows: 100px;
-    background-color: #1861ac;
+    grid-template-columns: auto auto auto;
+    background-color: #d6d5d5;
     padding: 15px;
 }
 
@@ -201,6 +201,5 @@ app {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 5px;
-    font-size: 5px;
     text-align: center;
 }
