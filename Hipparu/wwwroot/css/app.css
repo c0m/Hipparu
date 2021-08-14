@@ -190,16 +190,22 @@ app {
     display: none
 }
 
-
-.grid-container {
-    grid-template-columns: auto auto auto;
-    background-color: #d6d5d5;
-    padding: 15px;
-}
-
-.grid-item {
+.flex-item {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 5px;
     text-align: center;
+}
+
+.flex-container {
+    width: 400px;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    background-color: dodgerblue;
+    float: left;
+}
+
+.flex-container div:nth-child(2n){
+    padding: 10px;
 }

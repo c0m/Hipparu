@@ -10,10 +10,9 @@
 </div>
 
 <div class="@gameVisibility">
-
-    <div class="grid-container">
-        <Dropzone Items="AnswerList" TItem="AnswerItem" >
-            <div class="grid-item">
+    <div class="plk-flex">
+        <Dropzone Class="flex-container" Items="AnswerList" TItem="AnswerItem" >
+            <div class="flex-item">
                 @if (textState == TextState.HiraganaMode)
                 {
                     @context.HiraganaScript 
@@ -26,11 +25,10 @@
         </Dropzone>
     </div>
     <div class="@mixedButtonVisibility">
-        <button class="btn btn-primary" @onclick="SwapKana">Swap Kana</button>
+        <button class="btn btn-secondary" @onclick="SwapKana">Swap Kana</button>
     </div>
 
     <button class="btn btn-primary" @onclick="SwapBetweenGameAndMenu">Reset</button>
-
 </div>
 
 @code{
