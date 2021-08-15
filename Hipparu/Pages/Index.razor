@@ -8,14 +8,13 @@
     <button class="btn btn-primary" @onclick="()=>SelectMode(2)">Katakana</button>
     <button class="btn btn-primary" @onclick="()=>SelectMode(3)">Mixed</button>
 </div>
-
 <div class="@gameVisibility">
     <div class="plk-flex">
-        <Dropzone Class="flex-container" Items="AnswerList" TItem="AnswerItem" >
+        <Dropzone class="flex-container" Items="AnswerList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">
             <div class="flex-item">
                 @if (textState == TextState.HiraganaMode)
                 {
-                    @context.HiraganaScript 
+                    @context.RomajiScript 
                 }
                 else
                 {
@@ -24,12 +23,44 @@
             </div>   
         </Dropzone>
     </div>
+    <div class="game-table">
+        <table>
+            <tr>
+                <th>⦵</th>
+                <th>R-</th>
+                <th>Y-</th>
+                <th>M-</th>
+                <th>H-</th>
+                <th>N-</th>
+                <th>T-</th>
+                <th>S-</th>
+                <th>K-</th>
+                <th>--</th>
+            </tr>
+            <tr>
+                <td>
+                    <Dropzone class="answer-container" Items="WaList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.RomajiScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="@mixedButtonVisibility">
         <button class="btn btn-secondary" @onclick="SwapKana">Swap Kana</button>
     </div>
+    <button class="btn btn-primary" @onclick="SwapBetweenGameAndMenu">Reset</button>
 </div>
 
-    <button class="btn btn-primary" @onclick="SwapBetweenGameAndMenu">Reset</button>
 
 @code{
     // Unfortunately the http client doesn't seem to want to work in the code behind file
