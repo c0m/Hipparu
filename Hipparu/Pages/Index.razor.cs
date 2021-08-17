@@ -53,6 +53,7 @@ namespace Hipparu.Pages
         public List<AnswerItem> SaList = new List<AnswerItem>() { };
         public List<AnswerItem> KaList = new List<AnswerItem>() { };
         public List<AnswerItem> AList = new List<AnswerItem>() { };
+        public List<AnswerItem> KiList = new List<AnswerItem>() { };
 
         // LastDropped lets us tell the player when they're going wrong
         private AnswerItem LastDropped { get; set; }

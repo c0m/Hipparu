@@ -27,32 +27,63 @@
     <div class="divTable blueTable">
         <div class="divTableHeading">
             <div class="divTableRow">
-            <div class="divTableHead">head1</div>
-            <div class="divTableHead">head2</div>
+                <div class="divTableHead"> </div>
+                <div class="divTableHead">∅</div>
+                <div class="divTableHead">K</div>
+            </div>
+        </div>
+        <div class="divTableBody">
+            <!--First row-->
+            <div class="divTableRow">
+            <div class="divTableRowHead">A</div>
+            <div class="divTableCell">
+                <Dropzone class="answer-container" Items="WaList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">    
+                    <div class="flex-item">
+                        @if (textState == TextState.HiraganaMode)
+                        {
+                            @context.RomajiScript 
+                        }
+                        else
+                        {
+                            @context.KatakanaScript
+                        }
+                    </div> 
+                </Dropzone>
+            </div>
+            <div class="divTableCell">
+                <Dropzone class="answer-container" Items="KaList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">    
+                    <div class="flex-item">
+                        @if (textState == TextState.HiraganaMode)
+                        {
+                            @context.RomajiScript 
+                        }
+                        else
+                        {
+                            @context.KatakanaScript
+                        }
+                    </div> 
+                </Dropzone>
             </div>
             </div>
-            <div class="divTableBody">
-                <div class="divTableRow">
-                    <div class="divTableCell">
-                        <Dropzone class="answer-container" Items="WaList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">    
-                            <div class="flex-item">
-                                @if (textState == TextState.HiraganaMode)
-                                {
-                                    @context.RomajiScript 
-                                }
-                                else
-                                {
-                                    @context.KatakanaScript
-                                }
-                            </div> 
-                        </Dropzone>
-                    </div>
-                    <div class="divTableCell">cell2_1</div>
-                </div>
-                <div class="divTableRow">
-                    <div class="divTableCell">cell1_2</div>
-                    <div class="divTableCell">cell2_2</div>
-                </div>
+            <!--Second row-->
+            <div class="divTableRow">
+            <div class="divTableRowHead">I</div>
+            <div class="divEmptyTableCell"></div>
+            <div class="divTableCell">
+                <Dropzone class="answer-container" Items="KiList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">    
+                    <div class="flex-item">
+                        @if (textState == TextState.HiraganaMode)
+                        {
+                            @context.RomajiScript 
+                        }
+                        else
+                        {
+                            @context.KatakanaScript
+                        }
+                    </div> 
+                </Dropzone>
+            </div>
+            </div>
         </div>
     </div>
     <div class="@mixedButtonVisibility">
