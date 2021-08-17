@@ -44,7 +44,7 @@ namespace Hipparu.Pages
 
         // Lists for the game board
         public List<AnswerItem> WaList = new List<AnswerItem>() { };
-        public List<AnswerItem> RaList = new List<AnswerItem>() { new AnswerItem() { Id = 777, HiraganaScript = "　", KatakanaScript = "　", RomajiScript = "　" } };
+        public List<AnswerItem> RaList = new List<AnswerItem>() { };
         public List<AnswerItem> YaList = new List<AnswerItem>() { };
         public List<AnswerItem> MaList = new List<AnswerItem>() { };
         public List<AnswerItem> HaList = new List<AnswerItem>() { };
@@ -140,7 +140,13 @@ namespace Hipparu.Pages
         /// <returns></returns>
         private static List<AnswerItem> BuildAnswerList()
         {
-            return (List<AnswerItem>)Shuffle(masterAnswers.Data);
+            // Temporary answer list for testing in the limited layout
+            List<AnswerItem> tinyList = new List<AnswerItem>() {    new AnswerItem() { Id = 1, HiraganaScript = "あ", KatakanaScript = "ア", RomajiScript = "a" },
+                                                                    new AnswerItem() { Id = 2, HiraganaScript = "か", KatakanaScript = "カ", RomajiScript = "ka" },
+                                                                    new AnswerItem() { Id = 3, HiraganaScript = "き", KatakanaScript = "キ", RomajiScript = "ki" }
+                                                                    };
+            return tinyList; 
+            //return (List<AnswerItem>)Shuffle(masterAnswers.Data);
         }
         /// <summary>
         /// Swap textState to Katakana if it's Hiragana, otherwise swap it to Hiragana.
