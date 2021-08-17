@@ -8,6 +8,7 @@
     <button class="btn btn-primary" @onclick="()=>SelectMode(2)">Katakana</button>
     <button class="btn btn-primary" @onclick="()=>SelectMode(3)">Mixed</button>
 </div>
+<br />
 <div class="@gameVisibility">
     <div class="plk-flex">
         <Dropzone class="flex-container" Items="AnswerList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">
@@ -23,37 +24,36 @@
             </div>   
         </Dropzone>
     </div>
-    <div class="game-table">
-        <table>
-            <tr>
-                <th>⦵</th>
-                <th>R-</th>
-                <th>Y-</th>
-                <th>M-</th>
-                <th>H-</th>
-                <th>N-</th>
-                <th>T-</th>
-                <th>S-</th>
-                <th>K-</th>
-                <th>--</th>
-            </tr>
-            <tr>
-                <td>
-                    <Dropzone class="answer-container" Items="WaList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">
-                        <div class="flex-item">
-                            @if (textState == TextState.HiraganaMode)
-                            {
-                                @context.RomajiScript 
-                            }
-                            else
-                            {
-                                @context.KatakanaScript
-                            }
-                        </div> 
-                    </Dropzone>
-                </td>
-            </tr>
-        </table>
+    <div class="divTable blueTable">
+        <div class="divTableHeading">
+            <div class="divTableRow">
+            <div class="divTableHead">head1</div>
+            <div class="divTableHead">head2</div>
+            </div>
+            </div>
+            <div class="divTableBody">
+                <div class="divTableRow">
+                    <div class="divTableCell">
+                        <Dropzone class="answer-container" Items="WaList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">    
+                            <div class="flex-item">
+                                @if (textState == TextState.HiraganaMode)
+                                {
+                                    @context.RomajiScript 
+                                }
+                                else
+                                {
+                                    @context.KatakanaScript
+                                }
+                            </div> 
+                        </Dropzone>
+                    </div>
+                    <div class="divTableCell">cell2_1</div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">cell1_2</div>
+                    <div class="divTableCell">cell2_2</div>
+                </div>
+        </div>
     </div>
     <div class="@mixedButtonVisibility">
         <button class="btn btn-secondary" @onclick="SwapKana">Swap Kana</button>

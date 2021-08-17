@@ -44,7 +44,7 @@ namespace Hipparu.Pages
 
         // Lists for the game board
         public List<AnswerItem> WaList = new List<AnswerItem>() { };
-        public List<AnswerItem> RaList = new List<AnswerItem>() { };
+        public List<AnswerItem> RaList = new List<AnswerItem>() { new AnswerItem() { Id = 777, HiraganaScript = "　", KatakanaScript = "　", RomajiScript = "　" } };
         public List<AnswerItem> YaList = new List<AnswerItem>() { };
         public List<AnswerItem> MaList = new List<AnswerItem>() { };
         public List<AnswerItem> HaList = new List<AnswerItem>() { };
@@ -56,6 +56,7 @@ namespace Hipparu.Pages
 
         // LastDropped lets us tell the player when they're going wrong
         private AnswerItem LastDropped { get; set; }
+        
 
         /// <summary>
         /// Run PrepareGame() to get the board ready, then switch case to decide which kana to use
