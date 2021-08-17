@@ -10,6 +10,14 @@
 </div>
 <br />
 <div class="@gameVisibility">
+    @if (LastDropped != null)
+    {
+        <div class="bg-warning">That's not where  @LastDropped?.HiraganaScript goes.</div>
+    }
+    @if (ActiveMaxItemWarning)
+    {
+        <div class="bg-warning">You've already populated this square.</div>
+    }
     <div class="plk-flex">
         <Dropzone class="flex-container" Items="AnswerList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">
             <div class="flex-item">
@@ -37,7 +45,7 @@
             <div class="divTableRow">
             <div class="divTableRowHead">A</div>
             <div class="divTableCell">
-                <Dropzone class="answer-container" Items="WaList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">    
+                <Dropzone class="answer-container" Items="WaList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning">    
                     <div class="flex-item">
                         @if (textState == TextState.HiraganaMode)
                         {
@@ -51,7 +59,7 @@
                 </Dropzone>
             </div>
             <div class="divTableCell">
-                <Dropzone class="answer-container" Items="KaList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">    
+                <Dropzone class="answer-container" Items="KaList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning">    
                     <div class="flex-item">
                         @if (textState == TextState.HiraganaMode)
                         {
@@ -70,7 +78,7 @@
             <div class="divTableRowHead">I</div>
             <div class="divEmptyTableCell"></div>
             <div class="divTableCell">
-                <Dropzone class="answer-container" Items="KiList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">    
+                <Dropzone class="answer-container" Items="KiList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning">    
                     <div class="flex-item">
                         @if (textState == TextState.HiraganaMode)
                         {

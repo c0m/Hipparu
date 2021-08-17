@@ -57,7 +57,8 @@ namespace Hipparu.Pages
 
         // LastDropped lets us tell the player when they're going wrong
         private AnswerItem LastDropped { get; set; }
-        
+        private bool ActiveMaxItemWarning = false;
+
 
         /// <summary>
         /// Run PrepareGame() to get the board ready, then switch case to decide which kana to use
@@ -166,10 +167,16 @@ namespace Hipparu.Pages
         private void SuccessfulDrop()
         {
             LastDropped = null;
+            ActiveMaxItemWarning = false;
             if (AnswerList.Count == 0)
             {
                 //win game
             }
+        }
+
+        private void ShowMaxItemWarning()
+        {
+            ActiveMaxItemWarning = true;
         }
     }
 }
