@@ -122,7 +122,7 @@
                 </div>
                 <div class="divEmptyTableCell"></div>
                 <div class="divTableCell">
-                    <Dropzone class="answer-container" Items="IList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("i")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning">    
+                    <Dropzone class="answer-container" Items="HiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("hi")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning">    
                         <div class="flex-item">
                             @if (textState == TextState.HiraganaMode)
                             {
@@ -136,7 +136,7 @@
                     </Dropzone>
                 </div>
                 <div class="divTableCell">
-                    <Dropzone class="answer-container" Items="IList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("i")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning">    
+                    <Dropzone class="answer-container" Items="BiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("bi")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning">    
                         <div class="flex-item">
                             @if (textState == TextState.HiraganaMode)
                             {
