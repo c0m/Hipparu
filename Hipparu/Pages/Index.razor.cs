@@ -43,17 +43,13 @@ namespace Hipparu.Pages
         public List<AnswerItem> AnswerList = new List<AnswerItem>(){};
 
         // Lists for the game board
-        public List<AnswerItem> WaList = new List<AnswerItem>() { };
-        public List<AnswerItem> RaList = new List<AnswerItem>() { };
-        public List<AnswerItem> YaList = new List<AnswerItem>() { };
-        public List<AnswerItem> MaList = new List<AnswerItem>() { };
-        public List<AnswerItem> HaList = new List<AnswerItem>() { };
-        public List<AnswerItem> NaList = new List<AnswerItem>() { };
-        public List<AnswerItem> TaList = new List<AnswerItem>() { };
-        public List<AnswerItem> SaList = new List<AnswerItem>() { };
-        public List<AnswerItem> KaList = new List<AnswerItem>() { };
         public List<AnswerItem> AList = new List<AnswerItem>() { };
-        public List<AnswerItem> KiList = new List<AnswerItem>() { };
+        public List<AnswerItem> IList = new List<AnswerItem>() { };
+        public List<AnswerItem> YaList = new List<AnswerItem>() { };
+        public List<AnswerItem> HiList = new List<AnswerItem>() { };
+        public List<AnswerItem> HaList = new List<AnswerItem>() { };
+        public List<AnswerItem> BiList = new List<AnswerItem>() { };
+        public List<AnswerItem> BaList = new List<AnswerItem>() { };
 
         // LastDropped lets us tell the player when they're going wrong
         private AnswerItem LastDropped { get; set; }
