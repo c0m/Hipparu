@@ -176,6 +176,7 @@ namespace Hipparu.Pages
 
         private void ShowMaxItemWarning()
         {
+            LastDropped = null;
             ActiveMaxItemWarning = true;
         }
     }
