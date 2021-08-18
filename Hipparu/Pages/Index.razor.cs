@@ -279,13 +279,13 @@ namespace Hipparu.Pages
                 case GameState.KatakanaMode:
                     if (bestKatakanaTime.TotalMilliseconds == 0 || gameTimer < bestKatakanaTime)
                     {
-                        bestHiraganaTime = gameTimer;
+                        bestKatakanaTime = gameTimer;
                     }
                     break;
                 case GameState.MixedMode:
                     if (bestMixedTime.TotalMilliseconds == 0 || gameTimer < bestMixedTime)
                     {
-                        bestHiraganaTime = gameTimer;
+                        bestMixedTime = gameTimer;
                     }
                     break;
             }
