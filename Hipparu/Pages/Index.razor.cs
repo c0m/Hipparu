@@ -190,11 +190,29 @@ namespace Hipparu.Pages
                 }
             }
         }
+        /// <summary>
+        /// Get the game ready for a fresh round by turning off the timer, refreshing it, swapping back to the menu, and emptying the game lists.
+        /// </summary>
         private void ResetGame()
         {
             isGameTimerRunning = false;
             gameTimer = new TimeSpan();
             SwapBetweenGameAndMenu();
+            EmptyGameLists();
+        }
+        /// <summary>
+        /// Empty all of the lists in the game to ensure the field is empty for a new round.
+        /// </summary>
+        private void EmptyGameLists()
+        {
+            AnswerList = new List<AnswerItem>() { };
+            AList = new List<AnswerItem>() { };
+            IList = new List<AnswerItem>() { };
+            YaList = new List<AnswerItem>() { };
+            HiList = new List<AnswerItem>() { };
+            HaList = new List<AnswerItem>() { };
+            BiList = new List<AnswerItem>() { };
+            BaList = new List<AnswerItem>() { };
         }
 
     }
