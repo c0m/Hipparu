@@ -39,8 +39,15 @@ namespace Hipparu.Pages
         // Gets assigned to in OnInitializedAsync()
         private static Answers masterAnswers;
 
-        TimeSpan gameTimer = new TimeSpan();
-        bool isGameTimerRunning = false;
+        // Timer for the game and bool for whether it should be running
+        private TimeSpan gameTimer = new TimeSpan();
+        private bool isGameTimerRunning = false;
+
+        // Best times the user has achieved
+        private TimeSpan bestMixedTime;
+        private TimeSpan bestHiraganaTime;
+        private TimeSpan bestKatakanaTime;
+
 
         // List for Answer Items
         public List<AnswerItem> AnswerList = new List<AnswerItem>(){};
@@ -201,6 +208,7 @@ namespace Hipparu.Pages
             LastDropped = null;
             ActiveMaxItemWarning = false;
             PlacingItemBackWarning = false;
+            HasWonGame = false;
         }
         /// <summary>
         /// Handle the game timer during the game. Set isGameTimerRunning to true and add a second to the timespan every second then update the state.
@@ -259,7 +267,28 @@ namespace Hipparu.Pages
         /// <param name="gameState"></param>
         private void SubmitScore(TimeSpan time, GameState gameState)
         {
-            //check to see if it's a new record and update if it is
+            switch (gameState)
+            {
+                case GameState.HiraganaMode:
+                    if (bestHiraganaTime.TotalMilliseconds == 0 || gameTimer < bestHiraganaTime)
+                    {
+                        bestHiraganaTime = gameTimer;
+                    }
+                    break;
+                case GameState.KatakanaMode:
+                    if (bestKatakanaTime.TotalMilliseconds == 0 || gameTimer < bestKatakanaTime)
+                    {
+                        bestHiraganaTime = gameTimer;
+                    }
+                    break;
+                case GameState.MixedMode:
+                    if (bestMixedTime.TotalMilliseconds == 0 || gameTimer < bestMixedTime)
+                    {
+                        bestHiraganaTime = gameTimer;
+                    }
+                    break;
+            }
+
         }
     }
 }
