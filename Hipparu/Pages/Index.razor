@@ -70,9 +70,21 @@
             <div class="divTableRow">
                 <div class="divTableHead"> </div>
                 <div class="divTableHead">∅</div>
-                <div class="divTableHead">Y</div> 
+                <div class="divTableHead">K</div> 
+                <div class="divTableHead">G</div>
+                <div class="divTableHead">S</div> 
+                <div class="divTableHead">Z</div>
+                <div class="divTableHead">T</div> 
+                <div class="divTableHead">D</div>
+                <div class="divTableHead">N</div> 
                 <div class="divTableHead">H</div>
                 <div class="divTableHead">B</div> 
+                <div class="divTableHead">P</div>
+                <div class="divTableHead">M</div> 
+                <div class="divTableHead">Y</div>
+                <div class="divTableHead">R</div> 
+                <div class="divTableHead">W</div>
+                <div class="divTableHead">N</div> 
             </div>
         </div>
         <div class="divTableBody">
@@ -85,6 +97,160 @@
                             @if (textState == TextState.HiraganaMode)
                             {
                                 @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="KaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ka")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="GaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ga")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="SaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("sa")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="ZaList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("za")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="TaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ta")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="DaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("da")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="NaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("na")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="HaList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ha")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="BaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ba")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="PaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("pa")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="MaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ma")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
                             }
                             else
                             {
@@ -108,7 +274,7 @@
                     </Dropzone>
                 </div>
                 <div class="divTableCell">
-                    <Dropzone class="answer-container" Items="HaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ha")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                    <Dropzone class="answer-container" Items="RaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ra")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
                         <div class="flex-item">
                             @if (textState == TextState.HiraganaMode)
                             {
@@ -122,7 +288,7 @@
                     </Dropzone>
                 </div>
                 <div class="divTableCell">
-                    <Dropzone class="answer-container" Items="BaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ba")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                    <Dropzone class="answer-container" Items="WaList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("wa")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
                         <div class="flex-item">
                             @if (textState == TextState.HiraganaMode)
                             {
@@ -140,7 +306,161 @@
             <div class="divTableRow">
                 <div class="divTableRowHead">I</div>
                 <div class="divTableCell">
-                    <Dropzone class="answer-container" Items="IList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("i")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                    <Dropzone class="answer-container" Items="IList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("i")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="KiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ki")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="GiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("gi")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="SiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("si")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="ZiList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("zi")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="TiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ti")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="DiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("di")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="NiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ni")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="HiList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("hi")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="BiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("bi")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="PiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("pi")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="MiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("mi")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
                         <div class="flex-item">
                             @if (textState == TextState.HiraganaMode)
                             {
@@ -155,7 +475,40 @@
                 </div>
                 <div class="divEmptyTableCell"></div>
                 <div class="divTableCell">
-                    <Dropzone class="answer-container" Items="HiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("hi")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                    <Dropzone class="answer-container" Items="RiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ri")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divEmptyTableCell"></div>
+            </div>
+            <!--Third row-->
+            <div class="divTableRow">
+                <div class="divTableRowHead">U</div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="UList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("u")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="KuList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ku")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
                         <div class="flex-item">
                             @if (textState == TextState.HiraganaMode)
                             {
@@ -169,7 +522,564 @@
                     </Dropzone>
                 </div>
                 <div class="divTableCell">
-                    <Dropzone class="answer-container" Items="BiList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("bi")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                    <Dropzone class="answer-container" Items="GuList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("gu")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="SuList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("su")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="ZuList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("zu")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="TuList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("tu")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="DuList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("du")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="NuList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("nu")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="HuList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("hu")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="BuList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("bu")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="PuList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("pu")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="MuList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("mu")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="YuList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("yu")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="RuList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ru")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divEmptyTableCell"></div>
+            </div>
+            <!--Fourth row-->
+            <div class="divTableRow">
+                <div class="divTableRowHead">E</div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="EList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("e")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="KeList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ke")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="GeList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ge")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="SeList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("se")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="ZeList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ze")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="TeList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("te")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="DeList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("de")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="NeList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ne")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="HeList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("he")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="BeList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("be")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="PeList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("pe")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="MeList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("me")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divEmptyTableCell"></div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="ReList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("re")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divEmptyTableCell"></div>
+            </div>
+            <!--Fifth row-->
+            <div class="divTableRow">
+                <div class="divTableRowHead">O</div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="OList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("o")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="KoList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ko")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="GoList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("go")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="SoList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("so")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="ZoList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("zo")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="ToList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("to")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="DoList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("do")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="NoList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("no")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="HoList"  TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ho")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="BoList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("bo")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="PoList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("po")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="MoList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("mo")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="YoList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("yo")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="RoList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("ro")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="WoList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("wo")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
                         <div class="flex-item">
                             @if (textState == TextState.HiraganaMode)
                             {

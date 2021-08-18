@@ -269,7 +269,7 @@ namespace Hipparu.Pages
 
         }
 
-        // Lists for the game board. These are placed at the bottom to save the readability of the rest of the document.
+        // Lists for the game board and the method to empty it. These are placed at the bottom to save the readability of the rest of the document.
         // All places of the board need a position, and each position need to be uniquely labelled somehow.
         // So here are the unique lists for the dropzones. 
         #region yep this is happening
@@ -347,6 +347,7 @@ namespace Hipparu.Pages
         protected List<AnswerItem> WoList = new List<AnswerItem>() { };
         protected List<AnswerItem> NList = new List<AnswerItem>() { };
         #endregion
+
         /// <summary>
         /// Empty all of the lists in the game to ensure the field is empty for a new round.
         /// </summary>
