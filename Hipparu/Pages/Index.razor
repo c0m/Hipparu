@@ -27,7 +27,16 @@
 <div class="@gameVisibility">
     @if (LastDropped != null)
     {
-        <div class="bg-warning">That's not where  @LastDropped?.HiraganaScript goes.</div>
+        <div class="bg-warning">That's not where
+            @if (textState == TextState.HiraganaMode)
+                {
+                    @LastDropped.HiraganaScript 
+                }
+                else
+                {
+                    @LastDropped.KatakanaScript
+                } 
+        goes.</div>
     }
     @if (ActiveMaxItemWarning)
     {

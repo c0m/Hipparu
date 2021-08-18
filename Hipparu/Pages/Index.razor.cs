@@ -61,7 +61,8 @@ namespace Hipparu.Pages
         public List<AnswerItem> BiList = new List<AnswerItem>() { };
         public List<AnswerItem> BaList = new List<AnswerItem>() { };
 
-        // These variables let us know when to tell the player when they're going wrong
+        // These variables are for displaying information on screen
+        // These come with leading capital letters to show this
         private AnswerItem LastDropped { get; set; }
         private bool ActiveMaxItemWarning = false;
         private bool PlacingItemBackWarning = false;
