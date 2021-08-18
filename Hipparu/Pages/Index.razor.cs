@@ -14,15 +14,6 @@ namespace Hipparu.Pages
 {
     public partial class Index : ComponentBase
     {
-        enum GameState
-        {
-            MainMenu,
-            HiraganaMode,
-            KatakanaMode,
-            MixedMode
-        }
-        private GameState gameState = GameState.MainMenu;
-
         enum TextState
         {
             HiraganaMode,
@@ -100,13 +91,11 @@ namespace Hipparu.Pages
         {
             if (menuVisibility == "invisible")
             {
-                gameState = GameState.MainMenu;
                 menuVisibility = "visible";
                 gameVisibility = "invisible";
             }
             else
             {
-                //gameState handled by SelectMode
                 menuVisibility = "invisible";
                 gameVisibility = "visible";
             }
@@ -200,6 +189,12 @@ namespace Hipparu.Pages
                     StateHasChanged();
                 }
             }
+        }
+        private void ResetGame()
+        {
+            isGameTimerRunning = false;
+            gameTimer = new TimeSpan();
+            SwapBetweenGameAndMenu();
         }
 
     }
