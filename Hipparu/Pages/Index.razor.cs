@@ -8,7 +8,7 @@ using Plk.Blazor.DragDrop;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.IO;
-
+using System.Diagnostics;
 
 namespace Hipparu.Pages
 {
@@ -38,6 +38,9 @@ namespace Hipparu.Pages
         // A list of answers to save us loading from json every time
         // Gets assigned to in OnInitializedAsync()
         private static Answers masterAnswers;
+
+        TimeSpan gameTimer = new TimeSpan();
+        bool isGameTimerRunning = false;
 
         // List for Answer Items
         public List<AnswerItem> AnswerList = new List<AnswerItem>(){};
@@ -88,7 +91,7 @@ namespace Hipparu.Pages
             mixedButtonVisibility = "invisible";
             SwapBetweenGameAndMenu();
             AnswerList = BuildAnswerList();
-            // Reset the game timer
+            GameTimer();
         }
         /// <summary>
         /// Swap between menu being visible and game being hidden. This changes the strings of the class of the divs which the menu and games are located in. 
@@ -173,12 +176,32 @@ namespace Hipparu.Pages
                 //win game
             }
         }
-
+        /// <summary>
+        /// Clear LastDropped. Set ActiveMaxWarning on.
+        /// </summary>
         private void ShowMaxItemWarning()
         {
             LastDropped = null;
             ActiveMaxItemWarning = true;
         }
+        /// <summary>
+        /// Handle the game timer during the game. Set isGameTimerRunning to true and add a second to the timespan every second then update the state.
+        /// </summary>
+        /// <returns></returns>
+        async Task GameTimer()
+        {
+            isGameTimerRunning = true;
+            while (isGameTimerRunning)
+            {
+                await Task.Delay(1000);
+                if (isGameTimerRunning)
+                {
+                    gameTimer = gameTimer.Add(new TimeSpan(0, 0, 1));
+                    StateHasChanged();
+                }
+            }
+        }
+
     }
 }
 
