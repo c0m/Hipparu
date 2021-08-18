@@ -14,6 +14,15 @@ namespace Hipparu.Pages
 {
     public partial class Index : ComponentBase
     {
+        enum GameState
+        {
+            MainMenu,
+            HiraganaMode,
+            KatakanaMode,
+            MixedMode
+        }
+        private GameState gameState = GameState.MainMenu;
+
         enum TextState
         {
             HiraganaMode,
@@ -49,6 +58,7 @@ namespace Hipparu.Pages
         private AnswerItem LastDropped { get; set; }
         private bool ActiveMaxItemWarning = false;
         private bool PlacingItemBackWarning = false;
+        private bool HasWonGame = false;
 
         /// <summary>
         /// Run PrepareGame() to get the board ready, then switch case to decide which kana to use
@@ -61,14 +71,17 @@ namespace Hipparu.Pages
             switch (mode)
             {
                 case 1:
+                    gameState = GameState.HiraganaMode;
                     textState = TextState.HiraganaMode;
                     break;
 
                 case 2:
+                    gameState = GameState.KatakanaMode;
                     textState = TextState.KatakanaMode;
                     break;
 
                 case 3:
+                    gameState = GameState.MixedMode;
                     textState = TextState.HiraganaMode;
                     mixedButtonVisibility = "visible";
                     break;
@@ -165,13 +178,16 @@ namespace Hipparu.Pages
             }
         }
         /// <summary>
-        /// Clear active warnings. Set ActiveMaxWarning on.
+        /// Clear active warnings. Show a warning for attempting to place more items in an already answered square. 
         /// </summary>
         private void ShowMaxItemWarning()
         {
             ClearCurrentWarnings();
             ActiveMaxItemWarning = true;
         }
+        /// <summary>
+        /// Clear active warnings. Show a warning for putting answers back in the item box.
+        /// </summary>
         private void ShowPlacingBackWarning()
         {
             ClearCurrentWarnings();
@@ -232,7 +248,18 @@ namespace Hipparu.Pages
         /// </summary>
         private void WinGame()
         {
-
+            isGameTimerRunning = false;
+            HasWonGame = true;
+            SubmitScore(gameTimer, gameState);
+        }
+        /// <summary>
+        /// Check if we have a new record and update the current records if it is.
+        /// </summary>
+        /// <param name="time"></param>
+        /// <param name="gameState"></param>
+        private void SubmitScore(TimeSpan time, GameState gameState)
+        {
+            //check to see if it's a new record and update if it is
         }
     }
 }
