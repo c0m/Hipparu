@@ -14,65 +14,65 @@ namespace Hipparu.Pages
 {
     public partial class Index : ComponentBase
     {
-        enum GameState
+        protected enum GameState
         {
             MainMenu,
             HiraganaMode,
             KatakanaMode,
             MixedMode
         }
-        private GameState gameState = GameState.MainMenu;
+        protected GameState gameState = GameState.MainMenu;
 
-        enum TextState
+        protected enum TextState
         {
             HiraganaMode,
             KatakanaMode
         }
-        private TextState textState = TextState.HiraganaMode;
+        protected TextState textState = TextState.HiraganaMode;
 
         // Styles for the game and menu divs to decide visibilty
-        private string menuVisibility = "visible";
-        private string gameVisibility = "invisible";
-        private string mixedButtonVisibility = "invisible";
+        protected string menuVisibility = "visible";
+        protected string gameVisibility = "invisible";
+        protected string mixedButtonVisibility = "invisible";
 
         // A list of answers to save us loading from json every time
         // Gets assigned to in OnInitializedAsync()
-        private static Answers masterAnswers;
+        protected static Answers masterAnswers;
 
         // Timer for the game and bool for whether it should be running
-        private TimeSpan gameTimer = new TimeSpan();
-        private bool isGameTimerRunning = false;
+        protected TimeSpan gameTimer = new TimeSpan();
+        protected bool isGameTimerRunning = false;
 
         // Best times the user has achieved
-        private TimeSpan bestMixedTime;
-        private TimeSpan bestHiraganaTime;
-        private TimeSpan bestKatakanaTime;
+        protected TimeSpan bestMixedTime;
+        protected TimeSpan bestHiraganaTime;
+        protected TimeSpan bestKatakanaTime;
 
 
         // List for Answer Items
-        public List<AnswerItem> AnswerList = new List<AnswerItem>(){};
+        protected List<AnswerItem> AnswerList = new List<AnswerItem>(){};
 
         // Lists for the game board
-        public List<AnswerItem> AList = new List<AnswerItem>() { };
-        public List<AnswerItem> IList = new List<AnswerItem>() { };
-        public List<AnswerItem> YaList = new List<AnswerItem>() { };
-        public List<AnswerItem> HiList = new List<AnswerItem>() { };
-        public List<AnswerItem> HaList = new List<AnswerItem>() { };
-        public List<AnswerItem> BiList = new List<AnswerItem>() { };
-        public List<AnswerItem> BaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> AList = new List<AnswerItem>() { };
+        protected List<AnswerItem> IList = new List<AnswerItem>() { };
+        protected List<AnswerItem> YaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> HiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> HaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> BiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> BaList = new List<AnswerItem>() { };
 
         // These variables are for displaying information on screen
         // These come with leading capital letters to show this
-        private AnswerItem LastDropped { get; set; }
-        private bool ActiveMaxItemWarning = false;
-        private bool PlacingItemBackWarning = false;
-        private bool HasWonGame = false;
+        protected AnswerItem LastDropped { get; set; }
+        protected bool ActiveMaxItemWarning = false;
+        protected bool PlacingItemBackWarning = false;
+        protected bool HasWonGame = false;
 
         /// <summary>
         /// Run PrepareGame() to get the board ready, then switch case to decide which kana to use
         /// </summary>
         /// <param name="mode">Int provided by button</param>
-        private void SelectMode(int mode)
+        protected void SelectMode(int mode)
         {
             PrepareGame();
 
@@ -98,7 +98,7 @@ namespace Hipparu.Pages
         /// <summary>
         /// Get board prepared for a new game
         /// </summary>
-        private void PrepareGame()
+        protected void PrepareGame()
         {
             mixedButtonVisibility = "invisible";
             SwapBetweenGameAndMenu();
@@ -108,7 +108,7 @@ namespace Hipparu.Pages
         /// <summary>
         /// Swap between menu being visible and game being hidden. This changes the strings of the class of the divs which the menu and games are located in. 
         /// </summary>
-        private void SwapBetweenGameAndMenu()
+        protected void SwapBetweenGameAndMenu()
         {
             if (menuVisibility == "invisible")
             {
@@ -127,7 +127,7 @@ namespace Hipparu.Pages
         /// <typeparam name="AnswerItem"></typeparam>
         /// <param name="list">Answers, usually masterAnswers</param>
         /// <returns></returns>
-        public static IList<AnswerItem> Shuffle<AnswerItem>(IList<AnswerItem> list)
+        protected static IList<AnswerItem> Shuffle<AnswerItem>(IList<AnswerItem> list)
         {
             Random rng = new Random();
             var source = list.ToList();
@@ -148,7 +148,7 @@ namespace Hipparu.Pages
         /// Return a shuffled list of masterAnswers
         /// </summary>
         /// <returns></returns>
-        private static List<AnswerItem> BuildAnswerList()
+        protected static List<AnswerItem> BuildAnswerList()
         {
             // Temporary answer list for testing in the limited layout
             List<AnswerItem> tinyList = new List<AnswerItem>() {    new AnswerItem() { Id = 1, HiraganaScript = "あ", KatakanaScript = "ア", RomajiScript = "a" },
@@ -165,7 +165,7 @@ namespace Hipparu.Pages
         /// <summary>
         /// Swap textState to Katakana if it's Hiragana, otherwise swap it to Hiragana.
         /// </summary>
-        private void SwapKana()
+        protected void SwapKana()
         {
             if (textState == TextState.HiraganaMode)
             {
@@ -177,7 +177,7 @@ namespace Hipparu.Pages
         /// <summary>
         /// Clear active warnings. Check if the player has won the game, then win it.
         /// </summary>
-        private void SuccessfulDrop()
+        protected void SuccessfulDrop()
         {
             ClearCurrentWarnings();
             if (AnswerList.Count == 0)
@@ -188,7 +188,7 @@ namespace Hipparu.Pages
         /// <summary>
         /// Clear active warnings. Show a warning for attempting to place more items in an already answered square. 
         /// </summary>
-        private void ShowMaxItemWarning()
+        protected void ShowMaxItemWarning()
         {
             ClearCurrentWarnings();
             ActiveMaxItemWarning = true;
@@ -196,7 +196,7 @@ namespace Hipparu.Pages
         /// <summary>
         /// Clear active warnings. Show a warning for putting answers back in the item box.
         /// </summary>
-        private void ShowPlacingBackWarning()
+        protected void ShowPlacingBackWarning()
         {
             ClearCurrentWarnings();
             PlacingItemBackWarning = true;
@@ -204,7 +204,7 @@ namespace Hipparu.Pages
         /// <summary>
         /// This resets all variables that may be currently displaying a warning
         /// </summary>
-        private void ClearCurrentWarnings()
+        protected void ClearCurrentWarnings()
         {
             LastDropped = null;
             ActiveMaxItemWarning = false;
@@ -231,7 +231,7 @@ namespace Hipparu.Pages
         /// <summary>
         /// Get the game ready for a fresh round by turning off the timer, refreshing it, swapping back to the menu, and emptying the game lists.
         /// </summary>
-        private void ResetGame()
+        protected void ResetGame()
         {
             isGameTimerRunning = false;
             gameTimer = new TimeSpan();
@@ -241,7 +241,7 @@ namespace Hipparu.Pages
         /// <summary>
         /// Empty all of the lists in the game to ensure the field is empty for a new round.
         /// </summary>
-        private void EmptyGameLists()
+        protected void EmptyGameLists()
         {
             AnswerList = new List<AnswerItem>() { };
             AList = new List<AnswerItem>() { };
@@ -255,7 +255,7 @@ namespace Hipparu.Pages
         /// <summary>
         /// Win the game for the player. 
         /// </summary>
-        private void WinGame()
+        protected void WinGame()
         {
             isGameTimerRunning = false;
             HasWonGame = true;
@@ -266,7 +266,7 @@ namespace Hipparu.Pages
         /// </summary>
         /// <param name="time"></param>
         /// <param name="gameState"></param>
-        private void SubmitScore(TimeSpan time, GameState gameState)
+        protected void SubmitScore(TimeSpan time, GameState gameState)
         {
             switch (gameState)
             {
