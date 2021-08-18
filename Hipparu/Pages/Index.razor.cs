@@ -45,10 +45,10 @@ namespace Hipparu.Pages
         public List<AnswerItem> BiList = new List<AnswerItem>() { };
         public List<AnswerItem> BaList = new List<AnswerItem>() { };
 
-        // LastDropped lets us tell the player when they're going wrong
+        // These variables let us know when to tell the player when they're going wrong
         private AnswerItem LastDropped { get; set; }
         private bool ActiveMaxItemWarning = false;
-
+        private bool PlacingItemBackWarning = false;
 
         /// <summary>
         /// Run PrepareGame() to get the board ready, then switch case to decide which kana to use
@@ -154,24 +154,37 @@ namespace Hipparu.Pages
             textState = TextState.HiraganaMode;
         }
         /// <summary>
-        /// Clear LastDropped. Check if the player has won the game, then win it.
+        /// Clear active warnings. Check if the player has won the game, then win it.
         /// </summary>
         private void SuccessfulDrop()
         {
-            LastDropped = null;
-            ActiveMaxItemWarning = false;
+            ClearCurrentWarnings();
             if (AnswerList.Count == 0)
             {
-                //win game
+                WinGame();
             }
         }
         /// <summary>
-        /// Clear LastDropped. Set ActiveMaxWarning on.
+        /// Clear active warnings. Set ActiveMaxWarning on.
         /// </summary>
         private void ShowMaxItemWarning()
         {
-            LastDropped = null;
+            ClearCurrentWarnings();
             ActiveMaxItemWarning = true;
+        }
+        private void ShowPlacingBackWarning()
+        {
+            ClearCurrentWarnings();
+            PlacingItemBackWarning = true;
+        }
+        /// <summary>
+        /// This resets all variables that may be currently displaying a warning
+        /// </summary>
+        private void ClearCurrentWarnings()
+        {
+            LastDropped = null;
+            ActiveMaxItemWarning = false;
+            PlacingItemBackWarning = false;
         }
         /// <summary>
         /// Handle the game timer during the game. Set isGameTimerRunning to true and add a second to the timespan every second then update the state.
@@ -214,7 +227,13 @@ namespace Hipparu.Pages
             BiList = new List<AnswerItem>() { };
             BaList = new List<AnswerItem>() { };
         }
+        /// <summary>
+        /// Win the game for the player. 
+        /// </summary>
+        private void WinGame()
+        {
 
+        }
     }
 }
 

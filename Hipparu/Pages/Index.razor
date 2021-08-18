@@ -18,9 +18,13 @@
     {
         <div class="bg-warning">You've already populated this square.</div>
     }
+    @if (PlacingItemBackWarning)
+    {
+        <div class="bg-warning">You can't place items back in the answer list.</div>
+    }
     <p>@gameTimer</p>
     <div class="plk-flex">
-        <Dropzone class="flex-container" Items="AnswerList" TItem="AnswerItem" OnItemDropRejected="@((i)=>LastDropped = i)">
+        <Dropzone class="flex-container" Items="AnswerList" TItem="AnswerItem" OnItemDropRejected="ShowPlacingBackWarning" Accepts='(d, t) => d.RomajiScript.Equals("This Dropzone is only for one way but we cant outright disable accepting things so we only accept this message instead")'>
             <div class="flex-item">
                 @if (textState == TextState.HiraganaMode)
                 {
