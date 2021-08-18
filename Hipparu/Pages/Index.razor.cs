@@ -52,15 +52,6 @@ namespace Hipparu.Pages
         // List for Answer Items
         protected List<AnswerItem> AnswerList = new List<AnswerItem>(){};
 
-        // Lists for the game board
-        protected List<AnswerItem> AList = new List<AnswerItem>() { };
-        protected List<AnswerItem> IList = new List<AnswerItem>() { };
-        protected List<AnswerItem> YaList = new List<AnswerItem>() { };
-        protected List<AnswerItem> HiList = new List<AnswerItem>() { };
-        protected List<AnswerItem> HaList = new List<AnswerItem>() { };
-        protected List<AnswerItem> BiList = new List<AnswerItem>() { };
-        protected List<AnswerItem> BaList = new List<AnswerItem>() { };
-
         // These variables are for displaying information on screen
         // These come with leading capital letters to show this
         protected AnswerItem LastDropped { get; set; }
@@ -238,24 +229,10 @@ namespace Hipparu.Pages
             SwapBetweenGameAndMenu();
             EmptyGameLists();
         }
-        /// <summary>
-        /// Empty all of the lists in the game to ensure the field is empty for a new round.
-        /// </summary>
-        protected void EmptyGameLists()
-        {
-            AnswerList = new List<AnswerItem>() { };
-            AList = new List<AnswerItem>() { };
-            IList = new List<AnswerItem>() { };
-            YaList = new List<AnswerItem>() { };
-            HiList = new List<AnswerItem>() { };
-            HaList = new List<AnswerItem>() { };
-            BiList = new List<AnswerItem>() { };
-            BaList = new List<AnswerItem>() { };
-        }
-        /// <summary>
-        /// Win the game for the player. 
-        /// </summary>
-        protected void WinGame()
+    /// <summary>
+    /// Win the game for the player. 
+    /// </summary>
+    protected void WinGame()
         {
             isGameTimerRunning = false;
             HasWonGame = true;
@@ -290,6 +267,166 @@ namespace Hipparu.Pages
                     break;
             }
 
+        }
+
+        // Lists for the game board. These are placed at the bottom to save the readability of the rest of the document.
+        // All places of the board need a position, and each position need to be uniquely labelled somehow.
+        // So here are the unique lists for the dropzones. 
+        #region yep this is happening
+        protected List<AnswerItem> AList = new List<AnswerItem>() { };
+        protected List<AnswerItem> KaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> GaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> SaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> ZaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> TaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> DaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> NaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> HaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> BaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> PaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> MaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> YaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> RaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> WaList = new List<AnswerItem>() { };
+        protected List<AnswerItem> IList = new List<AnswerItem>() { };
+        protected List<AnswerItem> KiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> GiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> SiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> ZiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> TiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> DiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> NiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> HiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> BiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> PiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> MiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> RiList = new List<AnswerItem>() { };
+        protected List<AnswerItem> UList = new List<AnswerItem>() { };
+        protected List<AnswerItem> KuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> GuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> SuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> ZuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> TuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> DuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> NuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> HuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> BuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> PuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> MuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> YuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> RuList = new List<AnswerItem>() { };
+        protected List<AnswerItem> EList = new List<AnswerItem>() { };
+        protected List<AnswerItem> KeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> GeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> SeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> ZeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> TeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> DeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> NeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> HeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> BeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> PeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> MeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> YeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> ReList = new List<AnswerItem>() { };
+        protected List<AnswerItem> WeList = new List<AnswerItem>() { };
+        protected List<AnswerItem> OList = new List<AnswerItem>() { };
+        protected List<AnswerItem> KoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> GoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> SoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> ZoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> ToList = new List<AnswerItem>() { };
+        protected List<AnswerItem> DoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> NoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> HoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> BoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> PoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> MoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> YoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> RoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> WoList = new List<AnswerItem>() { };
+        protected List<AnswerItem> NList = new List<AnswerItem>() { };
+        #endregion
+        /// <summary>
+        /// Empty all of the lists in the game to ensure the field is empty for a new round.
+        /// </summary>
+        protected void EmptyGameLists()
+        {
+            #region oh no not again
+            AList = new List<AnswerItem>() { };
+            KaList = new List<AnswerItem>() { };
+            GaList = new List<AnswerItem>() { };
+            SaList = new List<AnswerItem>() { };
+            ZaList = new List<AnswerItem>() { };
+            TaList = new List<AnswerItem>() { };
+            DaList = new List<AnswerItem>() { };
+            NaList = new List<AnswerItem>() { };
+            HaList = new List<AnswerItem>() { };
+            BaList = new List<AnswerItem>() { };
+            PaList = new List<AnswerItem>() { };
+            MaList = new List<AnswerItem>() { };
+            YaList = new List<AnswerItem>() { };
+            RaList = new List<AnswerItem>() { };
+            WaList = new List<AnswerItem>() { };
+            IList = new List<AnswerItem>() { };
+            KiList = new List<AnswerItem>() { };
+            GiList = new List<AnswerItem>() { };
+            SiList = new List<AnswerItem>() { };
+            ZiList = new List<AnswerItem>() { };
+            TiList = new List<AnswerItem>() { };
+            DiList = new List<AnswerItem>() { };
+            NiList = new List<AnswerItem>() { };
+            HiList = new List<AnswerItem>() { };
+            BiList = new List<AnswerItem>() { };
+            PiList = new List<AnswerItem>() { };
+            MiList = new List<AnswerItem>() { };
+            RiList = new List<AnswerItem>() { };
+            UList = new List<AnswerItem>() { };
+            KuList = new List<AnswerItem>() { };
+            GuList = new List<AnswerItem>() { };
+            SuList = new List<AnswerItem>() { };
+            ZuList = new List<AnswerItem>() { };
+            TuList = new List<AnswerItem>() { };
+            DuList = new List<AnswerItem>() { };
+            NuList = new List<AnswerItem>() { };
+            HuList = new List<AnswerItem>() { };
+            BuList = new List<AnswerItem>() { };
+            PuList = new List<AnswerItem>() { };
+            MuList = new List<AnswerItem>() { };
+            YuList = new List<AnswerItem>() { };
+            RuList = new List<AnswerItem>() { };
+            EList = new List<AnswerItem>() { };
+            KeList = new List<AnswerItem>() { };
+            GeList = new List<AnswerItem>() { };
+            SeList = new List<AnswerItem>() { };
+            ZeList = new List<AnswerItem>() { };
+            TeList = new List<AnswerItem>() { };
+            DeList = new List<AnswerItem>() { };
+            NeList = new List<AnswerItem>() { };
+            HeList = new List<AnswerItem>() { };
+            BeList = new List<AnswerItem>() { };
+            PeList = new List<AnswerItem>() { };
+            MeList = new List<AnswerItem>() { };
+            YeList = new List<AnswerItem>() { };
+            ReList = new List<AnswerItem>() { };
+            WeList = new List<AnswerItem>() { };
+            OList = new List<AnswerItem>() { };
+            KoList = new List<AnswerItem>() { };
+            GoList = new List<AnswerItem>() { };
+            SoList = new List<AnswerItem>() { };
+            ZoList = new List<AnswerItem>() { };
+            ToList = new List<AnswerItem>() { };
+            DoList = new List<AnswerItem>() { };
+            NoList = new List<AnswerItem>() { };
+            HoList = new List<AnswerItem>() { };
+            BoList = new List<AnswerItem>() { };
+            PoList = new List<AnswerItem>() { };
+            MoList = new List<AnswerItem>() { };
+            YoList = new List<AnswerItem>() { };
+            RoList = new List<AnswerItem>() { };
+            WoList = new List<AnswerItem>() { };
+            NList = new List<AnswerItem>() { };
+            #endregion
         }
     }
 }
