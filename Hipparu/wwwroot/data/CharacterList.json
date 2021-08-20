@@ -366,6 +366,208 @@
       "HiraganaScript": "お",
       "KatakanaScript": "オ"
 
+    },
+
+    {
+      "Id": 47,
+      "RomajiScript": "ga",
+      "HiraganaScript": "か",
+      "KatakanaScript": "ガ"
+
+    },
+
+    {
+      "Id": 48,
+      "RomajiScript": "gi",
+      "HiraganaScript": "き",
+      "KatakanaScript": "ギ"
+
+    },
+
+    {
+      "Id": 49,
+      "RomajiScript": "gu",
+      "HiraganaScript": "く",
+      "KatakanaScript": "グ"
+
+    },
+
+    {
+      "Id": 50,
+      "RomajiScript": "ge",
+      "HiraganaScript": "け",
+      "KatakanaScript": "ゲ"
+
+    },
+
+    {
+      "Id": 51,
+      "RomajiScript": "go",
+      "HiraganaScript": "こ",
+      "KatakanaScript": "ゴ"
+
+    },
+
+    {
+      "Id": 52,
+      "RomajiScript": "za",
+      "HiraganaScript": "か",
+      "KatakanaScript": "ザ"
+
+    },
+
+    {
+      "Id": 53,
+      "RomajiScript": "zi",
+      "HiraganaScript": "き",
+      "KatakanaScript": "ジ"
+
+    },
+
+    {
+      "Id": 54,
+      "RomajiScript": "zu",
+      "HiraganaScript": "く",
+      "KatakanaScript": "ズ"
+
+    },
+
+    {
+      "Id": 55,
+      "RomajiScript": "ze",
+      "HiraganaScript": "け",
+      "KatakanaScript": "ゼ"
+
+    },
+
+    {
+      "Id": 56,
+      "RomajiScript": "zo",
+      "HiraganaScript": "こ",
+      "KatakanaScript": "ゾ"
+
+    },
+
+    {
+      "Id": 57,
+      "RomajiScript": "da",
+      "HiraganaScript": "か",
+      "KatakanaScript": "ダ"
+
+    },
+
+    {
+      "Id": 58,
+      "RomajiScript": "di",
+      "HiraganaScript": "き",
+      "KatakanaScript": "ヂ"
+
+    },
+
+    {
+      "Id": 59,
+      "RomajiScript": "du",
+      "HiraganaScript": "く",
+      "KatakanaScript": "ヅ"
+
+    },
+
+    {
+      "Id": 60,
+      "RomajiScript": "de",
+      "HiraganaScript": "け",
+      "KatakanaScript": "デ"
+
+    },
+
+    {
+      "Id": 61,
+      "RomajiScript": "do",
+      "HiraganaScript": "こ",
+      "KatakanaScript": "ド"
+
+    },
+
+    {
+      "Id": 62,
+      "RomajiScript": "ba",
+      "HiraganaScript": "か",
+      "KatakanaScript": "バ"
+
+    },
+
+    {
+      "Id": 63,
+      "RomajiScript": "bi",
+      "HiraganaScript": "き",
+      "KatakanaScript": "ビ"
+
+    },
+
+    {
+      "Id": 64,
+      "RomajiScript": "bu",
+      "HiraganaScript": "く",
+      "KatakanaScript": "ブ"
+
+    },
+
+    {
+      "Id": 65,
+      "RomajiScript": "be",
+      "HiraganaScript": "け",
+      "KatakanaScript": "ベ"
+
+    },
+
+    {
+      "Id": 66,
+      "RomajiScript": "bo",
+      "HiraganaScript": "こ",
+      "KatakanaScript": "ボ"
+
+    },
+
+    {
+      "Id": 67,
+      "RomajiScript": "pa",
+      "HiraganaScript": "か",
+      "KatakanaScript": "パ"
+
+    },
+
+    {
+      "Id": 68,
+      "RomajiScript": "pi",
+      "HiraganaScript": "き",
+      "KatakanaScript": "ピ"
+
+    },
+
+    {
+      "Id": 69,
+      "RomajiScript": "pu",
+      "HiraganaScript": "く",
+      "KatakanaScript": "プ"
+
+    },
+
+    {
+      "Id": 70,
+      "RomajiScript": "pe",
+      "HiraganaScript": "け",
+      "KatakanaScript": "ペ"
+
+    },
+
+    {
+      "Id": 71,
+      "RomajiScript": "po",
+      "HiraganaScript": "こ",
+      "KatakanaScript": "ポ"
+
     }
+
+
   ]
 }

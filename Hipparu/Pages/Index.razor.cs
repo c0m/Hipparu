@@ -141,17 +141,7 @@ namespace Hipparu.Pages
         /// <returns></returns>
         protected static List<AnswerItem> BuildAnswerList()
         {
-            // Temporary answer list for testing in the limited layout
-            List<AnswerItem> tinyList = new List<AnswerItem>() {    new AnswerItem() { Id = 1, HiraganaScript = "あ", KatakanaScript = "ア", RomajiScript = "a" },
-                                                                    new AnswerItem() { Id = 2, HiraganaScript = "や", KatakanaScript = "ヤ", RomajiScript = "ya" },
-                                                                    new AnswerItem() { Id = 3, HiraganaScript = "は", KatakanaScript = "ハ", RomajiScript = "ha" },
-                                                                    new AnswerItem() { Id = 4, HiraganaScript = "ば", KatakanaScript = "バ", RomajiScript = "ba" },
-                                                                    new AnswerItem() { Id = 5, HiraganaScript = "い", KatakanaScript = "イ", RomajiScript = "i" },
-                                                                    new AnswerItem() { Id = 6, HiraganaScript = "ひ", KatakanaScript = "ヒ", RomajiScript = "hi" },
-                                                                    new AnswerItem() { Id = 7, HiraganaScript = "び", KatakanaScript = "ビ", RomajiScript = "bi" }
-                                                                    };
-            return tinyList; 
-            //return (List<AnswerItem>)Shuffle(masterAnswers.Data);
+            return (List<AnswerItem>)Shuffle(masterAnswers.Data);
         }
         /// <summary>
         /// Swap textState to Katakana if it's Hiragana, otherwise swap it to Hiragana.
