@@ -664,6 +664,20 @@
                     </Dropzone>
                 </div>
                 <div class="divEmptyTableCell"></div>
+                <div class="divTableCell">
+                    <Dropzone class="answer-container" Items="NList" TItem="AnswerItem" Accepts='(d, t) => d.RomajiScript.Equals("n")' OnItemDropRejected="@((i)=>LastDropped = i)" MaxItems="1" OnItemDropRejectedByMaxItemLimit="ShowMaxItemWarning" OnItemDrop="@((i) => SuccessfulDrop())" >    
+                        <div class="flex-item">
+                            @if (textState == TextState.HiraganaMode)
+                            {
+                                @context.HiraganaScript 
+                            }
+                            else
+                            {
+                                @context.KatakanaScript
+                            }
+                        </div> 
+                    </Dropzone>
+                </div>
             </div>
             <!--Fourth row-->
             <div class="divTableRow">
