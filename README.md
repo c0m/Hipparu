@@ -15,3 +15,8 @@ Flash is no longer supported, and the average Japanese learner who might have en
 Using Github Pages, it will be available at https://hipparu.com
 
 がんばってください！
+
+
+
+
+###### Emojis by OpenMoji
