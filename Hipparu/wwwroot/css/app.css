@@ -233,17 +233,17 @@ table, th, td {
 }
 
 .answer-container {
-    min-width: 20px;
-    min-height: 20px;
+    min-width: 50px;
+    min-height: 50px;
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.1);
     float: left;
 }
 
 div.lightTable {
-    border: 1px solid #1C6EA4;
+    border: 0px;
     background-color: #FFF;
     width: 100%;
     text-align: left;
@@ -251,7 +251,7 @@ div.lightTable {
 }
 
 .divTable.lightTable .divTableCell, .divTable.lightTable .divTableHead {
-    border: 1px solid #AAAAAA;
+    border: 2px solid #000;
     padding: 3px 2px;
 }
 
@@ -307,8 +307,12 @@ div.lightTable {
     background: #fff;
 }
 /*(n) column*/
-.divTable.lightTable .divTableBody .divTableCell:last-child {
-    background: #d4e6f6;
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+17) {
+    background: red;
+    border-left: 4px solid #000;
+    border-top: 1px solid #000;
+    border-right: 4px solid #000;
+    border-bottom: 4px solid #000;
 }
 
 
@@ -327,11 +331,20 @@ div.lightTable {
         font-size: 15px;
         font-weight: bold;
         color: #000;
-        border-left: 2px solid #D0E4F5;
+        border: 2px solid #000;
     }
 
+        .divTable.lightTable .divTableHeading .divTableHead {
+            height: 50px;
+            width: 50px;
+            background: #444444;
+            text-align: center;
+            vertical-align: middle;
+            line-height:50px;
+            border: 2px solid #000;
+        }
+
         .divTable.lightTable .divTableHeading .divTableHead:first-child {
-            border-left: none;
             background: #444444;
         }
         /*vowel column*/
@@ -382,13 +395,14 @@ div.lightTable {
         .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+13):nth-child(-n+16) {
             background: #fff;
         }
-        /*(n) column*/
-        .divTable.lightTable .divTableHeading .divTableHead:last-child {
-            background: #d4e6f6;
+        /*w column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-last-child(-n+2) {
+            background: #fff;
         }
 
 .divTable {
     display: table;
+    border: 2px solid #000;
 }
 
 .divTableRow {
@@ -419,16 +433,49 @@ div.lightTable {
 }
 
 .divTableRowHead {
+    height: 50px;
+    width: 50px;
     display: table-cell;
+    color: #000;
     background: #fff;
-    border-bottom: 2px solid #444444;
+    border: 2px solid #000;
     font-size: 15px;
     font-weight: bold;
-    color: #000;
-    border-left: 2px solid #D0E4F5;
+    border-left: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
 }
 
 .divEmptyTableCell {
     display: table-cell;
     background: #d3d3d3;
+    border:2px solid #000;
 }
+
+.divNHead {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    border: 2px solid #000;
+    font-size: 15px;
+    font-weight: bold;
+    background: red;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    border-left: 3px solid #000;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.float-container {
+    padding: 20px;
+}
+
+.float-child {
+    float: left;
+    padding: 20px;
+}  
