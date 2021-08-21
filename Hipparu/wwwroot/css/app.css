@@ -181,9 +181,9 @@ app {
         display: block;
     }
 }
-    
+
 .visible {
-    display: flex;
+    display: inline-block;
 }
 
 .invisible {
@@ -242,80 +242,150 @@ table, th, td {
     float: left;
 }
 
-div.blueTable {
+div.lightTable {
     border: 1px solid #1C6EA4;
-    background-color: #EEEEEE;
+    background-color: #FFF;
     width: 100%;
     text-align: left;
     border-collapse: collapse;
 }
 
-.divTable.blueTable .divTableCell, .divTable.blueTable .divTableHead {
+.divTable.lightTable .divTableCell, .divTable.lightTable .divTableHead {
     border: 1px solid #AAAAAA;
     padding: 3px 2px;
 }
 
-.divTable.blueTable .divTableBody .divTableCell {
+.divTable.lightTable .divTableBody .divTableCell {
     font-size: 13px;
 }
-
-.divTable.blueTable .divTableRow:nth-child(even) {
+/*vowel column*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+2) {
+    background: #fff;
+}
+/*k column*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+3) {
+    background: #83038d;
+}
+/*g column*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+4) {
+    background: #bc02cb;
+}
+/*s column*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+5) {
+    background: #5592bb;
+}
+/*z column*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+6) {
     background: #D0E4F5;
 }
-
-.divTable.blueTable .divTableHeading {
-    background: #1C6EA4;
-    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-    background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-    border-bottom: 2px solid #444444;
+/*t column*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+7) {
+    background: #00a903;
+}
+/*d column*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+8) {
+    background: #16c63a;
+}
+/*n column*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+9) {
+    background: #ffffff;
+}
+/*h column*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+10) {
+    background: #dafa08;
+}
+/*b column*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+11) {
+    background: #d5ff00;
+}
+/*p column*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+12) {
+    background: #f7e870;
+}
+/*m y r w columns*/
+.divTable.lightTable .divTableBody .divTableCell:nth-child(n+13):nth-child(-n+16) {
+    background: #fff;
+}
+/*(n) column*/
+.divTable.lightTable .divTableBody .divTableCell:last-child {
+    background: #d4e6f6;
 }
 
-    .divTable.blueTable .divTableHeading .divTableHead {
+
+
+.divTable.lightTable .divTableHeading .divTableCell:first-child {
+    border-left: none;
+    background: #444444;
+}
+
+
+.divTable.lightTable .divTableHeading {
+    color: #000
+}
+
+    .divTable.lightTable .divTableHeading .divTableHead {
         font-size: 15px;
         font-weight: bold;
-        color: #FFFFFF;
+        color: #000;
         border-left: 2px solid #D0E4F5;
     }
 
-        .divTable.blueTable .divTableHeading .divTableHead:first-child {
+        .divTable.lightTable .divTableHeading .divTableHead:first-child {
             border-left: none;
+            background: #444444;
         }
-
-.blueTable .tableFootStyle {
-    font-size: 14px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background: #D0E4F5;
-    background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-    background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-    background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-    border-top: 2px solid #444444;
-}
-
-.blueTable .tableFootStyle {
-    font-size: 14px;
-}
-
-    .blueTable .tableFootStyle .links {
-        text-align: right;
-    }
-
-        .blueTable .tableFootStyle .links a {
-            display: inline-block;
-            background: #1C6EA4;
-            color: #FFFFFF;
-            padding: 2px 8px;
-            border-radius: 5px;
+        /*vowel column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+2) {
+            background: #fff;
         }
-
-.blueTable.outerTableFooter {
-    border-top: none;
-}
-
-    .blueTable.outerTableFooter .tableFootStyle {
-        padding: 3px 5px;
-    }
+        /*k column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+3) {
+            background: #83038d;
+        }
+        /*g column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+4) {
+            background: #bc02cb;
+        }
+        /*s column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+5) {
+            background: #5592bb;
+        }
+        /*z column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+6) {
+            background: #D0E4F5;
+        }
+        /*t column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+7) {
+            background: #00a903;
+        }
+        /*d column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+8) {
+            background: #16c63a;
+        }
+        /*n column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+9) {
+            background: #ffffff;
+        }
+        /*h column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+10) {
+            background: #dafa08;
+        }
+        /*b column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+11) {
+            background: #d5ff00;
+        }
+        /*p column*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+12) {
+            background: #f7e870;
+        }
+        /*m y r w columns*/
+        .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+13):nth-child(-n+16) {
+            background: #fff;
+        }
+        /*(n) column*/
+        .divTable.lightTable .divTableHeading .divTableHead:last-child {
+            background: #d4e6f6;
+        }
 
 .divTable {
     display: table;
@@ -350,18 +420,15 @@ div.blueTable {
 
 .divTableRowHead {
     display: table-cell;
-    background: #1C6EA4;
-    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-    background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: #fff;
     border-bottom: 2px solid #444444;
     font-size: 15px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #000;
     border-left: 2px solid #D0E4F5;
 }
 
 .divEmptyTableCell {
     display: table-cell;
-    color: rgba(255,255,255,0.1);
+    background: #d3d3d3;
 }
