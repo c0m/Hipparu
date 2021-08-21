@@ -251,6 +251,7 @@ div.lightTable {
     width: 100%;
     text-align: left;
     border-collapse: collapse;
+    float: right;
 }
 
 .divTable.lightTable .divTableCell, .divTable.lightTable .divTableHead {
@@ -480,4 +481,16 @@ div.lightTable {
 .float-child {
     float: left;
     padding: 20px;
-}  
+}
+
+.answer-list {
+    float: left;
+    padding: 20px;
+}
+
+.game-timer {
+    float:right;
+    padding: 10px;
+    padding-top: 20px;
+    font-size: 20px;
+}
