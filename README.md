@@ -20,3 +20,4 @@ Using Github Pages, it will be available at https://hipparu.com
 
 
 ###### Emojis by OpenMoji
+###### Design by @[Goosey](https://www.lucybarlow.net)
