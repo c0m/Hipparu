@@ -4,24 +4,36 @@
 @inject HttpClient Http
 
 <div class="@menuVisibility">
-<h3>Best times</h3>
-    <table>
-        <tbody>
-            <tr>
-                <td>Hiragana</td>
-                <td>Katakana</td>
-                <td>Mixed</td>
-            </tr>
-            <tr>
-                <td>@bestHiraganaTime</td>
-                <td>@bestKatakanaTime</td>
-                <td>@bestMixedTime</td>
-            </tr>
-        </tbody>
-    </table>
-    <button class="btn btn-primary" @onclick="()=>SelectMode(1)">Hiragana</button>
-    <button class="btn btn-primary" @onclick="()=>SelectMode(2)">Katakana</button>
-    <button class="btn btn-primary" @onclick="()=>SelectMode(3)">Mixed</button>
+    <div class = "menu-container">
+        <div class = "title"><p>ひっぱる</p><br><p>Hipparu</p></div>
+        <div class = "content">
+            <div class = "best-times">
+                <h3>Best times</h3>
+                <div class="time-table">
+                    <div class="time-table-body">
+                        <div class="time-table-row">
+                            <div class="time-table-head">Hiragana</div>
+                            <div class="time-table-cell">@bestHiraganaTime</div>
+                        </div>
+                        <div class="time-table-row">
+                            <div class="time-table-head">Katakana</div>
+                            <div class="time-table-cell">@bestKatakanaTime</div>
+                        </div>
+                        <div class="time-table-row">
+                            <div class="time-table-head">Mixed</div>
+                            <div class="time-table-cell">@bestMixedTime</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="game-modes">
+                <h3>Select your game mode</h3>
+                <button class="btn btn-primary" @onclick="()=>SelectMode(1)">Hiragana<br>ひらがな</button>
+                <button class="btn btn-primary" @onclick="()=>SelectMode(2)">Katakana<br>カタカナ</button>
+                <button class="btn btn-primary" @onclick="()=>SelectMode(3)">Mixed</button>
+            </div>
+        </div>
+    </div>
 </div>
 <br />
 <div class="@gameVisibility">
@@ -65,7 +77,7 @@
                 </div>   
             </Dropzone>
         </div>
-        <div class="game-timer"><img src="assets/stopwatch_from_openmoji.png" alt="Stopwatch" height="30">@gameTimer</div>
+        <div class="game-timer"><img src="assets/stopwatch_from_openmoji.png" alt="Stopwatch" height="30"> @gameTimer</div>
         <div class="float-child">
             <div class="divTable lightTable">
                 <div class="divTableHeading">

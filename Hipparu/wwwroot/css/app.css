@@ -201,7 +201,7 @@ app {
 }
 
 .flex-container {
-    width: 400px;
+    width: 300px;
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -493,4 +493,73 @@ div.lightTable {
     padding: 10px;
     padding-top: 20px;
     font-size: 20px;
+}
+
+.menu-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .menu-container .title {
+        margin: 0 auto;
+        width: 30%;
+        line-height: 0px;
+    }
+
+    .menu-container .content {
+        display: flex;
+        flex-direction: row;
+        padding: 30px;
+        gap: 30px;
+    }
+
+        .menu-container .content .best-times {
+            padding: 30px;
+            position: relative;
+            border: 3px solid #00aeef;
+            background: #e1e1e1;
+            text-align: center;
+        }
+
+        .menu-container .content .game-modes {
+            padding: 30px;
+            position: relative;
+            border: 3px solid #f06eaa;
+            background: #e1e1e1;
+            text-align: center;
+        }
+        
+            .menu-container .game-modes .btn {
+                border: 0px;
+                color: #000;
+                background: #fff;
+            }
+
+.time-table {
+    display: table;
+    width: 30%;
+}
+
+.time-table-body {
+    display: table-row-group;
+}
+
+.time-table-row {
+    display: table-row;
+}
+
+.time-table-head {
+    display: table-cell;
+    border: 1px solid #444444;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.time-table-cell {
+    display: table-cell;
+    border: 1px solid #444444;
+    padding: 5px;
 }
