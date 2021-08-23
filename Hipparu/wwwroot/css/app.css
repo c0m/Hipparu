@@ -192,8 +192,8 @@ app {
 
 .flex-item {
     height: 45px;
-    font-size: 20px;
     width: 45px;
+    font-size: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(0, 0, 0, 0.9);
     text-align: center;
@@ -201,12 +201,32 @@ app {
 }
 
 .flex-container {
-    width: 300px;
+    width: 340px;
+    height: 400px;
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
     background-color: #d6d5d5;
     float: left;
+    overflow-y: scroll;
+    /*css scrollbar for firefox*/
+    scrollbar-color: auto; 
+    scrollbar-width: thin;
+}
+
+/*webkit scrollbar for edge/chrome/brave*/
+::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: white; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px grey; /* creates padding around scroll thumb */
 }
 
 .flex-container div:nth-child(2n){
