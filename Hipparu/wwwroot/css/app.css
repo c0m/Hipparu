@@ -135,7 +135,7 @@ app {
 
 .flex-container {
     width: 340px;
-    height: 360px;
+    height: 300px;
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -249,7 +249,7 @@ div.lightTable {
 }
 /*h column*/
 .divTable.lightTable .divTableBody .divTableCell:nth-child(n+10) {
-    background: #dafa08;
+    background: #fffb3f
 }
 /*b column*/
 .divTable.lightTable .divTableBody .divTableCell:nth-child(n+11) {
@@ -338,7 +338,7 @@ div.lightTable {
         }
         /*h column*/
         .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+10) {
-            background: #dafa08;
+            background: #fffb3f
         }
         /*b column*/
         .divTable.lightTable .divTableHeading .divTableHead:nth-child(n+11) {
@@ -392,6 +392,8 @@ div.lightTable {
 }
 
 .divTableRowHead {
+    min-height: 50px;
+    min-width: 50px;
     height: 50px;
     width: 50px;
     display: table-cell;
@@ -435,6 +437,7 @@ div.lightTable {
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    align-items: center;
     flex-direction: row;
     margin: 0 -1.5%;
 }
@@ -442,13 +445,17 @@ div.lightTable {
 .answer-list {
     float: left;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .game-timer {
     float:right;
     padding: 10px;
-    padding-top: 20px;
     font-size: 20px;
+    position:absolute;
+    right: 5%;
 }
 
 .title {
@@ -555,4 +562,30 @@ div.lightTable {
 
 .fa-github {
     color: black;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bg-warning {
+    position: absolute;
+    left: 28%;
+    top: -12.5%;
+    right: 5%;
+    bottom: 105%;
+    text-align:center;
+    background: rgba(0,0,0,0.3);
+}
+
+.bg-success {
+    position: absolute;
+    left: 28%;
+    top: -12.5%;
+    right: 5%;
+    bottom: 105%;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
 }
