@@ -1,0 +1,557 @@
+﻿{
+  "Data": [
+    {
+      "Id": 1,
+      "RomajiScript": "wa",
+      "HiraganaScript": "わ",
+      "KatakanaScript": "ワ"
+
+    },
+
+    {
+      "Id": 2,
+      "RomajiScript": "wo",
+      "HiraganaScript": "を",
+      "KatakanaScript": "ヲ"
+
+    },
+
+    {
+      "Id": 3,
+      "RomajiScript": "n",
+      "HiraganaScript": "ん",
+      "KatakanaScript": "ン"
+
+    },
+
+    {
+      "Id": 4,
+      "RomajiScript": "ra",
+      "HiraganaScript": "ら",
+      "KatakanaScript": "ラ"
+
+    },
+
+    {
+      "Id": 5,
+      "RomajiScript": "ri",
+      "HiraganaScript": "り",
+      "KatakanaScript": "リ"
+
+    },
+
+    {
+      "Id": 6,
+      "RomajiScript": "ru",
+      "HiraganaScript": "る",
+      "KatakanaScript": "ル"
+
+    },
+
+    {
+      "Id": 7,
+      "RomajiScript": "re",
+      "HiraganaScript": "れ",
+      "KatakanaScript": "レ"
+
+    },
+
+    {
+      "Id": 8,
+      "RomajiScript": "ro",
+      "HiraganaScript": "ろ",
+      "KatakanaScript": "ロ"
+
+    },
+
+    {
+      "Id": 9,
+      "RomajiScript": "ya",
+      "HiraganaScript": "や",
+      "KatakanaScript": "ヤ"
+
+    },
+
+    {
+      "Id": 10,
+      "RomajiScript": "yu",
+      "HiraganaScript": "ゆ",
+      "KatakanaScript": "ユ"
+
+    },
+
+    {
+      "Id": 11,
+      "RomajiScript": "yo",
+      "HiraganaScript": "よ",
+      "KatakanaScript": "ヨ"
+
+    },
+
+    {
+      "Id": 12,
+      "RomajiScript": "ma",
+      "HiraganaScript": "ま",
+      "KatakanaScript": "マ"
+
+    },
+
+    {
+      "Id": 13,
+      "RomajiScript": "mi",
+      "HiraganaScript": "み",
+      "KatakanaScript": "ミ"
+
+    },
+
+    {
+      "Id": 14,
+      "RomajiScript": "mu",
+      "HiraganaScript": "む",
+      "KatakanaScript": "ム"
+
+    },
+
+    {
+      "Id": 15,
+      "RomajiScript": "me",
+      "HiraganaScript": "め",
+      "KatakanaScript": "メ"
+
+    },
+
+    {
+      "Id": 16,
+      "RomajiScript": "mo",
+      "HiraganaScript": "も",
+      "KatakanaScript": "モ"
+
+    },
+
+    {
+      "Id": 17,
+      "RomajiScript": "ha",
+      "HiraganaScript": "は",
+      "KatakanaScript": "ハ"
+
+    },
+
+    {
+      "Id": 18,
+      "RomajiScript": "hi",
+      "HiraganaScript": "ひ",
+      "KatakanaScript": "ヒ"
+
+    },
+
+    {
+      "Id": 19,
+      "RomajiScript": "fu",
+      "HiraganaScript": "ふ",
+      "KatakanaScript": "フ"
+
+    },
+
+    {
+      "Id": 20,
+      "RomajiScript": "he",
+      "HiraganaScript": "へ",
+      "KatakanaScript": "ヘ"
+
+    },
+
+    {
+      "Id": 21,
+      "RomajiScript": "ho",
+      "HiraganaScript": "ほ",
+      "KatakanaScript": "ホ"
+
+    },
+
+    {
+      "Id": 22,
+      "RomajiScript": "na",
+      "HiraganaScript": "な",
+      "KatakanaScript": "ナ"
+
+    },
+
+    {
+      "Id": 23,
+      "RomajiScript": "ni",
+      "HiraganaScript": "に",
+      "KatakanaScript": "ニ"
+
+    },
+
+    {
+      "Id": 24,
+      "RomajiScript": "nu",
+      "HiraganaScript": "ぬ",
+      "KatakanaScript": "ヌ"
+
+    },
+
+    {
+      "Id": 25,
+      "RomajiScript": "ne",
+      "HiraganaScript": "ね",
+      "KatakanaScript": "ネ"
+
+    },
+
+    {
+      "Id": 26,
+      "RomajiScript": "no",
+      "HiraganaScript": "の",
+      "KatakanaScript": "ノ"
+
+    },
+
+    {
+      "Id": 27,
+      "RomajiScript": "ta",
+      "HiraganaScript": "た",
+      "KatakanaScript": "タ"
+
+    },
+
+    {
+      "Id": 28,
+      "RomajiScript": "chi",
+      "HiraganaScript": "ち",
+      "KatakanaScript": "チ"
+
+    },
+
+    {
+      "Id": 29,
+      "RomajiScript": "tsu",
+      "HiraganaScript": "つ",
+      "KatakanaScript": "ツ"
+
+    },
+
+    {
+      "Id": 30,
+      "RomajiScript": "te",
+      "HiraganaScript": "て",
+      "KatakanaScript": "テ"
+
+    },
+
+    {
+      "Id": 31,
+      "RomajiScript": "to",
+      "HiraganaScript": "と",
+      "KatakanaScript": "ト"
+
+    },
+
+    {
+      "Id": 32,
+      "RomajiScript": "sa",
+      "HiraganaScript": "さ",
+      "KatakanaScript": "サ"
+
+    },
+
+    {
+      "Id": 33,
+      "RomajiScript": "shi",
+      "HiraganaScript": "し",
+      "KatakanaScript": "シ"
+
+    },
+
+    {
+      "Id": 34,
+      "RomajiScript": "su",
+      "HiraganaScript": "す",
+      "KatakanaScript": "ス"
+
+    },
+
+    {
+      "Id": 35,
+      "RomajiScript": "se",
+      "HiraganaScript": "せ",
+      "KatakanaScript": "セ"
+
+    },
+
+    {
+      "Id": 36,
+      "RomajiScript": "so",
+      "HiraganaScript": "そ",
+      "KatakanaScript": "ソ"
+
+    },
+
+    {
+      "Id": 37,
+      "RomajiScript": "ka",
+      "HiraganaScript": "か",
+      "KatakanaScript": "カ"
+
+    },
+
+    {
+      "Id": 38,
+      "RomajiScript": "ki",
+      "HiraganaScript": "き",
+      "KatakanaScript": "キ"
+
+    },
+
+    {
+      "Id": 39,
+      "RomajiScript": "ku",
+      "HiraganaScript": "く",
+      "KatakanaScript": "ク"
+
+    },
+
+    {
+      "Id": 40,
+      "RomajiScript": "ke",
+      "HiraganaScript": "け",
+      "KatakanaScript": "ケ"
+
+    },
+
+    {
+      "Id": 41,
+      "RomajiScript": "ko",
+      "HiraganaScript": "こ",
+      "KatakanaScript": "コ"
+
+    },
+
+    {
+      "Id": 42,
+      "RomajiScript": "a",
+      "HiraganaScript": "あ",
+      "KatakanaScript": "ア"
+
+    },
+
+    {
+      "Id": 43,
+      "RomajiScript": "i",
+      "HiraganaScript": "い",
+      "KatakanaScript": "イ"
+
+    },
+
+    {
+      "Id": 44,
+      "RomajiScript": "u",
+      "HiraganaScript": "う",
+      "KatakanaScript": "ウ"
+
+    },
+
+    {
+      "Id": 45,
+      "RomajiScript": "e",
+      "HiraganaScript": "え",
+      "KatakanaScript": "エ"
+
+    },
+
+    {
+      "Id": 46,
+      "RomajiScript": "o",
+      "HiraganaScript": "お",
+      "KatakanaScript": "オ"
+
+    },
+
+    {
+      "Id": 47,
+      "RomajiScript": "ga",
+      "HiraganaScript": "が",
+      "KatakanaScript": "ガ"
+
+    },
+
+    {
+      "Id": 48,
+      "RomajiScript": "gi",
+      "HiraganaScript": "ぎ",
+      "KatakanaScript": "ギ"
+
+    },
+
+    {
+      "Id": 49,
+      "RomajiScript": "gu",
+      "HiraganaScript": "ぐ",
+      "KatakanaScript": "グ"
+
+    },
+
+    {
+      "Id": 50,
+      "RomajiScript": "ge",
+      "HiraganaScript": "げ",
+      "KatakanaScript": "ゲ"
+
+    },
+
+    {
+      "Id": 51,
+      "RomajiScript": "go",
+      "HiraganaScript": "ご",
+      "KatakanaScript": "ゴ"
+
+    },
+
+    {
+      "Id": 52,
+      "RomajiScript": "za",
+      "HiraganaScript": "ざ",
+      "KatakanaScript": "ザ"
+
+    },
+
+    {
+      "Id": 53,
+      "RomajiScript": "zi",
+      "HiraganaScript": "じ",
+      "KatakanaScript": "ジ"
+
+    },
+
+    {
+      "Id": 54,
+      "RomajiScript": "zu",
+      "HiraganaScript": "ず",
+      "KatakanaScript": "ズ"
+
+    },
+
+    {
+      "Id": 55,
+      "RomajiScript": "ze",
+      "HiraganaScript": "ぜ",
+      "KatakanaScript": "ゼ"
+
+    },
+
+    {
+      "Id": 56,
+      "RomajiScript": "zo",
+      "HiraganaScript": "ぞ",
+      "KatakanaScript": "ゾ"
+
+    },
+
+    {
+      "Id": 57,
+      "RomajiScript": "da",
+      "HiraganaScript": "だ",
+      "KatakanaScript": "ダ"
+
+    },
+
+    {
+      "Id": 60,
+      "RomajiScript": "de",
+      "HiraganaScript": "で",
+      "KatakanaScript": "デ"
+
+    },
+
+    {
+      "Id": 61,
+      "RomajiScript": "do",
+      "HiraganaScript": "ど",
+      "KatakanaScript": "ド"
+
+    },
+
+    {
+      "Id": 62,
+      "RomajiScript": "ba",
+      "HiraganaScript": "ば",
+      "KatakanaScript": "バ"
+
+    },
+
+    {
+      "Id": 63,
+      "RomajiScript": "bi",
+      "HiraganaScript": "び",
+      "KatakanaScript": "ビ"
+
+    },
+
+    {
+      "Id": 64,
+      "RomajiScript": "bu",
+      "HiraganaScript": "ぶ",
+      "KatakanaScript": "ブ"
+
+    },
+
+    {
+      "Id": 65,
+      "RomajiScript": "be",
+      "HiraganaScript": "べ",
+      "KatakanaScript": "ベ"
+
+    },
+
+    {
+      "Id": 66,
+      "RomajiScript": "bo",
+      "HiraganaScript": "ぼ",
+      "KatakanaScript": "ボ"
+
+    },
+
+    {
+      "Id": 67,
+      "RomajiScript": "pa",
+      "HiraganaScript": "ぱ",
+      "KatakanaScript": "パ"
+
+    },
+
+    {
+      "Id": 68,
+      "RomajiScript": "pi",
+      "HiraganaScript": "ぴ",
+      "KatakanaScript": "ピ"
+
+    },
+
+    {
+      "Id": 69,
+      "RomajiScript": "pu",
+      "HiraganaScript": "ぷ",
+      "KatakanaScript": "プ"
+
+    },
+
+    {
+      "Id": 70,
+      "RomajiScript": "pe",
+      "HiraganaScript": "ぺ",
+      "KatakanaScript": "ペ"
+
+    },
+
+    {
+      "Id": 71,
+      "RomajiScript": "po",
+      "HiraganaScript": "ぽ",
+      "KatakanaScript": "ポ"
+
+    }
+
+
+  ]
+}
