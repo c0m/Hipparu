@@ -4,8 +4,8 @@
 @inject HttpClient Http
 
 <div class="@menuVisibility">
+    <div class = "title"><p> ひっぱる</p><br><p>Hipparu</p></div>
     <div class = "menu-container">
-        <div class = "title"><p>ひっぱる</p><br><p>Hipparu</p></div>
         <div class = "content">
             <div class = "best-times">
                 <h3>Best times</h3>
@@ -28,9 +28,11 @@
             </div>
             <div class="game-modes">
                 <h3>Select your game mode</h3>
-                <button class="btn btn-primary" @onclick="()=>SelectMode(1)">Hiragana<br>ひらがな</button>
-                <button class="btn btn-primary" @onclick="()=>SelectMode(2)">Katakana<br>カタカナ</button>
-                <button class="btn btn-primary" @onclick="()=>SelectMode(3)">Mixed</button>
+                <div class="buttons">
+                    <button class="btn btn-primary" @onclick="()=>SelectMode(1)">Hiragana<br>ひらがな</button>
+                    <button class="btn btn-primary" @onclick="()=>SelectMode(2)">Katakana<br>カタカナ</button>
+                    <button class="btn btn-primary" @onclick="()=>SelectMode(3)">Mixed</button>
+                </div>
             </div>
         </div>
     </div>
