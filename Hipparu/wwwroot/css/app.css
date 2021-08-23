@@ -192,7 +192,8 @@ table, th, td {
     min-width: 50px;
     min-height: 50px;
     display: flex;
-    align-content: flex-start;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     background-color: rgba(255, 255, 255, 0.1);
     float: left;
