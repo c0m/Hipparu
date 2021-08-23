@@ -46,75 +46,8 @@ app {
     text-overflow: ellipsis;
 }
 
-.sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-}
-
-    .sidebar .top-row {
-        background-color: rgba(0,0,0,0.4);
-    }
-
-    .sidebar .navbar-brand {
-        font-size: 1.1rem;
-    }
-
-    .sidebar .oi {
-        width: 2rem;
-        font-size: 1.1rem;
-        vertical-align: text-top;
-        top: -2px;
-    }
-
-    .sidebar .nav-item {
-        font-size: 0.9rem;
-        padding-bottom: 0.5rem;
-    }
-
-        .sidebar .nav-item:first-of-type {
-            padding-top: 1rem;
-        }
-
-        .sidebar .nav-item:last-of-type {
-            padding-bottom: 1rem;
-        }
-
-        .sidebar .nav-item a {
-            color: #d7d7d7;
-            border-radius: 4px;
-            height: 3rem;
-            display: flex;
-            align-items: center;
-            line-height: 3rem;
-        }
-
-            .sidebar .nav-item a.active {
-                background-color: rgba(255,255,255,0.25);
-                color: white;
-            }
-
-            .sidebar .nav-item a:hover {
-                background-color: rgba(255,255,255,0.1);
-                color: white;
-            }
-
 .content {
     padding-top: 1.1rem;
-}
-
-.navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.valid.modified:not([type=checkbox]) {
-    outline: 1px solid #26b050;
-}
-
-.invalid {
-    outline: 1px solid red;
-}
-
-.validation-message {
-    color: red;
 }
 
 #blazor-error-ui {
@@ -202,7 +135,7 @@ app {
 
 .flex-container {
     width: 340px;
-    height: 400px;
+    height: 360px;
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -359,7 +292,7 @@ div.lightTable {
     }
 
         .divTable.lightTable .divTableHeading .divTableHead {
-            height: 50px;
+            max-height: 50px;
             width: 50px;
             background: #444444;
             text-align: center;
@@ -446,6 +379,8 @@ div.lightTable {
 
 .divTableHeading {
     display: table-header-group;
+    height: 50px;
+    width: 50px;
 }
 
 .divTableFoot {
@@ -494,13 +429,14 @@ div.lightTable {
     border-bottom: 1px solid #000;
 }
 
-.float-container {
-    padding: 20px;
-}
-
-.float-child {
-    float: left;
-    padding: 20px;
+.game-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    margin: 0 -1.5%;
 }
 
 .answer-list {

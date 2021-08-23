@@ -64,7 +64,8 @@
     {
         <div class="bg-success">You did the thing.</div>
     }
-    <div class="float-container">
+    <div class="game-timer"><img src="assets/stopwatch_from_openmoji.png" alt="Stopwatch" height="30"> @gameTimer</div>
+    <div class="game-container">
         <div class="answer-list">
             <Dropzone class="flex-container" Items="AnswerList" TItem="AnswerItem" OnItemDropRejected="ShowPlacingBackWarning" Accepts='(d, t) => d.RomajiScript.Equals("This Dropzone is only for one way but we cant outright disable accepting things so we only accept this message instead")'>
                 <div class="flex-item">
@@ -77,11 +78,12 @@
                         @context.KatakanaScript
                     }
                 </div>   
-            </Dropzone>
+            </Dropzone>   
+            <div class="@mixedButtonVisibility">
+                <button class="btn btn-secondary" @onclick="SwapKana">Swap Kana</button>
+            </div>
         </div>
-        <div class="game-timer"><img src="assets/stopwatch_from_openmoji.png" alt="Stopwatch" height="30"> @gameTimer</div>
-        <div class="float-child">
-            <div class="divTable lightTable">
+        <div class="divTable lightTable">
                 <div class="divTableHeading">
                     <div class="divTableRow">
                         <div class="divTableHead"> </div>
@@ -1098,11 +1100,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
-    </div>
-    <div class="@mixedButtonVisibility">
-        <button class="btn btn-secondary" @onclick="SwapKana">Swap Kana</button>
     </div>
     <button class="btn btn-primary" @onclick="ResetGame">Reset</button>
 </div>
